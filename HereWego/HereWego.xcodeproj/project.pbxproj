@@ -7,40 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F36D45B92919263C005BD660 /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D45B82919263C005BD660 /* ProfileUser.swift */; };
-		F394E975291824B100C39C71 /* AddHomeTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E96E291824B000C39C71 /* AddHomeTeamView.swift */; };
-		F394E976291824B100C39C71 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E96F291824B000C39C71 /* TeamListView.swift */; };
-		F394E977291824B100C39C71 /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E970291824B000C39C71 /* TeamDetail.swift */; };
-		F394E978291824B100C39C71 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E971291824B000C39C71 /* SearchView.swift */; };
-		F394E979291824B100C39C71 /* TeamListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E972291824B000C39C71 /* TeamListRow.swift */; };
-		F394E97A291824B100C39C71 /* TeamTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E973291824B000C39C71 /* TeamTitle.swift */; };
-		F394E97B291824B100C39C71 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E974291824B000C39C71 /* LoginView.swift */; };
-		F394E97F291824DF00C39C71 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E97E291824DF00C39C71 /* Team.swift */; };
-		F39EF7A5291823D800B9F265 /* HereWegoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39EF7A4291823D800B9F265 /* HereWegoApp.swift */; };
-		F39EF7A7291823D800B9F265 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39EF7A6291823D800B9F265 /* ContentView.swift */; };
-		F39EF7A9291823D900B9F265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39EF7A8291823D900B9F265 /* Assets.xcassets */; };
-		F39EF7AC291823D900B9F265 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39EF7AB291823D900B9F265 /* Preview Assets.xcassets */; };
+		F3249AF42919725A00302D84 /* HereWeGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249AF32919725A00302D84 /* HereWeGoApp.swift */; };
+		F3249AF82919725B00302D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3249AF72919725B00302D84 /* Assets.xcassets */; };
+		F3249AFB2919725B00302D84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3249AFA2919725B00302D84 /* Preview Assets.xcassets */; };
+		F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0C291973AE00302D84 /* TeamDetail.swift */; };
+		F3249B16291973AE00302D84 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0D291973AE00302D84 /* LoginView.swift */; };
+		F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */; };
+		F3249B18291973AE00302D84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0F291973AE00302D84 /* ContentView.swift */; };
+		F3249B19291973AE00302D84 /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B10291973AE00302D84 /* ProfileUser.swift */; };
+		F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B11291973AE00302D84 /* TeamListView.swift */; };
+		F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B12291973AE00302D84 /* TeamTitle.swift */; };
+		F3249B1C291973AE00302D84 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B13291973AE00302D84 /* SearchView.swift */; };
+		F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B14291973AE00302D84 /* TeamListRow.swift */; };
+		F3249B1F291973B900302D84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B1E291973B900302D84 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F36D45B82919263C005BD660 /* ProfileUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
-		F394E96E291824B000C39C71 /* AddHomeTeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeTeamView.swift; sourceTree = "<group>"; };
-		F394E96F291824B000C39C71 /* TeamListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
-		F394E970291824B000C39C71 /* TeamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
-		F394E971291824B000C39C71 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		F394E972291824B000C39C71 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
-		F394E973291824B000C39C71 /* TeamTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTitle.swift; sourceTree = "<group>"; };
-		F394E974291824B000C39C71 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		F394E97E291824DF00C39C71 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		F39EF7A1291823D800B9F265 /* HereWego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereWego.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F39EF7A4291823D800B9F265 /* HereWegoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereWegoApp.swift; sourceTree = "<group>"; };
-		F39EF7A6291823D800B9F265 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F39EF7A8291823D900B9F265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F39EF7AB291823D900B9F265 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3249AF02919725A00302D84 /* HereWeGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereWeGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3249AF32919725A00302D84 /* HereWeGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HereWeGoApp.swift; sourceTree = "<group>"; };
+		F3249AF72919725B00302D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3249AFA2919725B00302D84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F3249B0C291973AE00302D84 /* TeamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
+		F3249B0D291973AE00302D84 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeTeamView.swift; sourceTree = "<group>"; };
+		F3249B0F291973AE00302D84 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../../temp/ContentView.swift; sourceTree = "<group>"; };
+		F3249B10291973AE00302D84 /* ProfileUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
+		F3249B11291973AE00302D84 /* TeamListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
+		F3249B12291973AE00302D84 /* TeamTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTitle.swift; sourceTree = "<group>"; };
+		F3249B13291973AE00302D84 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
+		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F39EF79E291823D800B9F265 /* Frameworks */ = {
+		F3249AED2919725A00302D84 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,110 +50,110 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F394E96D2918243B00C39C71 /* View */ = {
+		F3249AE72919725A00302D84 = {
 			isa = PBXGroup;
 			children = (
-				F394E96E291824B000C39C71 /* AddHomeTeamView.swift */,
-				F394E974291824B000C39C71 /* LoginView.swift */,
-				F394E971291824B000C39C71 /* SearchView.swift */,
-				F394E970291824B000C39C71 /* TeamDetail.swift */,
-				F394E972291824B000C39C71 /* TeamListRow.swift */,
-				F394E96F291824B000C39C71 /* TeamListView.swift */,
-				F394E973291824B000C39C71 /* TeamTitle.swift */,
-				F39EF7A6291823D800B9F265 /* ContentView.swift */,
-				F36D45B82919263C005BD660 /* ProfileUser.swift */,
+				F3249AF22919725A00302D84 /* HereWeGo */,
+				F3249AF12919725A00302D84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3249AF12919725A00302D84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3249AF02919725A00302D84 /* HereWeGo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3249AF22919725A00302D84 /* HereWeGo */ = {
+			isa = PBXGroup;
+			children = (
+				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
+				F3249B012919727B00302D84 /* Model */,
+				F3249B08291972F700302D84 /* View */,
+				F3249B09291972FB00302D84 /* ViewModel */,
+				F3249AF72919725B00302D84 /* Assets.xcassets */,
+				F3249AF92919725B00302D84 /* Preview Content */,
+			);
+			path = HereWeGo;
+			sourceTree = "<group>";
+		};
+		F3249AF92919725B00302D84 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F3249AFA2919725B00302D84 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F3249B012919727B00302D84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3249B1E291973B900302D84 /* Team.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3249B08291972F700302D84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */,
+				F3249B0F291973AE00302D84 /* ContentView.swift */,
+				F3249B0D291973AE00302D84 /* LoginView.swift */,
+				F3249B10291973AE00302D84 /* ProfileUser.swift */,
+				F3249B13291973AE00302D84 /* SearchView.swift */,
+				F3249B0C291973AE00302D84 /* TeamDetail.swift */,
+				F3249B14291973AE00302D84 /* TeamListRow.swift */,
+				F3249B11291973AE00302D84 /* TeamListView.swift */,
+				F3249B12291973AE00302D84 /* TeamTitle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		F394E97C291824C000C39C71 /* ViewModel */ = {
+		F3249B09291972FB00302D84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F394E97D291824D000C39C71 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F394E97E291824DF00C39C71 /* Team.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F39EF798291823D800B9F265 = {
-			isa = PBXGroup;
-			children = (
-				F39EF7A3291823D800B9F265 /* HereWego */,
-				F39EF7A2291823D800B9F265 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		F39EF7A2291823D800B9F265 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F39EF7A1291823D800B9F265 /* HereWego.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F39EF7A3291823D800B9F265 /* HereWego */ = {
-			isa = PBXGroup;
-			children = (
-				F39EF7A4291823D800B9F265 /* HereWegoApp.swift */,
-				F394E97D291824D000C39C71 /* Model */,
-				F394E97C291824C000C39C71 /* ViewModel */,
-				F394E96D2918243B00C39C71 /* View */,
-				F39EF7A8291823D900B9F265 /* Assets.xcassets */,
-				F39EF7AA291823D900B9F265 /* Preview Content */,
-			);
-			path = HereWego;
-			sourceTree = "<group>";
-		};
-		F39EF7AA291823D900B9F265 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				F39EF7AB291823D900B9F265 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F39EF7A0291823D800B9F265 /* HereWego */ = {
+		F3249AEF2919725A00302D84 /* HereWeGo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F39EF7AF291823D900B9F265 /* Build configuration list for PBXNativeTarget "HereWego" */;
+			buildConfigurationList = F3249AFE2919725B00302D84 /* Build configuration list for PBXNativeTarget "HereWeGo" */;
 			buildPhases = (
-				F39EF79D291823D800B9F265 /* Sources */,
-				F39EF79E291823D800B9F265 /* Frameworks */,
-				F39EF79F291823D800B9F265 /* Resources */,
+				F3249AEC2919725A00302D84 /* Sources */,
+				F3249AED2919725A00302D84 /* Frameworks */,
+				F3249AEE2919725A00302D84 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HereWego;
-			productName = HereWego;
-			productReference = F39EF7A1291823D800B9F265 /* HereWego.app */;
+			name = HereWeGo;
+			productName = HereWeGo;
+			productReference = F3249AF02919725A00302D84 /* HereWeGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F39EF799291823D800B9F265 /* Project object */ = {
+		F3249AE82919725A00302D84 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					F39EF7A0291823D800B9F265 = {
+					F3249AEF2919725A00302D84 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = F39EF79C291823D800B9F265 /* Build configuration list for PBXProject "HereWego" */;
+			buildConfigurationList = F3249AEB2919725A00302D84 /* Build configuration list for PBXProject "HereWeGo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -161,51 +161,51 @@
 				en,
 				Base,
 			);
-			mainGroup = F39EF798291823D800B9F265;
-			productRefGroup = F39EF7A2291823D800B9F265 /* Products */;
+			mainGroup = F3249AE72919725A00302D84;
+			productRefGroup = F3249AF12919725A00302D84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F39EF7A0291823D800B9F265 /* HereWego */,
+				F3249AEF2919725A00302D84 /* HereWeGo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F39EF79F291823D800B9F265 /* Resources */ = {
+		F3249AEE2919725A00302D84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39EF7AC291823D900B9F265 /* Preview Assets.xcassets in Resources */,
-				F39EF7A9291823D900B9F265 /* Assets.xcassets in Resources */,
+				F3249AFB2919725B00302D84 /* Preview Assets.xcassets in Resources */,
+				F3249AF82919725B00302D84 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F39EF79D291823D800B9F265 /* Sources */ = {
+		F3249AEC2919725A00302D84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F394E975291824B100C39C71 /* AddHomeTeamView.swift in Sources */,
-				F394E977291824B100C39C71 /* TeamDetail.swift in Sources */,
-				F39EF7A7291823D800B9F265 /* ContentView.swift in Sources */,
-				F394E97B291824B100C39C71 /* LoginView.swift in Sources */,
-				F394E97A291824B100C39C71 /* TeamTitle.swift in Sources */,
-				F39EF7A5291823D800B9F265 /* HereWegoApp.swift in Sources */,
-				F36D45B92919263C005BD660 /* ProfileUser.swift in Sources */,
-				F394E978291824B100C39C71 /* SearchView.swift in Sources */,
-				F394E979291824B100C39C71 /* TeamListRow.swift in Sources */,
-				F394E97F291824DF00C39C71 /* Team.swift in Sources */,
-				F394E976291824B100C39C71 /* TeamListView.swift in Sources */,
+				F3249B1F291973B900302D84 /* Team.swift in Sources */,
+				F3249B1C291973AE00302D84 /* SearchView.swift in Sources */,
+				F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */,
+				F3249B18291973AE00302D84 /* ContentView.swift in Sources */,
+				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
+				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
+				F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */,
+				F3249B19291973AE00302D84 /* ProfileUser.swift in Sources */,
+				F3249AF42919725A00302D84 /* HereWeGoApp.swift in Sources */,
+				F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */,
+				F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		F39EF7AD291823D900B9F265 /* Debug */ = {
+		F3249AFC2919725B00302D84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +265,7 @@
 			};
 			name = Debug;
 		};
-		F39EF7AE291823D900B9F265 /* Release */ = {
+		F3249AFD2919725B00302D84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -319,14 +319,14 @@
 			};
 			name = Release;
 		};
-		F39EF7B0291823D900B9F265 /* Debug */ = {
+		F3249AFF2919725B00302D84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HereWego/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HereWeGo/Preview Content\"";
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -340,7 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.HereWego;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.HereWeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -348,14 +348,14 @@
 			};
 			name = Debug;
 		};
-		F39EF7B1291823D900B9F265 /* Release */ = {
+		F3249B002919725B00302D84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HereWego/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HereWeGo/Preview Content\"";
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -369,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.HereWego;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyungsoo.HereWeGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -380,25 +380,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F39EF79C291823D800B9F265 /* Build configuration list for PBXProject "HereWego" */ = {
+		F3249AEB2919725A00302D84 /* Build configuration list for PBXProject "HereWeGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F39EF7AD291823D900B9F265 /* Debug */,
-				F39EF7AE291823D900B9F265 /* Release */,
+				F3249AFC2919725B00302D84 /* Debug */,
+				F3249AFD2919725B00302D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F39EF7AF291823D900B9F265 /* Build configuration list for PBXNativeTarget "HereWego" */ = {
+		F3249AFE2919725B00302D84 /* Build configuration list for PBXNativeTarget "HereWeGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F39EF7B0291823D900B9F265 /* Debug */,
-				F39EF7B1291823D900B9F265 /* Release */,
+				F3249AFF2919725B00302D84 /* Debug */,
+				F3249B002919725B00302D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F39EF799291823D800B9F265 /* Project object */;
+	rootObject = F3249AE82919725A00302D84 /* Project object */;
 }
