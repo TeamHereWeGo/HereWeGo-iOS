@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F36D45B92919263C005BD660 /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36D45B82919263C005BD660 /* ProfileUser.swift */; };
 		F394E975291824B100C39C71 /* AddHomeTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E96E291824B000C39C71 /* AddHomeTeamView.swift */; };
 		F394E976291824B100C39C71 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E96F291824B000C39C71 /* TeamListView.swift */; };
 		F394E977291824B100C39C71 /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394E970291824B000C39C71 /* TeamDetail.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F36D45B82919263C005BD660 /* ProfileUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
 		F394E96E291824B000C39C71 /* AddHomeTeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeTeamView.swift; sourceTree = "<group>"; };
 		F394E96F291824B000C39C71 /* TeamListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
 		F394E970291824B000C39C71 /* TeamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				F394E96F291824B000C39C71 /* TeamListView.swift */,
 				F394E973291824B000C39C71 /* TeamTitle.swift */,
 				F39EF7A6291823D800B9F265 /* ContentView.swift */,
+				F36D45B82919263C005BD660 /* ProfileUser.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				F394E97B291824B100C39C71 /* LoginView.swift in Sources */,
 				F394E97A291824B100C39C71 /* TeamTitle.swift in Sources */,
 				F39EF7A5291823D800B9F265 /* HereWegoApp.swift in Sources */,
+				F36D45B92919263C005BD660 /* ProfileUser.swift in Sources */,
 				F394E978291824B100C39C71 /* SearchView.swift in Sources */,
 				F394E979291824B100C39C71 /* TeamListRow.swift in Sources */,
 				F394E97F291824DF00C39C71 /* Team.swift in Sources */,

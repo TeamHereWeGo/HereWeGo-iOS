@@ -9,21 +9,25 @@ import SwiftUI
 
 struct AddHomeTeamView: View {
     var body: some View {
-        VStack {
-            Image("UCL_logo")
-                .resizable()
-                .aspectRatio( contentMode: .fit)
-                .frame(width: 200, height: 200)
-            Button {
+        NavigationView {
+            VStack {
+                Image("UCL_logo")
+                    .resizable()
+                    .aspectRatio( contentMode: .fit)
+                    .frame(width: 200, height: 200)
                 
-            } label: {
-                Text("+")
-                    .padding()
-                    .background(Color.gray)
-                    .clipShape(Circle())
-                    
+                NavigationLink {
+                    TeamListView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("+")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.gray)
+                        .clipShape(Circle())
+                }
+                Text("홈 팀을 추가하세요.")
             }
-            Text("홈 팀을 추가하세요.")
         }
     }
 }
