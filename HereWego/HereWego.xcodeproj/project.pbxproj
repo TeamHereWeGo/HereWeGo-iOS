@@ -70,7 +70,6 @@
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
 				F3249B08291972F700302D84 /* View */,
-				F3F40113291A7F67009D43B8 /* ViewModel */,
 				F3249AF72919725B00302D84 /* Assets.xcassets */,
 				F3249AF92919725B00302D84 /* Preview Content */,
 			);
@@ -106,13 +105,6 @@
 				F3249B12291973AE00302D84 /* TeamTitle.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F3F40113291A7F67009D43B8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
