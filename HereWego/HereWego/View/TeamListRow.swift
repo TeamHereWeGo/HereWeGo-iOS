@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TeamListRow: View {
+    @State private var isChecked = false
     var teamImage: String
     var teamName: String
     var rank: Int
@@ -32,8 +33,7 @@ struct TeamListRow: View {
                     Button {
                         
                     } label: {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
+                        FavoriteButton(isCheck: $isChecked)
                     }
                     Button {
                         
