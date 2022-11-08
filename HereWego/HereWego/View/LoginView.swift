@@ -65,7 +65,7 @@ struct LoginView: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             }
         } else {
-            AddHomeTeamView()
+            AddHomeTeamView(userName: self.$userName, password: self.$password)
         }
         
     }
