@@ -12,8 +12,7 @@ struct LoginView: View {
     @State private var password = ""
     @State private var loginSuccessful = false
     @State private var oauteChecked = false
-    private var tempUserName = "jmtkd9196"
-    private var tempPassword = "dlrudtn1234"
+    private var tempLoginData: [String: String] = ["jmtkd9196": "dlrudtn1234", "jae961217": "jaeyeon1234", "sukrrard97": "hyeonseok1234", "rurusu0704": "junyoung1234"]
     var body: some View {
         if !loginSuccessful {
             VStack {
@@ -36,9 +35,13 @@ struct LoginView: View {
                 Button {
                     print(userName)
                     print(password)
-                    if userName == tempUserName || password == tempPassword {
-                        loginSuccessful = true
+                    tempLoginData.forEach { loginData in
+                        print(loginData)
+                        if userName == loginData.key || password == loginData.value {
+                            loginSuccessful = true
+                        }
                     }
+                    
                 } label: {
                     Text("Login")
                         .padding()
