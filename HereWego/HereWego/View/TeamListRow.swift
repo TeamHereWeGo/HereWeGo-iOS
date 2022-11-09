@@ -42,7 +42,6 @@ struct TeamListRow: View {
                             .foregroundColor(.gray)
                             .padding(.trailing)
                     }
-                    
                 }
             }
         }
