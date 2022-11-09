@@ -11,6 +11,7 @@ struct LoginView: View {
     @State private var userName = ""
     @State private var password = ""
     @State private var loginSuccessful = false
+    @State private var oauteChecked = false
     private var tempUserName = "jmtkd9196"
     private var tempPassword = "dlrudtn1234"
     var body: some View {
@@ -55,8 +56,13 @@ struct LoginView: View {
                 }
                 HStack {
                     Text("Oauth 연동")
-                    Image(systemName: "checkmark.square")
+                    Button {
+                        oauteChecked.toggle()
+                    } label: {
+                        OauthCheckBox(isCheck: $oauteChecked)
+                    }
                 }
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             }
         } else {
             AddHomeTeamView()
