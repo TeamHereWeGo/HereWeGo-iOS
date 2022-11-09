@@ -37,7 +37,7 @@ struct LoginView: View {
                     print(password)
                     tempLoginData.forEach { loginData in
                         print(loginData)
-                        if userName == loginData.key || password == loginData.value {
+                        if userName == loginData.key && password == loginData.value {
                             loginSuccessful = true
                         }
                     }
