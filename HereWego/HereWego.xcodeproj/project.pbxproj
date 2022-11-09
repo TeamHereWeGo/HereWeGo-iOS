@@ -13,7 +13,6 @@
 		F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0C291973AE00302D84 /* TeamDetail.swift */; };
 		F3249B16291973AE00302D84 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0D291973AE00302D84 /* LoginView.swift */; };
 		F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */; };
-		F3249B18291973AE00302D84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B0F291973AE00302D84 /* ContentView.swift */; };
 		F3249B19291973AE00302D84 /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B10291973AE00302D84 /* ProfileUser.swift */; };
 		F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B11291973AE00302D84 /* TeamListView.swift */; };
 		F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B12291973AE00302D84 /* TeamTitle.swift */; };
@@ -30,7 +29,6 @@
 		F3249B0C291973AE00302D84 /* TeamDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamDetail.swift; sourceTree = "<group>"; };
 		F3249B0D291973AE00302D84 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddHomeTeamView.swift; sourceTree = "<group>"; };
-		F3249B0F291973AE00302D84 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../../temp/ContentView.swift; sourceTree = "<group>"; };
 		F3249B10291973AE00302D84 /* ProfileUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
 		F3249B11291973AE00302D84 /* TeamListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
 		F3249B12291973AE00302D84 /* TeamTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTitle.swift; sourceTree = "<group>"; };
@@ -72,7 +70,7 @@
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
 				F3249B08291972F700302D84 /* View */,
-				F3249B09291972FB00302D84 /* ViewModel */,
+				F3F40113291A7F67009D43B8 /* ViewModel */,
 				F3249AF72919725B00302D84 /* Assets.xcassets */,
 				F3249AF92919725B00302D84 /* Preview Content */,
 			);
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */,
-				F3249B0F291973AE00302D84 /* ContentView.swift */,
 				F3249B0D291973AE00302D84 /* LoginView.swift */,
 				F3249B10291973AE00302D84 /* ProfileUser.swift */,
 				F3249B13291973AE00302D84 /* SearchView.swift */,
@@ -111,7 +108,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F3249B09291972FB00302D84 /* ViewModel */ = {
+		F3F40113291A7F67009D43B8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -153,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3249AEB2919725A00302D84 /* Build configuration list for PBXProject "HereWeGo" */;
+			buildConfigurationList = F3249AEB2919725A00302D84 /* Build configuration list for PBXProject "HereWego" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,7 +188,6 @@
 				F3249B1F291973B900302D84 /* Team.swift in Sources */,
 				F3249B1C291973AE00302D84 /* SearchView.swift in Sources */,
 				F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */,
-				F3249B18291973AE00302D84 /* ContentView.swift in Sources */,
 				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
 				F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */,
@@ -380,7 +376,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3249AEB2919725A00302D84 /* Build configuration list for PBXProject "HereWeGo" */ = {
+		F3249AEB2919725A00302D84 /* Build configuration list for PBXProject "HereWego" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3249AFC2919725B00302D84 /* Debug */,

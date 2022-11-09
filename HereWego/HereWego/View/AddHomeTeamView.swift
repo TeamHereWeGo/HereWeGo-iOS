@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct AddHomeTeamView: View {
+    @State private var showingView = false
     var body: some View {
-        NavigationView {
-            VStack {
+        VStack {
+            if showingView {
+                TeamListView()
+            } else {
                 Image("UCL_logo")
                     .resizable()
                     .aspectRatio( contentMode: .fit)
                     .frame(width: 200, height: 200)
-                
-                NavigationLink {
-                    TeamListView()
-                        .navigationBarBackButtonHidden(true)
+
+                Button {
+                    showingView.toggle()
                 } label: {
                     Text("+")
                         .padding()
