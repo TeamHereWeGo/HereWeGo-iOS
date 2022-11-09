@@ -80,6 +80,7 @@ struct TeamListView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

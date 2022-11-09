@@ -9,28 +9,36 @@ import SwiftUI
 
 struct AddHomeTeamView: View {
     @State private var showingView = false
+    @State private var havingHomeTeam = false
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
-        VStack {
-            if showingView {
-                TeamListView(userName: self.$userName, password: self.$password)
-            } else {
-                Image("UCL_logo")
-                    .resizable()
-                    .aspectRatio( contentMode: .fit)
-                    .frame(width: 200, height: 200)
-
-                Button {
-                    showingView.toggle()
-                } label: {
-                    Text("+")
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.gray)
-                        .clipShape(Circle())
+        if havingHomeTeam {
+            TeamListView(userName: self.$userName, password: self.$password)
+        }
+        else {
+            NavigationStack {
+                VStack {
+                    Image("UCL_logo")
+                        .resizable()
+                        .aspectRatio( contentMode: .fit)
+                        .frame(width: 200, height: 200)
+                    NavigationLink {
+                        TeamListView(userName: self.$userName, password: self.$password)
+                    } label: {
+                        Text("+")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.gray)
+                            .clipShape(Circle())
+                    }
+                    Text("홈 팀을 추가하세요.")
                 }
-                Text("홈 팀을 추가하세요.")
+                .toolbar {
+                    ToolbarItem {
+                        ProfileButton(userName: $userName, password: $password)
+                    }
+                }
             }
         }
     }
