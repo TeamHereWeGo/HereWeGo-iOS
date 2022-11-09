@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State private var stack = NavigationPath()
     @State private var userName = ""
     @State private var password = ""
     @State private var loginSuccessful = false
+    @State private var showSignUp = false
     @State private var oauteChecked = false
     private var tempLoginData: [String: String] = ["jmtkd9196": "dlrudtn1234", "jae961217": "jaeyeon1234", "sukrrard97": "hyeonseok1234", "rurusu0704": "junyoung1234"]
     var body: some View {
         if !loginSuccessful {
-            NavigationStack {
-                
+            NavigationStack(path: $stack) {
                 VStack {
                     Spacer()
                     Image("UCL_logo")
@@ -43,7 +44,6 @@ struct LoginView: View {
                                 loginSuccessful = true
                             }
                         }
-                        
                     } label: {
                         Text("Login")
                             .padding()
@@ -53,11 +53,13 @@ struct LoginView: View {
                     }
                     Spacer()
                     Text("아이디/비밀번호 찾기")
-                    NavigationLink {
-                        SignUpView()
-                            .navigationBarTitleDisplayMode(.inline)
+                    Button {
+                        showSignUp.toggle()
                     } label: {
                         Text("회원가입")
+                    }
+                    .navigationDestination(isPresented: $showSignUp) {
+                        SignUpView(showSignUp: $showSignUp)
                     }
                     HStack {
                         Text("Oauth 연동")
@@ -68,13 +70,11 @@ struct LoginView: View {
                         }
                     }
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
-                    
                 }
             }
         } else {
             AddHomeTeamView(userName: self.$userName, password: self.$password)
         }
-        
     }
 }
 
