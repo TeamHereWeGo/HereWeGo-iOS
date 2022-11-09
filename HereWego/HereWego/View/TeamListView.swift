@@ -10,6 +10,8 @@ import SwiftUI
 struct TeamListView: View {
     @State private var showFavoriteOnly = false
     @State private var showingProfile = false
+    @Binding var userName: String
+    @Binding var password: String
     var body: some View {
         NavigationView {
             VStack {
@@ -80,7 +82,7 @@ struct TeamListView: View {
                     }
                 }
                 .sheet(isPresented: $showingProfile) {
-                    ProfileUser()
+                    ProfileUser(userName: self.$userName, password: self.$password)
                 }
             }
         }
@@ -89,11 +91,11 @@ struct TeamListView: View {
 
 struct TeamListView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamListView()
-        TeamListView()
+        TeamListView(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        TeamListView(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
             .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
             .previewDisplayName("iPad Pro (11-inch) (4th generation)")
-        TeamListView()
+        TeamListView(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
             .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
             .previewDisplayName("iPhone SE (3rd generation)")
     }

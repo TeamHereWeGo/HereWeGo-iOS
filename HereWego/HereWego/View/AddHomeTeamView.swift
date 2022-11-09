@@ -9,10 +9,12 @@ import SwiftUI
 
 struct AddHomeTeamView: View {
     @State private var showingView = false
+    @Binding var userName: String
+    @Binding var password: String
     var body: some View {
         VStack {
             if showingView {
-                TeamListView()
+                TeamListView(userName: self.$userName, password: self.$password)
             } else {
                 Image("UCL_logo")
                     .resizable()
@@ -36,6 +38,6 @@ struct AddHomeTeamView: View {
 
 struct AddHomeTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        AddHomeTeamView()
+        AddHomeTeamView(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
     }
 }
