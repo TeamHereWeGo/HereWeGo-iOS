@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var id: String = ""
-    @State var pw: String = ""
+    @State private var userName = ""
+    @State private var password = ""
+    @State private var loginSuccessful = false
+    private var tempUserName = "jmtkd9196"
+    private var tempPassword = "dlrudtn1234"
     var body: some View {
-        NavigationView {
-            
+        if !loginSuccessful {
             VStack {
                 Spacer()
                 Image("UCL_logo")
@@ -20,18 +22,22 @@ struct LoginView: View {
                     .aspectRatio( contentMode: .fit)
                     .frame(width: 200, height: 200)
                 Spacer()
-                TextField("ID", text: $id)
+                TextField("Username", text: $userName)
                     .padding()
                     .background(Color.gray)
                     .cornerRadius(5.0)
                     .padding(.horizontal, 20)
-                TextField("PW", text: $pw)
+                SecureField("Password", text: $password)
                     .padding()
                     .background(Color.gray)
                     .cornerRadius(5.0)
                     .padding(.horizontal, 20)
                 Button {
-                    
+                    print(userName)
+                    print(password)
+                    if userName == tempUserName || password == tempPassword {
+                        loginSuccessful = true
+                    }
                 } label: {
                     Text("Login")
                         .padding()
@@ -40,7 +46,6 @@ struct LoginView: View {
                         .padding(.horizontal, 20)
                 }
                 Spacer()
-                
                 Text("아이디/비밀번호 찾기")
                 NavigationLink {
                     SignUpView()
@@ -53,9 +58,10 @@ struct LoginView: View {
                     Image(systemName: "checkmark.square")
                 }
             }
-            
-            
+        } else {
+            AddHomeTeamView()
         }
+        
     }
 }
 
