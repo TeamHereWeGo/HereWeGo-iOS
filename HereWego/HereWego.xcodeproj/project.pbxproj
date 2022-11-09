@@ -19,6 +19,7 @@
 		F3249B1C291973AE00302D84 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B13291973AE00302D84 /* SearchView.swift */; };
 		F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B14291973AE00302D84 /* TeamListRow.swift */; };
 		F3249B1F291973B900302D84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B1E291973B900302D84 /* Team.swift */; };
+		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F3249B13291973AE00302D84 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
 		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */,
 				F3249B0D291973AE00302D84 /* LoginView.swift */,
+				F3F40115291A8DA6009D43B8 /* SignUpView.swift */,
 				F3249B10291973AE00302D84 /* ProfileUser.swift */,
 				F3249B13291973AE00302D84 /* SearchView.swift */,
 				F3249B0C291973AE00302D84 /* TeamDetail.swift */,
@@ -182,6 +185,7 @@
 				F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */,
 				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
+				F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */,
 				F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */,
 				F3249B19291973AE00302D84 /* ProfileUser.swift in Sources */,
 				F3249AF42919725A00302D84 /* HereWeGoApp.swift in Sources */,
