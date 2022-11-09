@@ -11,9 +11,8 @@ struct TeamListView: View {
     @State private var showFavoriteOnly = false
     @State private var showingProfile = false
     var body: some View {
-        
-        VStack {
-            NavigationView {
+        NavigationView {
+            VStack {
                 List {
                     SearchView()
                         .frame(height: 10)
