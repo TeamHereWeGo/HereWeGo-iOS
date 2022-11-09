@@ -74,15 +74,9 @@ struct TeamListView: View {
                 }
                 .navigationTitle("List")
                 .toolbar {
-                    Button {
-                        showingProfile.toggle()
-                    } label: {
-                        Label("User Profile", systemImage: "person.crop.circle")
-                            .foregroundColor(.black)
+                    ToolbarItem {
+                        ProfileButton(userName: $userName, password: $password)
                     }
-                }
-                .sheet(isPresented: $showingProfile) {
-                    ProfileUser(userName: self.$userName, password: self.$password)
                 }
             }
         }
