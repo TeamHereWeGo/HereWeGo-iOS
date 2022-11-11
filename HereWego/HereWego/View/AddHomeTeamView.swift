@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct AddHomeTeamView: View {
-    @State private var showingView = false
     @State private var havingHomeTeam = false
+    @State private var showingView = false
+    @Binding var loginSuccessful: Bool
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
-        if havingHomeTeam {
-            TeamListView(userName: self.$userName, password: self.$password)
-        }
-        else {
-            NavigationStack {
+        NavigationStack {
+            if havingHomeTeam {
+                TeamListView(loginSuccessful: self.$loginSuccessful, userName: self.$userName, password: self.$password)
+            }
+            else {
                 VStack {
                     Image("UCL_logo")
                         .resizable()
                         .aspectRatio( contentMode: .fit)
                         .frame(width: 200, height: 200)
                     NavigationLink {
-                        TeamListView(userName: self.$userName, password: self.$password)
+                        TeamListView(loginSuccessful: self.$loginSuccessful, userName: self.$userName, password: self.$password)
                     } label: {
                         Text("+")
                             .padding()
@@ -34,11 +35,12 @@ struct AddHomeTeamView: View {
                     }
                     Text("홈 팀을 추가하세요.")
                 }
-                .toolbar {
-                    ToolbarItem {
-                        ProfileButton(userName: $userName, password: $password)
-                    }
-                }
+            }
+        }
+        .toolbar {
+            ToolbarItem {
+                ProfileButton(loginSuccessful: $loginSuccessful, userName: $userName, password: $password)
+                
             }
         }
     }
@@ -46,6 +48,6 @@ struct AddHomeTeamView: View {
 
 struct AddHomeTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        AddHomeTeamView(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        AddHomeTeamView(loginSuccessful: .constant(false), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
     }
 }

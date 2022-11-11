@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileButton: View {
     @State private var showingProfile = false
+    @Binding var loginSuccessful: Bool
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
@@ -20,13 +21,13 @@ struct ProfileButton: View {
                 .labelStyle(.iconOnly)
         }
         .sheet(isPresented: $showingProfile) {
-            ProfileUser(userName: self.$userName, password: self.$password)
+            ProfileUser(loginSuccessful: $loginSuccessful, userName: self.$userName, password: self.$password)
         }
     }
 }
 
 struct ProfileButton_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileButton(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        ProfileButton(loginSuccessful: .constant(true),userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
     }
 }
