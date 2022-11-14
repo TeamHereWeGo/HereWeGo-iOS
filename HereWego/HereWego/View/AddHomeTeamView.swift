@@ -24,7 +24,7 @@ struct AddHomeTeamView: View {
                         .aspectRatio( contentMode: .fit)
                         .frame(width: 200, height: 200)
                     NavigationLink {
-                        TeamListView(userName: self.$userName, password: self.$password)
+                        TeamListView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
                     } label: {
                         Text("+")
                             .padding()
@@ -34,11 +34,12 @@ struct AddHomeTeamView: View {
                     }
                     Text("홈 팀을 추가하세요.")
                 }
-                .toolbar {
-                    ToolbarItem {
-                        ProfileButton(userName: $userName, password: $password)
-                    }
-                }
+            }
+        }
+        .toolbar {
+            ToolbarItem {
+                ProfileButton(isLogined: $isLogined, userName: $userName, password: $password)
+                
             }
         }
     }
@@ -46,6 +47,6 @@ struct AddHomeTeamView: View {
 
 struct AddHomeTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        AddHomeTeamView(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        AddHomeTeamView(isLogined: .constant(false), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
     }
 }

@@ -22,6 +22,7 @@
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
 		F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */; };
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
+		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
 		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
+		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F3249B1E291973B900302D84 /* Team.swift */,
+				F3DA8C89291E420D007CB553 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
 				F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */,
 				F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */,
+				F3DA8C8A291E420D007CB553 /* User.swift in Sources */,
 				F3249B19291973AE00302D84 /* ProfileUser.swift in Sources */,
 				F3249AF42919725A00302D84 /* HereWeGoApp.swift in Sources */,
 				F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */,

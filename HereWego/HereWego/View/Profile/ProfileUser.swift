@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileUser: View {
+    @Binding var isLogined: Bool
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
@@ -27,6 +28,7 @@ struct ProfileUser: View {
             Button {
                 self.userName = ""
                 self.password = ""
+                self.isLogined = false
             } label: {
                 Text("로그아웃")
             }
@@ -38,6 +40,6 @@ struct ProfileUser: View {
 
 struct ProfileUser_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileUser(userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        ProfileUser(isLogined: .constant(true),userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
     }
 }

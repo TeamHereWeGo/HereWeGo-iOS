@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @Binding var showSignUp: Bool
+    @Binding var showsSignUp: Bool
     @State private var userName = ""
     @State private var userNameEmptyCheck = true
     @State private var userNameDuplicationCheck = true
@@ -118,7 +118,7 @@ struct SignUpView: View {
                             if (userName != "" && password != "" && passwordReEnter != "" && firstName != "" && lastName != "") && userNameEmptyCheck && userNameDuplicationCheck && passwordEmptyCheck && passwordSameCheck && nameEmptyCheck {
                                 validAllVariables = true
                                 notValidAllVariables = false
-                                showSignUp = false
+                                showsSignUp = false
                             } else {
                                 validAllVariables = false
                                 notValidAllVariables = true
@@ -144,6 +144,6 @@ struct SignUpView: View {
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView(showSignUp: .constant(true))
+        SignUpView(showsSignUp: .constant(true))
     }
 }
