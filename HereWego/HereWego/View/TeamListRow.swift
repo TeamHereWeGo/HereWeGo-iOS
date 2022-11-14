@@ -33,7 +33,7 @@ struct TeamListRow: View {
                     Button {
                         
                     } label: {
-                        FavoriteButton(isCheck: $isChecked)
+                        FavoriteButton(isChecked: $isChecked)
                     }
                     Button {
                         

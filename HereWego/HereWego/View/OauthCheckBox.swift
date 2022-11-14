@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct OauthCheckBox: View {
-    @Binding var isCheck: Bool
+    @Binding var isChecked: Bool
     var body: some View {
         Button {
-            isCheck.toggle()
+            isChecked.toggle()
         } label: {
-            Label("Toggle Oauth", systemImage: isCheck ? "checkmark.square" : "square")
+            Label("Toggle Oauth", systemImage: isChecked ? "checkmark.square" : "square")
                 .labelStyle(.iconOnly)
         }
     }
@@ -21,6 +21,6 @@ struct OauthCheckBox: View {
 
 struct OauthCheckBox_Previews: PreviewProvider {
     static var previews: some View {
-        OauthCheckBox(isCheck: .constant(true))
+        OauthCheckBox(isChecked: .constant(true))
     }
 }

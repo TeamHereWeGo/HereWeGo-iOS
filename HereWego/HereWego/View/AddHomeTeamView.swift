@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct AddHomeTeamView: View {
-    @State private var havingHomeTeam = false
     @State private var showingView = false
-    @Binding var loginSuccessful: Bool
+    @State private var hasHomeTeam = false
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
-        NavigationStack {
-            if havingHomeTeam {
-                TeamListView(loginSuccessful: self.$loginSuccessful, userName: self.$userName, password: self.$password)
-            }
-            else {
+        if hasHomeTeam {
+            TeamListView(userName: self.$userName, password: self.$password)
+        }
+        else {
+            NavigationStack {
                 VStack {
                     Image("UCL_logo")
                         .resizable()
                         .aspectRatio( contentMode: .fit)
                         .frame(width: 200, height: 200)
                     NavigationLink {
-                        TeamListView(loginSuccessful: self.$loginSuccessful, userName: self.$userName, password: self.$password)
+                        TeamListView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
                     } label: {
                         Text("+")
                             .padding()
@@ -39,7 +38,7 @@ struct AddHomeTeamView: View {
         }
         .toolbar {
             ToolbarItem {
-                ProfileButton(loginSuccessful: $loginSuccessful, userName: $userName, password: $password)
+                ProfileButton(isLogined: $isLogined, userName: $userName, password: $password)
                 
             }
         }
@@ -48,6 +47,6 @@ struct AddHomeTeamView: View {
 
 struct AddHomeTeamView_Previews: PreviewProvider {
     static var previews: some View {
-        AddHomeTeamView(loginSuccessful: .constant(false), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        AddHomeTeamView(isLogined: .constant(false), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
     }
 }

@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @Binding var isCheck: Bool
+    @Binding var isChecked: Bool
     var body: some View {
         Button {
-            isCheck.toggle()
+            isChecked.toggle()
         } label: {
-            Label("Toggle Oauth", systemImage: isCheck ? "star.fill" : "star")
+            Label("Toggle Oauth", systemImage: isChecked ? "star.fill" : "star")
                 .labelStyle(.iconOnly)
-                .foregroundColor(isCheck ? .yellow : .gray)
+                .foregroundColor(isChecked ? .yellow : .gray)
         }
     }
 }
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(isCheck: .constant(true))
+        FavoriteButton(isChecked: .constant(true))
     }
 }

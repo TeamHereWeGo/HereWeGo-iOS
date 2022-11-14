@@ -11,7 +11,7 @@ struct LoginView: View {
     @State private var stack = NavigationPath()
     @State private var userName = ""
     @State private var password = ""
-    @State private var loginSuccessful = false
+    @State private var isLogined = false
     @State private var showSignUp = false
     @State private var oauteChecked = false
     private var tempLoginData: [String: String] = ["jmtkd9196": "dlrudtn1234", "jae961217": "jaeyeon1234", "sukrrard97": "hyeonseok1234", "rurusu0704": "junyoung1234"]
@@ -40,7 +40,7 @@ struct LoginView: View {
                     tempLoginData.forEach { loginData in
                         print(loginData)
                         if userName == loginData.key && password == loginData.value {
-                            loginSuccessful = true
+                            isLogined = true
                         }
                     }
                 } label: {
@@ -50,8 +50,8 @@ struct LoginView: View {
                         .cornerRadius(5.0)
                         .padding(.horizontal, 20)
                 }
-                .navigationDestination(isPresented: $loginSuccessful) {
-                    AddHomeTeamView(loginSuccessful: self.$loginSuccessful, userName: self.$userName, password: self.$password)
+                .navigationDestination(isPresented: $isLogined) {
+                    AddHomeTeamView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
                 }
                 Spacer()
                 Text("아이디/비밀번호 찾기")
@@ -61,14 +61,14 @@ struct LoginView: View {
                     Text("회원가입")
                 }
                 .navigationDestination(isPresented: $showSignUp) {
-                    SignUpView(showSignUp: $showSignUp)
+                    SignUpView(showsSignUp: $showSignUp)
                 }
                 HStack {
                     Text("Oauth 연동")
                     Button {
                         oauteChecked.toggle()
                     } label: {
-                        OauthCheckBox(isCheck: $oauteChecked)
+                        OauthCheckBox(isChecked: $oauteChecked)
                     }
                 }
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))

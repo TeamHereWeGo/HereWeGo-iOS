@@ -10,7 +10,7 @@ import SwiftUI
 struct TeamListView: View {
     @State private var showFavoriteOnly = false
     @State private var showingProfile = false
-    @Binding var loginSuccessful: Bool
+    @Binding var isLogined: Bool
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
@@ -76,7 +76,7 @@ struct TeamListView: View {
                 .navigationTitle("List")
                 .toolbar {
                     ToolbarItem {
-                        ProfileButton(loginSuccessful: $loginSuccessful, userName: $userName, password: $password)
+                        ProfileButton(isLogined: $isLogined, userName: $userName, password: $password)
                     }
                 }
             }
@@ -87,11 +87,11 @@ struct TeamListView: View {
 
 struct TeamListView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamListView(loginSuccessful: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
-        TeamListView(loginSuccessful: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
             .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
             .previewDisplayName("iPad Pro (11-inch) (4th generation)")
-        TeamListView(loginSuccessful: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
             .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
             .previewDisplayName("iPhone SE (3rd generation)")
     }
