@@ -9,11 +9,11 @@ import SwiftUI
 
 struct AddHomeTeamView: View {
     @State private var showingView = false
-    @State private var havingHomeTeam = false
+    @State private var hasHomeTeam = false
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
-        if havingHomeTeam {
+        if hasHomeTeam {
             TeamListView(userName: self.$userName, password: self.$password)
         }
         else {
