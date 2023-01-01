@@ -20,6 +20,7 @@
 		F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B14291973AE00302D84 /* TeamListRow.swift */; };
 		F3249B1F291973B900302D84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B1E291973B900302D84 /* Team.swift */; };
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
+		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
 		F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */; };
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
 		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
@@ -41,6 +42,7 @@
 		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
 		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
+		F387BF202955BF88008E3877 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = HereWego/View/Login/LoginButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
 		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
@@ -106,9 +108,9 @@
 		F3249B08291972F700302D84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F387BF1F2955BDF4008E3877 /* Login */,
 				F39AD9D9291B913D00EDCC82 /* Profile */,
 				F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */,
-				F3249B0D291973AE00302D84 /* LoginView.swift */,
 				F3F40115291A8DA6009D43B8 /* SignUpView.swift */,
 				F3249B13291973AE00302D84 /* SearchView.swift */,
 				F3249B0C291973AE00302D84 /* TeamDetail.swift */,
@@ -119,6 +121,15 @@
 				F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F387BF1F2955BDF4008E3877 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F3249B0D291973AE00302D84 /* LoginView.swift */,
+				F387BF202955BF88008E3877 /* LoginButton.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		F39AD9D9291B913D00EDCC82 /* Profile */ = {
@@ -214,6 +225,7 @@
 				F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */,
 				F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */,
 				F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */,
+				F387BF212955BF88008E3877 /* LoginButton.swift in Sources */,
 				F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
