@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginButton: View {
+    let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
     var body: some View {
         VStack {

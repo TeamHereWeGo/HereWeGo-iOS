@@ -42,6 +42,7 @@
 		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
 		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
+		F37FDF9129658533008D7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F387BF202955BF88008E3877 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = HereWego/View/Login/LoginButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
@@ -79,6 +80,7 @@
 		F3249AF22919725A00302D84 /* HereWeGo */ = {
 			isa = PBXGroup;
 			children = (
+				F37FDF9129658533008D7BF2 /* Info.plist */,
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
 				F3249B08291972F700302D84 /* View */,
@@ -358,6 +360,7 @@
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HereWeGo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -387,6 +390,7 @@
 				DEVELOPMENT_TEAM = U5F437QJA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HereWeGo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
