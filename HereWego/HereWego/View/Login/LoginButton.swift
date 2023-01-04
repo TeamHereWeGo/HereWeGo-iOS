@@ -16,6 +16,17 @@ struct LoginButton: View {
                 .resizable()
                 .aspectRatio( contentMode: .fit)
                 .frame(width: 200, height: 200)
+            Link(destination: url!, label: {
+                HStack {
+                    Spacer()
+                    Text("구글")
+                    Spacer()
+                }
+                .padding()
+                .background(Color.gray)
+                .foregroundColor(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
+            })
             Button {
                 
             } label: {
@@ -65,7 +76,8 @@ struct LoginButton: View {
                 }
             }
    
-        }
+        }//VStack
+        .padding()
     }
 }
 
