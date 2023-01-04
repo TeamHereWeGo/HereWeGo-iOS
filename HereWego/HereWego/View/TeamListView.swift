@@ -73,7 +73,7 @@ struct TeamListView: View {
                         TeamListRow(teamImage: "LeisterCity_logo", teamName: "Leister City", rank: 3)
                     }
                 }
-                .navigationTitle("List")
+                .navigationTitle("Search")
                 .toolbar {
                     ToolbarItem {
                         ProfileButton(isLogined: $isLogined, userName: $userName, password: $password)

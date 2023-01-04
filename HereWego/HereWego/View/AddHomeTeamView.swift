@@ -10,14 +10,15 @@ import SwiftUI
 struct AddHomeTeamView: View {
     @State private var showingView = false
     @State private var hasHomeTeam = false
+    @Binding var isLogined: Bool
     @Binding var userName: String
     @Binding var password: String
     var body: some View {
-        if hasHomeTeam {
-            TeamListView(userName: self.$userName, password: self.$password)
-        }
-        else {
-            NavigationStack {
+        NavigationStack {
+            if hasHomeTeam {
+                TeamListView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
+            }
+            else {
                 VStack {
                     Image("UCL_logo")
                         .resizable()
