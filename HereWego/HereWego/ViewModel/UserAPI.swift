@@ -9,7 +9,8 @@ import SwiftUI
 
 class UserAPI: ObservableObject {
     func fetch() {
-        guard let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users") else {
+        // 임시로 JSON 리다이렉트 url 직접 대입.(나중에 수정 예정)
+        guard let url = URL(string: "http://hwgapp.com/v1/users?authorization=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqbXRrZDkxOTZAZ21haWwuY29tIiwicm9sZSI6IlJPTEVfVVNFUiIsImlzcyI6ImRlYnJhaW5zIiwiaWF0IjoxNjczMDc2MzIwLCJleHAiOjE2NzMwNzk5MjB9.MNSr3ubhmC4yuuggzNzSY3itBM_z_Dl0bLaLnE4pZtLEeuVQpTkfI9lcWNsLpTgwJjpf_1Xw-W6qhbm2OMej8A") else {
             return
         }
         
@@ -24,7 +25,7 @@ class UserAPI: ObservableObject {
                 do {
                     let json = try JSONSerialization.jsonObject(with: dataJson, options: [])
                     print("- DATA -")
-                    print(data)
+                    print(json)
                 } catch {
                     // code
                     // Test

@@ -82,11 +82,11 @@
 		F3249AF22919725A00302D84 /* HereWeGo */ = {
 			isa = PBXGroup;
 			children = (
-				F37FDF95296609E4008D7BF2 /* ViewModel */,
-				F37FDF9129658533008D7BF2 /* Info.plist */,
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
 				F3249B08291972F700302D84 /* View */,
+				F37FDF95296609E4008D7BF2 /* ViewModel */,
+				F37FDF9129658533008D7BF2 /* Info.plist */,
 				F3249AF72919725B00302D84 /* Assets.xcassets */,
 				F3249AF92919725B00302D84 /* Preview Content */,
 			);
