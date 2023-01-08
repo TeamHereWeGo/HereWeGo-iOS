@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginButton: View {
+    // Test
+    var viewModel: UserAPI = UserAPI()
+    
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
     var body: some View {
@@ -16,10 +19,13 @@ struct LoginButton: View {
                 .resizable()
                 .aspectRatio( contentMode: .fit)
                 .frame(width: 200, height: 200)
+            Link(destination: URL(string: "https://media.api-sports.io/football/leagues/39.png")!, label: {
+                Text("TEST Image(https)")
+            })
             Link(destination: url!, label: {
                 HStack {
                     Spacer()
-                    Text("구글")
+                    Text("직접 링크 넣기")
                     Spacer()
                 }
                 .padding()
@@ -27,11 +33,13 @@ struct LoginButton: View {
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 5))
             })
+            
             Button {
-                
+                // Test
+                viewModel.fetch()
             } label: {
                 HStack{
-                    Text("구글로 로그인")
+                    Text("viewModel.fetch()")
                         .foregroundColor(Color.white)
                         .bold()
                         .frame(width: 300, height: 50)
@@ -83,6 +91,6 @@ struct LoginButton: View {
 
 struct LoginButton_Previews: PreviewProvider {
     static var previews: some View {
-        LoginButton(provider: "네이버")
+        LoginButton(provider: "구글")
     }
 }
