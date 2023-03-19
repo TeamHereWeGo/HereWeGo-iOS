@@ -24,6 +24,7 @@
 		F35A540F29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35A540E29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */; };
 		F35A541129C70D3D00E4446A /* GoogleAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */; };
 		F35A541329C70D4800E4446A /* UserAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541229C70D4800E4446A /* UserAPIViewModel.swift */; };
+		F35A541529C70DDF00E4446A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541429C70DDF00E4446A /* AppDelegate.swift */; };
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
 		F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FDF96296609F0008D7BF2 /* UserAPI.swift */; };
 		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
@@ -50,6 +51,7 @@
 		F35A540E29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoogleAPIViewModel.swift; path = HereWego/ViewModel/GoogleAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F35A541229C70D4800E4446A /* UserAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPIViewModel.swift; path = HereWego/ViewModel/UserAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
+		F35A541429C70DDF00E4446A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HereWego/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
 		F37FDF9129658533008D7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F37FDF96296609F0008D7BF2 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = HereWego/ViewModel/UserAPI.swift; sourceTree = SOURCE_ROOT; };
@@ -100,6 +102,7 @@
 				F37FDF9129658533008D7BF2 /* Info.plist */,
 				F3249AF72919725B00302D84 /* Assets.xcassets */,
 				F3249AF92919725B00302D84 /* Preview Content */,
+				F35A541429C70DDF00E4446A /* AppDelegate.swift */,
 			);
 			path = HereWeGo;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */,
 				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
+				F35A541529C70DDF00E4446A /* AppDelegate.swift in Sources */,
 				F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */,
 				F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */,
 				F3DA8C8A291E420D007CB553 /* User.swift in Sources */,

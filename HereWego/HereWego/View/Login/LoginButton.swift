@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import GoogleSignInSwift
+import GoogleSignIn
 
 struct LoginButton: View {
     // Test
     var viewModel: UserAPI = UserAPI()
+    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
+    @StateObject var googleAPIViewModel: GoogleAPIViewModel = .init()
+    
     
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
@@ -83,6 +88,7 @@ struct LoginButton: View {
                         .cornerRadius(5.0)
                 }
             }
+            GoogleSignInButton(action: googleAPIViewModel.handleSignInButton)
    
         }//VStack
         .padding()
