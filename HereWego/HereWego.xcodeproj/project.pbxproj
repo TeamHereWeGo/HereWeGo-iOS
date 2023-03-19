@@ -26,6 +26,7 @@
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
 		F3C3B04D29C6FFDD00D8FD88 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F3C3B04C29C6FFDD00D8FD88 /* GoogleSignIn */; };
 		F3C3B04F29C6FFDD00D8FD88 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3C3B04E29C6FFDD00D8FD88 /* GoogleSignInSwift */; };
+		F3C3B05129C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C3B05029C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */; };
 		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
 		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		F387BF202955BF88008E3877 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = HereWego/View/Login/LoginButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
+		F3C3B05029C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist"; path = "HereWego/client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist"; sourceTree = SOURCE_ROOT; };
 		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				F37FDF9129658533008D7BF2 /* Info.plist */,
 				F3249AF72919725B00302D84 /* Assets.xcassets */,
 				F3249AF92919725B00302D84 /* Preview Content */,
+				F3C3B05029C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */,
 			);
 			path = HereWeGo;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				F3249AFB2919725B00302D84 /* Preview Assets.xcassets in Resources */,
 				F3249AF82919725B00302D84 /* Assets.xcassets in Resources */,
+				F3C3B05129C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
