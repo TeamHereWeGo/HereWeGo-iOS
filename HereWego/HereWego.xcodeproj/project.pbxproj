@@ -19,6 +19,7 @@
 		F3249B1C291973AE00302D84 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B13291973AE00302D84 /* SearchView.swift */; };
 		F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B14291973AE00302D84 /* TeamListRow.swift */; };
 		F3249B1F291973B900302D84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B1E291973B900302D84 /* Team.swift */; };
+		F35A540829C7042900E4446A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A540729C7042900E4446A /* AppDelegate.swift */; };
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
 		F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FDF96296609F0008D7BF2 /* UserAPI.swift */; };
 		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
@@ -47,6 +48,7 @@
 		F3249B13291973AE00302D84 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
 		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		F35A540729C7042900E4446A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HereWego/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
 		F37FDF9129658533008D7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F37FDF96296609F0008D7BF2 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = HereWego/ViewModel/UserAPI.swift; sourceTree = SOURCE_ROOT; };
@@ -100,6 +102,7 @@
 				F3249AF72919725B00302D84 /* Assets.xcassets */,
 				F3249AF92919725B00302D84 /* Preview Content */,
 				F3C3B05029C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */,
+				F35A540729C7042900E4446A /* AppDelegate.swift */,
 			);
 			path = HereWeGo;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */,
 				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
+				F35A540829C7042900E4446A /* AppDelegate.swift in Sources */,
 				F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */,
 				F3249B1B291973AE00302D84 /* TeamTitle.swift in Sources */,
 				F3DA8C8A291E420D007CB553 /* User.swift in Sources */,
