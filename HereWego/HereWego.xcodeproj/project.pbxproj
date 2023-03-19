@@ -27,6 +27,8 @@
 		F3C3B04D29C6FFDD00D8FD88 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F3C3B04C29C6FFDD00D8FD88 /* GoogleSignIn */; };
 		F3C3B04F29C6FFDD00D8FD88 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F3C3B04E29C6FFDD00D8FD88 /* GoogleSignInSwift */; };
 		F3C3B05129C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3C3B05029C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */; };
+		F3C3B05329C7033600D8FD88 /* UserAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3B05229C7033600D8FD88 /* UserAPIViewModel.swift */; };
+		F3C3B05529C7034900D8FD88 /* GoogleAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3B05429C7034900D8FD88 /* GoogleAPIViewModel.swift */; };
 		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
 		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,8 @@
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
 		F3C3B05029C7019B00D8FD88 /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist"; path = "HereWego/client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist"; sourceTree = SOURCE_ROOT; };
+		F3C3B05229C7033600D8FD88 /* UserAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPIViewModel.swift; path = HereWego/ViewModel/UserAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
+		F3C3B05429C7034900D8FD88 /* GoogleAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoogleAPIViewModel.swift; path = HereWego/ViewModel/GoogleAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -139,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				F37FDF96296609F0008D7BF2 /* UserAPI.swift */,
+				F3C3B05229C7033600D8FD88 /* UserAPIViewModel.swift */,
+				F3C3B05429C7034900D8FD88 /* GoogleAPIViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				F3249B1C291973AE00302D84 /* SearchView.swift in Sources */,
 				F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */,
 				F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */,
+				F3C3B05329C7033600D8FD88 /* UserAPIViewModel.swift in Sources */,
 				F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */,
 				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
@@ -253,6 +260,7 @@
 				F3249AF42919725A00302D84 /* HereWeGoApp.swift in Sources */,
 				F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */,
 				F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */,
+				F3C3B05529C7034900D8FD88 /* GoogleAPIViewModel.swift in Sources */,
 				F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */,
 				F387BF212955BF88008E3877 /* LoginButton.swift in Sources */,
 				F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */,
