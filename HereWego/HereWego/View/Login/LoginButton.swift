@@ -20,13 +20,14 @@ struct LoginButton: View {
     var provider : String
     var body: some View {
         if googleAPIViewModel.isLogined {
-            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
-            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
-            Button {
-                googleAPIViewModel.isLogined.toggle()
-            } label: {
-                Text("Log out")
-            }
+//            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
+//            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
+//            Button {
+//                googleAPIViewModel.isLogined.toggle()
+//            } label: {
+//                Text("Log out")
+//            }
+            TeamDetail(teamImage: "https://media-2.api-sports.io/football/teams/33.png", teamName: "Manchester United", league: "Manchester United")
         } else {
             VStack {
                 Image("UCL_logo")
