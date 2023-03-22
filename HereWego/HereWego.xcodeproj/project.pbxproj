@@ -21,12 +21,12 @@
 		F3249B1F291973B900302D84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B1E291973B900302D84 /* Team.swift */; };
 		F35A540B29C70B9F00E4446A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F35A540A29C70B9F00E4446A /* GoogleSignIn */; };
 		F35A540D29C70B9F00E4446A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F35A540C29C70B9F00E4446A /* GoogleSignInSwift */; };
-		F35A540F29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F35A540E29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */; };
 		F35A541129C70D3D00E4446A /* GoogleAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */; };
 		F35A541329C70D4800E4446A /* UserAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541229C70D4800E4446A /* UserAPIViewModel.swift */; };
 		F35A541529C70DDF00E4446A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541429C70DDF00E4446A /* AppDelegate.swift */; };
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
 		F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FDF96296609F0008D7BF2 /* UserAPI.swift */; };
+		F386FDBA29CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */; };
 		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
 		F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */; };
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
@@ -48,13 +48,13 @@
 		F3249B13291973AE00302D84 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
 		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		F35A540E29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoogleAPIViewModel.swift; path = HereWego/ViewModel/GoogleAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F35A541229C70D4800E4446A /* UserAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPIViewModel.swift; path = HereWego/ViewModel/UserAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F35A541429C70DDF00E4446A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HereWego/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
 		F37FDF9129658533008D7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F37FDF96296609F0008D7BF2 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = HereWego/ViewModel/UserAPI.swift; sourceTree = SOURCE_ROOT; };
+		F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		F387BF202955BF88008E3877 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = HereWego/View/Login/LoginButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
@@ -94,7 +94,7 @@
 		F3249AF22919725A00302D84 /* HereWeGo */ = {
 			isa = PBXGroup;
 			children = (
-				F35A540E29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist */,
+				F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */,
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
 				F3249B08291972F700302D84 /* View */,
@@ -237,7 +237,7 @@
 			files = (
 				F3249AFB2919725B00302D84 /* Preview Assets.xcassets in Resources */,
 				F3249AF82919725B00302D84 /* Assets.xcassets in Resources */,
-				F35A540F29C70C1100E4446A /* client_615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com.plist in Resources */,
+				F386FDBA29CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
