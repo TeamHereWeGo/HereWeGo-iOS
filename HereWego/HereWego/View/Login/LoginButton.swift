@@ -19,79 +19,90 @@ struct LoginButton: View {
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
     var body: some View {
-        VStack {
-            Image("UCL_logo")
-                .resizable()
-                .aspectRatio( contentMode: .fit)
-                .frame(width: 200, height: 200)
-            Link(destination: URL(string: "https://media.api-sports.io/football/leagues/39.png")!, label: {
-                Text("TEST Image(https)")
-            })
-            Link(destination: url!, label: {
-                HStack {
-                    Spacer()
-                    Text("직접 링크 넣기")
-                    Spacer()
-                }
-                .padding()
-                .background(Color.gray)
-                .foregroundColor(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 5))
-            })
-            
+        if googleAPIViewModel.isLogined {
+            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
+            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
             Button {
-                // Test
-                viewModel.fetch()
+                googleAPIViewModel.isLogined.toggle()
             } label: {
-                HStack{
-                    Text("viewModel.fetch()")
-                        .foregroundColor(Color.white)
-                        .bold()
-                        .frame(width: 300, height: 50)
-                        .background(Color.gray)
-                        .cornerRadius(5.0)
-                }
+                Text("Log out")
             }
-            Button {
-                
-            } label: {
-                HStack{
-                    Text(provider + "로 로그인")
-                        .foregroundColor(Color.white)
-                        .bold()
-                        .frame(width: 300, height: 50)
-                        .background(Color.green)
-                        .cornerRadius(5.0)
-                }
-            }
-            Button {
-                
-            } label: {
-                HStack{
-                    Text("깃허브로 로그인")
-                        .foregroundColor(Color.white)
-                        .bold()
-                        .frame(width: 300, height: 50)
-                        .background(Color.black)
-                        .cornerRadius(5.0)
-                }
-            }
-            Button {
-                
-            } label: {
-                HStack{
-                    Text("카카오로 로그인")
-                        .foregroundColor(Color.white)
-                        .bold()
-                        .frame(width: 300, height: 50)
-                        .background(Color.yellow)
-                        .cornerRadius(5.0)
-                }
-            }
-            GoogleSignInButton(action: googleAPIViewModel.handleSignInButton)
-   
-        }//VStack
-        .padding()
+        } else {
+            VStack {
+                Image("UCL_logo")
+                    .resizable()
+                    .aspectRatio( contentMode: .fit)
+                    .frame(width: 200, height: 200)
+//                Link(destination: URL(string: "https://media.api-sports.io/football/leagues/39.png")!, label: {
+//                    Text("TEST Image(https)")
+//                })
+//                Link(destination: url!, label: {
+//                    HStack {
+//                        Spacer()
+//                        Text("직접 링크 넣기")
+//                        Spacer()
+//                    }
+//                    .padding()
+//                    .background(Color.gray)
+//                    .foregroundColor(.white)
+//                    .clipShape(RoundedRectangle(cornerRadius: 5))
+//                })
+//
+//                Button {
+//                    // Test
+//                    viewModel.fetch()
+//                } label: {
+//                    HStack{
+//                        Text("viewModel.fetch()")
+//                            .foregroundColor(Color.white)
+//                            .bold()
+//                            .frame(width: 300, height: 50)
+//                            .background(Color.gray)
+//                            .cornerRadius(5.0)
+//                    }
+//                }
+//                Button {
+//
+//                } label: {
+//                    HStack{
+//                        Text(provider + "로 로그인")
+//                            .foregroundColor(Color.white)
+//                            .bold()
+//                            .frame(width: 300, height: 50)
+//                            .background(Color.green)
+//                            .cornerRadius(5.0)
+//                    }
+//                }
+//                Button {
+//
+//                } label: {
+//                    HStack{
+//                        Text("깃허브로 로그인")
+//                            .foregroundColor(Color.white)
+//                            .bold()
+//                            .frame(width: 300, height: 50)
+//                            .background(Color.black)
+//                            .cornerRadius(5.0)
+//                    }
+//                }
+//                Button {
+//
+//                } label: {
+//                    HStack{
+//                        Text("카카오로 로그인")
+//                            .foregroundColor(Color.white)
+//                            .bold()
+//                            .frame(width: 300, height: 50)
+//                            .background(Color.yellow)
+//                            .cornerRadius(5.0)
+//                    }
+//                }
+                GoogleSignInButton(action: googleAPIViewModel.handleSignInButton)
+       
+            }//VStack
+            .padding()
+        }
+        
     }
 }
 
