@@ -80,7 +80,7 @@ class GoogleAPIViewModel: ObservableObject {
                 DispatchQueue.main.async { [weak self] in
                     print(self?.message)
                     //                self.message = data as! String
-                    self?.user.userAPIData = User.UserAPIData(data as! UserAPIViewModel.Responses.UserAPIData)
+                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
                     print(self?.user)
                     if result {
                         self?.message = "로그인 성공"

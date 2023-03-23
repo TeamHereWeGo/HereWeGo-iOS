@@ -145,7 +145,7 @@ class UserAPIViewModel: ObservableObject {
             
             // 3. GoogleAPIViewModel에서 userAPIViewModel에 호출한 지점에 completionHandler를 통해 결과 값을 넘겨주기 위해 Dictionary 형식으로 데이터 변경
             
-            let userAPIData = Responses.UserAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+            let userAPIData = Responses.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
             
             // 4. 함수가 모두 종료 시 실행되는 핸들러 -> GoogleAPIViewModel로 결과 값 리턴
             completionHandler(true, userAPIData)
@@ -172,7 +172,7 @@ class UserAPIViewModel: ObservableObject {
 
 extension UserAPIViewModel {
     struct Responses: Codable {
-        struct UserAPIData: Codable {
+        struct JoinAPIData: Codable {
             let jwtAccessToken: String
             let jwtRefreshToken: String
             let userId: String

@@ -13,13 +13,13 @@ struct LoginButton: View {
     // Test
     var viewModel: UserAPI = UserAPI()
 //    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
-    @EnvironmentObject var googleAPIViewModel: GoogleAPIViewModel
+    @EnvironmentObject var userInfo: GoogleAPIViewModel
     
     
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
     var body: some View {
-        if googleAPIViewModel.isLogined {
+        if userInfo.isLogined {
 //            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
 //            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
 //            Button {
@@ -98,7 +98,7 @@ struct LoginButton: View {
 //                            .cornerRadius(5.0)
 //                    }
 //                }
-                GoogleSignInButton(action: googleAPIViewModel.handleSignInButton)
+                GoogleSignInButton(action: userInfo.handleSignInButton)
        
             }//VStack
             .padding()

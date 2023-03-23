@@ -9,7 +9,7 @@ import Foundation
 
 struct User: Codable {
     var googleAPIData: GoogleAPIData?
-    var userAPIData: UserAPIData?
+    var userAPIData: JoinAPIData?
     
 }
 
@@ -42,21 +42,30 @@ extension User {
         //        }
     }
     
-    struct UserAPIData: Codable {
+    struct JoinAPIData: Codable {
         var jwtAccessToken: String?
         var jwtRefreshToken: String?
         var userId: String?
         
-        init(_ userAPIData: UserAPIViewModel.Responses.UserAPIData) {
-            jwtAccessToken = userAPIData.jwtAccessToken
-            jwtRefreshToken = userAPIData.jwtRefreshToken
-            userId = userAPIData.userId
+        init(_ joinAPIData: UserAPIViewModel.Responses.JoinAPIData) {
+            jwtAccessToken = joinAPIData.jwtAccessToken
+            jwtRefreshToken = joinAPIData.jwtRefreshToken
+            userId = joinAPIData.userId
         }
         
         //        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
         //
         //        }
     }
+    
+//    struct TeamAPIData: Codable {
+//        var email: String?
+//        var favorites: [String]?
+//        var gameUnit: [Int]?
+//
+//        init(_ teamAPIData: TeamAPIView)
+//
+//    }
     
     
 }
