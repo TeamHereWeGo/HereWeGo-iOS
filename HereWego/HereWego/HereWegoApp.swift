@@ -12,6 +12,7 @@ struct HereWeGoApp: App {
     var body: some Scene {
         WindowGroup {
             LoginButton(provider: "google")
+                .environmentObject(GoogleAPIViewModel())
 //            LoginView()
         }
     }

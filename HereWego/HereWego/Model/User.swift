@@ -10,7 +10,7 @@ import Foundation
 struct User: Codable {
     var googleAPIData: GoogleAPIData?
     var userAPIData: UserAPIData?
-
+    
 }
 
 extension User {
@@ -31,32 +31,34 @@ extension User {
             refreshToken = googleAPIData.refreshToken
         }
         
-//        mutating func setInfo(_ name: String, _ email: String, _ imageURL: String, _ accessToken: String, _ refreshToken: String) {
-//            self.name = name
-//            self.email = email
-//            self.imageURL = imageURL
-//            self.accessToken = accessToken
-//            self.refreshToken = refreshToken
-//        }
+        
+        
+        //        mutating func setInfo(_ name: String, _ email: String, _ imageURL: String, _ accessToken: String, _ refreshToken: String) {
+        //            self.name = name
+        //            self.email = email
+        //            self.imageURL = imageURL
+        //            self.accessToken = accessToken
+        //            self.refreshToken = refreshToken
+        //        }
     }
     
     struct UserAPIData: Codable {
         var jwtAccessToken: String?
         var jwtRefreshToken: String?
         var userId: String?
-
+        
         init(_ userAPIData: UserAPIViewModel.Responses.UserAPIData) {
             jwtAccessToken = userAPIData.jwtAccessToken
             jwtRefreshToken = userAPIData.jwtRefreshToken
             userId = userAPIData.userId
         }
         
-//        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
-//
-//        }
+        //        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
+        //
+        //        }
     }
     
-   
+    
 }
 
 

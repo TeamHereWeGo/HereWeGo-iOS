@@ -12,8 +12,8 @@ import GoogleSignIn
 struct LoginButton: View {
     // Test
     var viewModel: UserAPI = UserAPI()
-    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
-    @StateObject var googleAPIViewModel: GoogleAPIViewModel = .init()
+//    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
+    @EnvironmentObject var googleAPIViewModel: GoogleAPIViewModel
     
     
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
@@ -109,6 +109,6 @@ struct LoginButton: View {
 
 struct LoginButton_Previews: PreviewProvider {
     static var previews: some View {
-        LoginButton(provider: "구글")
+        LoginButton(provider: "Google")
     }
 }
