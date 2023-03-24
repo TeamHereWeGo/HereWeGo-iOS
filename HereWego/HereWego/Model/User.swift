@@ -15,20 +15,20 @@ struct User: Codable {
 
 extension User {
     struct GoogleAPIData: Codable {
-        var authProvider: String?
-        var name: String?
-        var email: String?
-        var imageURL: String?
-        var accessToken: String?
-        var refreshToken: String?
+        let authProvider: String?
+        let name: String?
+        let email: String?
+        let imageURL: String?
+        let accessToken: String?
+        let refreshToken: String?
         
-        init(_ googleAPIData: GoogleAPIViewModel.Responses.GoogleAPIData) {
-            authProvider = googleAPIData.authProvider
-            name = googleAPIData.name
-            email = googleAPIData.email
-            imageURL = googleAPIData.imageURL
-            accessToken = googleAPIData.accessToken
-            refreshToken = googleAPIData.refreshToken
+        init(authProvider: String, name: String, email: String, imageURL: String, accessToken: String, refreshToken: String) {
+            self.authProvider = authProvider
+            self.name = name
+            self.email = email
+            self.imageURL = imageURL
+            self.accessToken = accessToken
+            self.refreshToken = refreshToken
         }
         
         
@@ -58,14 +58,18 @@ extension User {
         //        }
     }
     
-//    struct TeamAPIData: Codable {
-//        var email: String?
-//        var favorites: [String]?
-//        var gameUnit: [Int]?
-//
-//        init(_ teamAPIData: TeamAPIView)
-//
-//    }
+    struct UserInfoAPIData: Codable {
+        var email: String?
+        var favorites: [String]?
+        var gameUnit: [Int]?
+
+        init(userInfoAPIData: UserAPIViewModel.Responses.UserInfoAPIData) {
+            email = userInfoAPIData.email
+            favorites = userInfoAPIData.favorites
+            gameUnit = userInfoAPIData.gameUnit
+        }
+
+    }
     
     
 }

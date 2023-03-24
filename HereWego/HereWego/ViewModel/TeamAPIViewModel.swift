@@ -23,7 +23,7 @@ fileprivate enum HereWeGoAPITeamList {
 
 class TeamAPIViewModel: ObservableObject {
     
-    @Published var googleAPIViewModel = GoogleAPIViewModel()
+//    @Published var googleAPIViewModel = GoogleAPIViewModel()
     //    @Published var teams: [Team]
     
     
