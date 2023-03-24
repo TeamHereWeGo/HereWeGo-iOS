@@ -28,14 +28,14 @@ class UserAPIViewModel: ObservableObject {
     @Published var message: String = "API 호출 중..."
     @Published var isLogined = false
     
-//    func SignInButtonHandler(authProvider: String) -> Void {
-//        if authProvider == "Google" {
-//            self.handleSignInButton()
-//        } else if authProvider == "Kakao" {
-//
-//        }
-//
-//    }
+    //    func SignInButtonHandler(authProvider: String) -> Void {
+    //        if authProvider == "Google" {
+    //            self.handleSignInButton()
+    //        } else if authProvider == "Kakao" {
+    //
+    //        }
+    //
+    //    }
     
     //test
     // 연동을 시도 했을때 불러오는 메소드
@@ -48,7 +48,7 @@ class UserAPIViewModel: ObservableObject {
             }
             return
         }
-
+        
         // 사용자 정보 가져오기
         if let userId = user.userID,                  // For client-side use only!
            let idToken = user.idToken, // Safe to send to the server
@@ -56,17 +56,17 @@ class UserAPIViewModel: ObservableObject {
            let givenName = user.profile?.givenName,
            let familyName = user.profile?.familyName,
            let email = user.profile?.email {
-
+            
             print("Token : \(idToken)")
             print("User ID : \(userId)")
             print("User Email : \(email)")
             print("User Name : \((fullName))")
-
+            
         } else {
             print("Error : User Data Not Found")
         }
     }
-
+    
     // 구글 로그인 연동 해제했을때 불러오는 메소드
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         print("Disconnect")
@@ -91,32 +91,20 @@ class UserAPIViewModel: ObservableObject {
             
             
             
-            let googleAPIData = User.GoogleAPIData(authProvider: "GOOGLE", name: name, email: email, imageURL: imageURL, accessToken: accessToken, refreshToken: refreshToken)
-            
-            self.user.googleAPIData = googleAPIData
-            print("log : \(self.user)")
-            //            self.user.googleAPIData =
-            
-            
-            
-            //            print("SETSTEST")
-            //            print(self.userAPIViewModel.user)
-            //            print(googleAPIData)
-            
+            self.user.googleAPIData = User.GoogleAPIData(authProvider: "GOOGLE", name: name, email: email, imageURL: imageURL, accessToken: accessToken, refreshToken: refreshToken)
             
             self.request("join", "GOOGLE", self.user) { (result, data) in
                 DispatchQueue.main.async { [weak self] in
                     print(self?.message)
-                    print("log: \(self?.user)")
                     
                     //                self.message = data as! String
-
-                    print("ASDFDASFASDFADSF")
-//                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
-//                    print(self?.userAPIViewModel.user)
+                    
+                    //                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
+                    //                    print(self?.userAPIViewModel.user)
                     if result {
                         self?.message = "로그인 성공"
                         self?.isLogined = result
+                        print(self?.user)
                     } else {
                         self?.message = "로그인 실패"
                     }
@@ -126,6 +114,7 @@ class UserAPIViewModel: ObservableObject {
             
             
             // If sign in succeeded, display the app's main content View.
+            
         }
     }
     
@@ -152,8 +141,8 @@ class UserAPIViewModel: ObservableObject {
         var urlRequest = URLRequest(url: url)
         // Test Code
         urlRequest.httpMethod = "GET"
-        urlRequest.setValue(userData.userAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
-        urlRequest.setValue(userData.userAPIData?.userId as? String, forHTTPHeaderField: "UserId")
+        urlRequest.setValue(userData.joinAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(userData.joinAPIData?.userId as? String, forHTTPHeaderField: "UserId")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         
@@ -180,13 +169,13 @@ class UserAPIViewModel: ObservableObject {
             
             //test
             let jsonStr = String(decoding: data, as: UTF8.self)
-            print(data)
-            print("@@@@@@@@@@@@@@@@@@@@")
-            print(response.self)
-            print("########################")
-            print(jsonStr)
-            print("%%%%%%%%%%%%%%%%%%%%%%%")
-            print(userData)
+            //            print(data)
+            //            print("@@@@@@@@@@@@@@@@@@@@")
+            //            print(response.self)
+            //            print("########################")
+            //            print(jsonStr)
+            //            print("%%%%%%%%%%%%%%%%%%%%%%%")
+            //            print(userData)
             guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(jsonStr.utf8), options: []) as? [String: Any] else {
                 print("Error: convert failed json to dictionary")
                 return
@@ -195,7 +184,7 @@ class UserAPIViewModel: ObservableObject {
                 print("Error: HTTP request failed")
                 return
             }
-            print(jsonStr)
+            //            print(jsonStr)
             
             //test
             
@@ -208,8 +197,8 @@ class UserAPIViewModel: ObservableObject {
     // Header와 Body 파라미터 나눠서 작성하기(아직 안고침)
     //Post 방식의 User join func
     func registerNewUserGoogle(authProvider: String, userData: User, completionHandler: @escaping (Bool, Any) -> Void) {
-        
         // parameter(= body)에 설정할 자료들 data -> json으로 변환
+        
         
         guard let json = try? JSONEncoder().encode(userData.googleAPIData) else { return }
         // 결과 :: Optional("{\"name\":\"demnodey\",\"part\":\"development\"}")
@@ -260,13 +249,6 @@ class UserAPIViewModel: ObservableObject {
             }
             
             let jsonStr = String(decoding: data, as: UTF8.self)
-            print(data)
-            print("@@@@@@@@@@@@@@@@@@@@")
-            print(response.self)
-            print("########################")
-            print(jsonStr)
-            print("%%%%%%%%%%%%%%%%%%%%%%%")
-            print(userData)
             guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(jsonStr.utf8), options: []) as? [String: Any] else {
                 print("Error: convert failed json to dictionary")
                 return
@@ -275,7 +257,6 @@ class UserAPIViewModel: ObservableObject {
                 print("Error: HTTP request failed")
                 return
             }
-            print(jsonStr)
             //            guard let output = try? JSONDecoder().decode(Responses.StatusCode.self, from: data) else {
             //                print("Error: JSON Data Parsing failed")
             //                return
@@ -284,21 +265,21 @@ class UserAPIViewModel: ObservableObject {
             
             // 3. GoogleAPIViewModel에서 userAPIViewModel에 호출한 지점에 completionHandler를 통해 결과 값을 넘겨주기 위해 Dictionary 형식으로 데이터 변경
             
-            let userAPIData = Responses.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+            
+            
+            self.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+            
             
             // 4. 함수가 모두 종료 시 실행되는 핸들러 -> GoogleAPIViewModel로 결과 값 리턴
-            completionHandler(true, userAPIData)
+            completionHandler(true, "Complete")
             
         }.resume()
     }
     
     /* 메소드별 동작 분리 */
     func request(_ method: String, _ authProvider: String, _ userData: User, completionHandler: @escaping (Bool, Any) -> Void) {
-        print(method)
-        print(authProvider)
-        print(userData)
         if method == "join" {
-            if authProvider == "Google" {
+            if authProvider == "GOOGLE" {
                 registerNewUserGoogle(authProvider: authProvider, userData: userData) { (success, data) in
                     completionHandler(success, data)
                 }

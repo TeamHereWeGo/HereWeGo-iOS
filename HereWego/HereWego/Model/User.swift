@@ -9,7 +9,7 @@ import Foundation
 
 struct User: Codable {
     var googleAPIData: GoogleAPIData?
-    var userAPIData: JoinAPIData?
+    var joinAPIData: JoinAPIData?
     
 }
 
@@ -43,14 +43,14 @@ extension User {
     }
     
     struct JoinAPIData: Codable {
-        var jwtAccessToken: String?
-        var jwtRefreshToken: String?
-        var userId: String?
+        let jwtAccessToken: String?
+        let jwtRefreshToken: String?
+        let userId: String?
         
-        init(_ joinAPIData: UserAPIViewModel.Responses.JoinAPIData) {
-            jwtAccessToken = joinAPIData.jwtAccessToken
-            jwtRefreshToken = joinAPIData.jwtRefreshToken
-            userId = joinAPIData.userId
+        init(jwtAccessToken: String, jwtRefreshToken: String, userId: String) {
+            self.jwtAccessToken = jwtAccessToken
+            self.jwtRefreshToken = jwtRefreshToken
+            self.userId = userId
         }
         
         //        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {

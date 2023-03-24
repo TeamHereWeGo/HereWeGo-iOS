@@ -50,8 +50,8 @@ class TeamAPIViewModel: ObservableObject {
         
         // Test Code
         request.httpMethod = method
-        request.setValue(userData.userAPIData?.userId as? String, forHTTPHeaderField: "UserId")
-        request.setValue(userData.userAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
+        request.setValue(userData.joinAPIData?.userId as? String, forHTTPHeaderField: "UserId")
+        request.setValue(userData.joinAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         
