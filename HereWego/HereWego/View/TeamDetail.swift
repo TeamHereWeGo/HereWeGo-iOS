@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TeamDetail: View {
+    @StateObject var teamAPIViewModel: TeamAPIViewModel = .init()
     var teamImage: String
     var teamName: String
     var league: String

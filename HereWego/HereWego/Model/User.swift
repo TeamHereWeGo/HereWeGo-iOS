@@ -9,54 +9,69 @@ import Foundation
 
 struct User: Codable {
     var googleAPIData: GoogleAPIData?
-    var userAPIData: UserAPIData?
-
+    var joinAPIData: JoinAPIData?
+    
 }
 
 extension User {
     struct GoogleAPIData: Codable {
-        var authProvider: String?
-        var name: String?
+        let authProvider: String?
+        let name: String?
+        let email: String?
+        let imageURL: String?
+        let accessToken: String?
+        let refreshToken: String?
+        
+        init(authProvider: String, name: String, email: String, imageURL: String, accessToken: String, refreshToken: String) {
+            self.authProvider = authProvider
+            self.name = name
+            self.email = email
+            self.imageURL = imageURL
+            self.accessToken = accessToken
+            self.refreshToken = refreshToken
+        }
+        
+        
+        
+        //        mutating func setInfo(_ name: String, _ email: String, _ imageURL: String, _ accessToken: String, _ refreshToken: String) {
+        //            self.name = name
+        //            self.email = email
+        //            self.imageURL = imageURL
+        //            self.accessToken = accessToken
+        //            self.refreshToken = refreshToken
+        //        }
+    }
+    
+    struct JoinAPIData: Codable {
+        let jwtAccessToken: String?
+        let jwtRefreshToken: String?
+        let userId: String?
+        
+        init(jwtAccessToken: String, jwtRefreshToken: String, userId: String) {
+            self.jwtAccessToken = jwtAccessToken
+            self.jwtRefreshToken = jwtRefreshToken
+            self.userId = userId
+        }
+        
+        //        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
+        //
+        //        }
+    }
+    
+    struct UserInfoAPIData: Codable {
         var email: String?
-        var imageURL: String?
-        var accessToken: String?
-        var refreshToken: String?
-        
-        init(_ googleAPIData: GoogleAPIViewModel.Responses.GoogleAPIData) {
-            authProvider = googleAPIData.authProvider
-            name = googleAPIData.name
-            email = googleAPIData.email
-            imageURL = googleAPIData.imageURL
-            accessToken = googleAPIData.accessToken
-            refreshToken = googleAPIData.refreshToken
-        }
-        
-//        mutating func setInfo(_ name: String, _ email: String, _ imageURL: String, _ accessToken: String, _ refreshToken: String) {
-//            self.name = name
-//            self.email = email
-//            self.imageURL = imageURL
-//            self.accessToken = accessToken
-//            self.refreshToken = refreshToken
-//        }
-    }
-    
-    struct UserAPIData: Codable {
-        var jwtAccessToken: String?
-        var jwtRefreshToken: String?
-        var userId: String?
+        var favorites: [String]?
+        var gameUnit: [Int]?
 
-        init(_ userAPIData: UserAPIViewModel.Responses.UserAPIData) {
-            jwtAccessToken = userAPIData.jwtAccessToken
-            jwtRefreshToken = userAPIData.jwtRefreshToken
-            userId = userAPIData.userId
+        init(userInfoAPIData: UserAPIViewModel.Responses.UserInfoAPIData) {
+            email = userInfoAPIData.email
+            favorites = userInfoAPIData.favorites
+            gameUnit = userInfoAPIData.gameUnit
         }
-        
-//        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
-//
-//        }
+
     }
     
-   
+    
 }
 
 

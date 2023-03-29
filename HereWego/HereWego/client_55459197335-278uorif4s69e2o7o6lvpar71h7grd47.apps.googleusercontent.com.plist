@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0.apps.googleusercontent.com</string>
+	<string>55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.615690412525-9uf5nt3d5kjbdt3utj9bi7r366iqlkh0</string>
+	<string>com.googleusercontent.apps.55459197335-278uorif4s69e2o7o6lvpar71h7grd47</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.kyungsoo.GoogleSignInWithoutFirebase</string>
+	<string>com.kyungsoo.HereWeGo</string>
 </dict>
 </plist>
