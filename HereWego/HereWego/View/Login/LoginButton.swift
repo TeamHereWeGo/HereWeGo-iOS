@@ -13,14 +13,15 @@ struct LoginButton: View {
     // Test
 //    var viewModel: UserAPI = UserAPI()
 //    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
-    @State var isLogined = false
+//    @State var isLogined = false
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     
     
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
     var body: some View {
-        if isLogined {
+        if userAPIViewModel.isLogined {
 //            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
 //            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
 //            Button {
@@ -28,7 +29,7 @@ struct LoginButton: View {
 //            } label: {
 //                Text("Log out")
 //            }
-            TeamDetail(teamImage: "https://media-2.api-sports.io/football/teams/33.png", teamName: "Manchester United", league: "Manchester United")
+            TeamDetail(teamId: 40)
         } else {
             VStack {
                 Image("UCL_logo")

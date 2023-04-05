@@ -9,18 +9,19 @@ import SwiftUI
 
 struct TeamListRow: View {
     @State private var isChecked = false
-    var teamImage: String
-    var teamName: String
-    var rank: Int
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+//    var teamImage: String
+//    var teamName: String
+//    var rank: Int
     var body: some View {
         HStack {
-            Image(teamImage)
+            Image(teamAPIViewModel.team.icon!)
                 .resizable()
                 .aspectRatio( contentMode: .fit)
                 .frame(width: 75, height: 75)
             VStack {
                 HStack {
-                    Text(teamName)
+                    Text(teamAPIViewModel.team.teamName!)
                         .bold()
                         .font(.title3)
                         .lineLimit(1)
@@ -28,7 +29,7 @@ struct TeamListRow: View {
                     Spacer()
                 }
                 HStack {
-                    Text("순위 : \(rank)위")
+                    Text("순위 : \(1)위")
                     Spacer()
                     Button {
                         
@@ -50,7 +51,9 @@ struct TeamListRow: View {
 }
 
 struct TeamListRow_Previews: PreviewProvider {
+//    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     static var previews: some View {
-        TeamListRow(teamImage: "Liverpool_logo", teamName: "Liverpool", rank: 9)
+        TeamListRow()
+            .environmentObject(TeamAPIViewModel())
     }
 }

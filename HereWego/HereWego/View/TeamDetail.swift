@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct TeamDetail: View {
-    @StateObject var teamAPIViewModel: TeamAPIViewModel = .init()
-    var teamImage: String
-    var teamName: String
-    var league: String
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+    var teamId: Int
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                TeamTitle(teamImage: teamImage, teamName: teamName, league: league)
+                TeamTitle()
                 Menu {
                     Button {
                         
@@ -55,13 +53,14 @@ struct TeamDetail: View {
 
 struct TeamDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
-        
-        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
-            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
-            .previewDisplayName("iPad Pro (11-inch) (4th generation)")
-        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
-            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-            .previewDisplayName("iPhone SE (3rd generation)")
+        TeamDetail(teamId: 40)
+            .environmentObject(TeamAPIViewModel())
+//
+//        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
+//            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
+//            .previewDisplayName("iPad Pro (11-inch) (4th generation)")
+//        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
+//            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
+//            .previewDisplayName("iPhone SE (3rd generation)")
     }
 }
