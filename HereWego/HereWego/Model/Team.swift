@@ -15,20 +15,23 @@ struct Team: Codable {
     var joining: Joining?
     var statistics: Statistics?
     
-    init(_ teamListAPIData: TeamAPIViewModel.Responses.SummaryInfo) {
-        teamId = teamListAPIData.teamId
-        teamName = teamListAPIData.teamName
-        league = teamListAPIData.league
-        icon = teamListAPIData.icon
+    init() {
     }
     
-    init(_ teamDetailAPIData: TeamAPIViewModel.Responses.TeamDetailData) {
-        teamId = teamDetailAPIData.teamId
-        teamName = teamDetailAPIData.teamName
-        league = teamDetailAPIData.league
-        icon = teamDetailAPIData.icon
-        joining = teamDetailAPIData.joining
-        statistics = teamDetailAPIData.statistics
+    init(teamId: Int, teamName: String, league: String, icon: String) {
+        self.teamId = teamId
+        self.teamName = teamName
+        self.league = league
+        self.icon = icon
+    }
+    
+    init(teamId: Int, teamName: String, league: String, icon: String, joining: Team.Joining, statistics: Team.Statistics) {
+        self.teamId = teamId
+        self.teamName = teamName
+        self.league = league
+        self.icon = icon
+        self.joining = joining
+        self.statistics = statistics
     }
 }
 

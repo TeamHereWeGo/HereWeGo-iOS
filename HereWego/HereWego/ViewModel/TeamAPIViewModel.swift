@@ -25,6 +25,10 @@ class TeamAPIViewModel: ObservableObject {
     
 //    @Published var googleAPIViewModel = GoogleAPIViewModel()
     //    @Published var teams: [Team]
+    @Published var team = Team()
+    @Published var message: String = "API 호출 중..."
+    
+    
     
     
     // Body가 없는 요청
@@ -193,10 +197,25 @@ class TeamAPIViewModel: ObservableObject {
     }
     
     /* 메소드별 동작 분리 */
-    func request(_ method: String, _ userData: User, completionHandler: @escaping (Bool, Any) -> Void) {
+    func request(_ method: String, _ userData: User) {
         if method == "GET" {
             requestGetTeamDetail(method: method, userData: userData) { (success, data) in
-                completionHandler(success, data)
+                DispatchQueue.main.async { [weak self] in
+                    print(self?.message)
+                    
+                    //                self.message = data as! String
+                    
+                    //                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
+                    //                    print(self?.userAPIViewModel.user)
+                    if success {
+                        self?.message = "팀 불러오기 성공"
+                
+                        print(self?.team)
+                    } else {
+                        self?.message = "팀 불러우기 실패"
+                    }
+                    print(self?.message)
+                }
             }
         }
         else {

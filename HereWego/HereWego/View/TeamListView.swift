@@ -24,54 +24,54 @@ struct TeamListView: View {
                     Toggle(isOn: $showFavoriteOnly) {
                         Text("즐겨찾기")
                     }
-                    NavigationLink {
-                        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", rank: 5)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "Liverpool_logo", teamName: "LiverPool", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "Liverpool_logo", teamName: "LiverPool", rank: 9)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "ManchesterCity_logo", teamName: "Manchester City", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "ManchesterCity_logo", teamName: "Manchester City", rank: 2)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "LeisterCity_logo", teamName: "Leister City", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "LeisterCity_logo", teamName: "Leister City", rank: 3)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", rank: 5)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "Liverpool_logo", teamName: "LiverPool", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "Liverpool_logo", teamName: "LiverPool", rank: 9)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "ManchesterCity_logo", teamName: "Manchester City", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "ManchesterCity_logo", teamName: "Manchester City", rank: 2)
-                    }
-                    NavigationLink {
-                        TeamDetail(teamImage: "LeisterCity_logo", teamName: "Leister City", league: "잉글랜드 프리미어리그")
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        TeamListRow(teamImage: "LeisterCity_logo", teamName: "Leister City", rank: 3)
-                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", rank: 5)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "Liverpool_logo", teamName: "LiverPool", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "Liverpool_logo", teamName: "LiverPool", rank: 9)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "ManchesterCity_logo", teamName: "Manchester City", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "ManchesterCity_logo", teamName: "Manchester City", rank: 2)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "LeisterCity_logo", teamName: "Leister City", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "LeisterCity_logo", teamName: "Leister City", rank: 3)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", rank: 5)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "Liverpool_logo", teamName: "LiverPool", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "Liverpool_logo", teamName: "LiverPool", rank: 9)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "ManchesterCity_logo", teamName: "Manchester City", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "ManchesterCity_logo", teamName: "Manchester City", rank: 2)
+//                    }
+//                    NavigationLink {
+//                        TeamDetail(teamImage: "LeisterCity_logo", teamName: "Leister City", league: "잉글랜드 프리미어리그")
+//                            .navigationBarTitleDisplayMode(.inline)
+//                    } label: {
+//                        TeamListRow(teamImage: "LeisterCity_logo", teamName: "Leister City", rank: 3)
+//                    }
                 }
                 .navigationTitle("Search")
                 .toolbar {
