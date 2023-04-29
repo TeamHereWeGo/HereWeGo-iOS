@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "700D0F16-043F-4A74-BC44-BF6F645529CD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HereWego/View/Login/LoginButton.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C48C54C6-ECE9-49C5-AE70-23693434D146"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +62,8 @@
             filePath = "HereWego/ViewModel/TeamAPIViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "requestPost(method:authProvider:userData:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,13 +78,13 @@
             filePath = "HereWego/ViewModel/TeamAPIViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "requestPost(method:authProvider:userData:completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1E076752-4C93-40E6-BD24-28516AC29F99 - ff2ac93c5c2d5d18"
+                  uuid = "1E076752-4C93-40E6-BD24-28516AC29F99 - ff2ac93c5c2d40aa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -110,12 +94,12 @@
                   urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "1032">
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
+                  offsetFromSymbolStart = "1024">
                </Location>
                <Location
-                  uuid = "1E076752-4C93-40E6-BD24-28516AC29F99 - ff2ac93c5c2d5d18"
+                  uuid = "1E076752-4C93-40E6-BD24-28516AC29F99 - ff2ac93c5c2d40aa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,8 +109,8 @@
                   urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
                   offsetFromSymbolStart = "872">
                </Location>
             </Locations>

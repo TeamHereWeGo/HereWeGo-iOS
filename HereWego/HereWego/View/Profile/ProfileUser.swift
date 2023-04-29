@@ -8,27 +8,28 @@
 import SwiftUI
 
 struct ProfileUser: View {
-    @Binding var isLogined: Bool
-    @Binding var userName: String
-    @Binding var password: String
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("<회원 정보>")
-            Text("ID : \(self.userName)")
+            Text("ID : \(userAPIViewModel.user.googleAPIData?.name ?? "nil")")
             HStack {
-                Text("PW : \(self.password)")
+                Text("PW : ")
                 Button {
                     
                 } label: {
                     Text("[비밀번호 변경]")
                 }
             }
-            Text("휴대폰 : 010-9196-7601")
+            Text("email : \(userAPIViewModel.user.googleAPIData?.email ?? "nil")")
             
+            
+            //아직 로그아웃 미구현
             Button {
-                self.userName = ""
-                self.password = ""
-                self.isLogined = false
+//                self.userName = ""
+//                self.password = ""
+//                self.isLogined = false
             } label: {
                 Text("로그아웃")
             }
@@ -40,6 +41,8 @@ struct ProfileUser: View {
 
 struct ProfileUser_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileUser(isLogined: .constant(true),userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        ProfileUser()
+            .environmentObject(UserAPIViewModel())
+            .environmentObject(TeamAPIViewModel())
     }
 }

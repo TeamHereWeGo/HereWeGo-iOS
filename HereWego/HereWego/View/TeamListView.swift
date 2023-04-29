@@ -10,9 +10,8 @@ import SwiftUI
 struct TeamListView: View {
     @State private var showFavoriteOnly = false
     @State private var showingProfile = false
-    @Binding var isLogined: Bool
-    @Binding var userName: String
-    @Binding var password: String
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var body: some View {
         NavigationView {
             VStack {
@@ -24,12 +23,25 @@ struct TeamListView: View {
                     Toggle(isOn: $showFavoriteOnly) {
                         Text("즐겨찾기")
                     }
-//                    NavigationLink {
-//                        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", league: "잉글랜드 프리미어리그")
-//                            .navigationBarTitleDisplayMode(.inline)
-//                    } label: {
-//                        TeamListRow(teamImage: "ManchesterUnited_logo", teamName: "Manchester United", rank: 5)
-//                    }
+                    
+                    
+                    
+                    
+                    NavigationLink {
+                        // optional 고쳐야 됨
+                        TeamDetail(teamId: 40)
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        // teamViewModel로 바꿔야됨
+                        TeamListRow(teamId: 40)
+                    }
+                    
+                    Button {
+                        print("팀 리스트 로그 : \(teamAPIViewModel.teamList)")
+                        print("팀 리스트 로그 1 : \(teamAPIViewModel.teamList[0])")
+                    } label: {
+                        Text("ㅇ")
+                    }
 //                    NavigationLink {
 //                        TeamDetail(teamImage: "Liverpool_logo", teamName: "LiverPool", league: "잉글랜드 프리미어리그")
 //                            .navigationBarTitleDisplayMode(.inline)
@@ -76,23 +88,28 @@ struct TeamListView: View {
                 .navigationTitle("Search")
                 .toolbar {
                     ToolbarItem {
-                        ProfileButton(isLogined: $isLogined, userName: $userName, password: $password)
+                        ProfileButton()
                     }
                 }
             }
         }
         .navigationBarBackButtonHidden(true)
+        .onAppear {
+            teamAPIViewModel.getTeamList(method: "GET", userData: userAPIViewModel.user)
+        }
     }
 }
 
 struct TeamListView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
-        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
-            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
-            .previewDisplayName("iPad Pro (11-inch) (4th generation)")
-        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
-            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-            .previewDisplayName("iPhone SE (3rd generation)")
+        TeamListView()
+            .environmentObject(UserAPIViewModel())
+            .environmentObject(TeamAPIViewModel())
+//        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+//            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
+//            .previewDisplayName("iPad Pro (11-inch) (4th generation)")
+//        TeamListView(isLogined: .constant(true), userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+//            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
+//            .previewDisplayName("iPhone SE (3rd generation)")
     }
 }

@@ -8,15 +8,18 @@
 import Foundation
 
 struct Team: Codable {
-    var teamId: Int?
-    var teamName: String?
-    var league: String?
-    var icon: String?
+    var teamId: Int
+    var teamName: String
+    var league: String
+    var icon: String
     var joining: Joining?
     var statistics: Statistics?
     
     init() {
-        
+        self.teamId = 0
+        self.teamName = "-"
+        self.league = "-"
+        self.icon = "-"
     }
     
     init(teamId: Int, teamName: String, league: String, icon: String) {

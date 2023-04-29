@@ -11,9 +11,9 @@ import GoogleSignIn
 
 struct LoginButton: View {
     // Test
-//    var viewModel: UserAPI = UserAPI()
-//    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
-//    @State var isLogined = false
+    //    var viewModel: UserAPI = UserAPI()
+    //    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
+    //    @State var isLogined = false
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     
@@ -22,23 +22,27 @@ struct LoginButton: View {
     var provider : String
     var body: some View {
         if userAPIViewModel.isLogined {
-//            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
-//            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
-//            Button {
-//                googleAPIViewModel.isLogined.toggle()
-//            } label: {
-//                Text("Log out")
-//            }
-            TeamDetail(teamId: userAPIViewModel.user.userInfoAPIData?.homeTeamId ?? 0)
+            //            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
+            //            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
+            //            Button {
+            //                googleAPIViewModel.isLogined.toggle()
+            //            } label: {
+            //                Text("Log out")
+            //            }
+            
+            TeamListView()
+            
+//            TeamDetail(teamId: userAPIViewModel.user.userInfoAPIData?.homeTeamId ?? 0)
+            
         } else {
             VStack {
                 Image("UCL_logo")
                     .resizable()
                     .aspectRatio( contentMode: .fit)
                     .frame(width: 200, height: 200)
-
+                
                 GoogleSignInButton(action: userAPIViewModel.handleSignInButton)
-       
+                
             }//VStack
             .padding()
         }

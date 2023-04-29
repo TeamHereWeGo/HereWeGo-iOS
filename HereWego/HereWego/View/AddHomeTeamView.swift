@@ -16,7 +16,7 @@ struct AddHomeTeamView: View {
     var body: some View {
         NavigationStack {
             if hasHomeTeam {
-                TeamListView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
+                TeamListView()
             }
             else {
                 VStack {
@@ -25,7 +25,7 @@ struct AddHomeTeamView: View {
                         .aspectRatio( contentMode: .fit)
                         .frame(width: 200, height: 200)
                     NavigationLink {
-                        TeamListView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
+                        TeamListView()
                     } label: {
                         Text("+")
                             .padding()
@@ -39,7 +39,7 @@ struct AddHomeTeamView: View {
         }
         .toolbar {
             ToolbarItem {
-                ProfileButton(isLogined: $isLogined, userName: $userName, password: $password)
+                ProfileButton()
                 
             }
         }

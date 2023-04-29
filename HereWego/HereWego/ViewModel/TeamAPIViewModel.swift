@@ -26,6 +26,7 @@ class TeamAPIViewModel: ObservableObject {
 //    @Published var googleAPIViewModel = GoogleAPIViewModel()
     //    @Published var teams: [Team]
     @Published var team = Team()
+    @Published var teamList: [Team] = []
     @Published var message: String = "API 호출 중..."
     
     
@@ -100,6 +101,23 @@ class TeamAPIViewModel: ObservableObject {
             
             // 3. GoogleAPIViewModel에서 userAPIViewModel에 호출한 지점에 completionHandler를 통해 결과 값을 넘겨주기 위해 Dictionary 형식으로 데이터 변경
             
+            if error == nil && data != nil {
+                
+                //Parse JSON
+                let decoder = JSONDecoder()
+                
+                do{
+                    
+                    let teamListData = try decoder.decode([Team].self, from: data)
+                    self.teamList = teamListData
+                    print("디코드 한 teamListData : \(teamListData)")
+                    print("team.teamList : \(self.teamList)")
+//                    print("전체 유저 정보 : \(self.team)")
+                }
+                catch{
+                    print("Error in JSON parsing")
+                }
+            }
             
 //            let teamListAPIData = Responses.TeamDetailData(teamId: jsonDictionary["teamId"] as! Int, teamName: jsonDictionary["teamName"] as! String, league: jsonDictionary["league"] as! String, icon: jsonDictionary["icon"] as! String, joining: jsonDictionary["joining"] as! Team.Joining, statistics: jsonDictionary["statistics"] as! Team.Statistics)
             
@@ -191,6 +209,7 @@ class TeamAPIViewModel: ObservableObject {
             
             
             let teamDetailData = Responses.TeamDetailData(teamId: jsonDictionary["teamId"] as! Int, teamName: jsonDictionary["teamName"] as! String, league: jsonDictionary["league"] as! String, icon: jsonDictionary["icon"] as! String, joining: jsonDictionary["joining"] as! Team.Joining, statistics: jsonDictionary["statistics"] as! Team.Statistics)
+            
             
             // 4. 함수가 모두 종료 시 실행되는 핸들러 -> GoogleAPIViewModel로 결과 값 리턴
             //            completionHandler(true, userAPIData)

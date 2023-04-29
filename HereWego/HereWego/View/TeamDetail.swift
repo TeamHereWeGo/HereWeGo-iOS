@@ -48,21 +48,22 @@ struct TeamDetail: View {
                 .overlay(.black)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             
-            if let test1 = userAPIViewModel.user.userInfoAPIData?.homeTeamId {
-                Text("te1 : \(test1)")
-            } else {
-                Text("nil")
-            }
-            if let test2 = teamAPIViewModel.team.teamName {
-                Text("te2 : \(test2)")
-            } else {
-                Text("nil")
-            }
+//            if let test1 = userAPIViewModel.user.userInfoAPIData?.homeTeamId {
+//                Text("te1 : \(test1)")
+//            } else {
+//                Text("nil")
+//            }
+//            if let test2 = teamAPIViewModel.team.teamName {
+//                Text("te2 : \(test2)")
+//            } else {
+//                Text("nil")
+//            }
+//            Text("te1 : \(userAPIViewModel.user.userInfoAPIData?.homeTeamId)")
+            Text("te2 : \(teamAPIViewModel.team.teamName)")
             Spacer()
         }
         .onAppear {
             print("userAPIViewModel.user : \(userAPIViewModel.user)")
-            teamAPIViewModel.getTeamList(method: "GET", userData: userAPIViewModel.user)
         }
     }
 }
