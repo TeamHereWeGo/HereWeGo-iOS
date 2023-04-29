@@ -60,11 +60,12 @@ extension User {
     }
     
     struct UserInfoAPIData: Codable {
-        var homeTeamId: Int?
-        var favorites: [TeamSummary]?
-        var gameUnit: [Int]?
+        let homeTeamId: Int?
+        let favorites: [User.UserInfoAPIData.TeamSummary]?
+        let gameUnit: [Int]?
         
-        init(homeTeamId: Int, favorites: [TeamSummary], gameUnit: [Int]) {
+        
+        init(homeTeamId: Int, favorites: [User.UserInfoAPIData.TeamSummary], gameUnit: [Int]) {
             self.homeTeamId = homeTeamId
             self.favorites = favorites
             self.gameUnit = gameUnit
@@ -78,6 +79,7 @@ extension User.UserInfoAPIData {
         let teamName: String?
         let league: String?
         let icon: String?
+        let rank: Int?
     }
 }
 

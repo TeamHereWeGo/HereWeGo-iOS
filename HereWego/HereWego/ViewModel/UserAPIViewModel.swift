@@ -186,7 +186,7 @@ class UserAPIViewModel: ObservableObject {
         
         
         
-
+        
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
             
@@ -200,6 +200,7 @@ class UserAPIViewModel: ObservableObject {
                 return
             }
             
+            print("data : \(data)")
             
             let jsonStr = String(decoding: data, as: UTF8.self)
             print("log [ASDFSADFDSAFADSFADSF] : \(data)")
@@ -211,10 +212,10 @@ class UserAPIViewModel: ObservableObject {
                 print("Error: HTTP request failed3")
                 return
             }
-            guard let output = try? JSONDecoder().decode(Responses.StatusCode.self, from: data) else {
-                print("Error: JSON Data Parsing failed")
-                return
-            }
+            //            guard let output = try? JSONDecoder().decode(Responses.StatusCode.self, from: data) else {
+            //                print("Error: JSON Data Parsing failed")
+            //                return
+            //            }
             
             //test
             //            let jsonStr = String(decoding: data, as: UTF8.self)
@@ -226,9 +227,9 @@ class UserAPIViewModel: ObservableObject {
             //            print("%%%%%%%%%%%%%%%%%%%%%%%")
             //            print(userData)
             
-
-            guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(jsonStr.utf8), options: []) as? [String: Any] else {
-                print("Error: convert failed json to dictionary")
+            
+            guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(data), options: []) as? [String: Any] else {
+                print("Error: convert failed json to dictionary1")
                 return
             }
             guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
@@ -236,14 +237,39 @@ class UserAPIViewModel: ObservableObject {
                 return
             }
             //            print(jsonStr)
+            print("jsonDictionary: \(jsonDictionary)")
+            let test = jsonDictionary["favorites"]
+            print("Test log : \(type(of: test))")
             
-            self.user.userInfoAPIData = User.UserInfoAPIData(homeTeamId: jsonDictionary["homeTeamId"] as! Int, favorites: jsonDictionary["favorites"] as! [User.UserInfoAPIData.TeamSummary], gameUnit: jsonDictionary["gameUnit"] as! [Int])
+            
+            
+            //Check that there are no errors and that data exists
+            if error == nil && data != nil {
+                
+                //Parse JSON
+                let decoder = JSONDecoder()
+                
+                do{
+                    
+                    let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
+                    self.user.userInfoAPIData = userInfoAPIData
+                    print("user.userInfoAPIData : \(self.user.userInfoAPIData)")
+                }
+                catch{
+                    print("Error in JSON parsing")
+                }
+            }
+            
+            
+            
+            
+//            self.user.userInfoAPIData = User.UserInfoAPIData(homeTeamId: jsonDictionary["homeTeamId"] as! Int, favorites: jsonDictionary["favorites"] as! [User.UserInfoAPIData.TeamSummary], gameUnit: jsonDictionary["gameUnit"] as! [Int])
             //test
             
             
             
             
-            completionHandler(true, output.result)
+            completionHandler(true, "Complete")
         }.resume()
     }
     
@@ -368,38 +394,38 @@ extension UIApplication {
     }
 }
 
-extension UserAPIViewModel {
-    struct Responses: Codable {
-        struct JoinAPIData: Codable {
-            let jwtAccessToken: String
-            let jwtRefreshToken: String
-            let userId: String
-            
-        }
-        
-        
-        struct GoogleAPIData {
-            let authProvider: String
-            let name: String
-            let email: String
-            let imageURL: String
-            let accessToken: String
-            let refreshToken: String
-        }
-        
-        
-        // Codable을 통해 JSON 객체를 Dictionary 타입으로 만들 수 있게 되었다.
-        struct StatusCode: Codable {
-            let success: Bool
-            let result: String
-            let message: String
-        }
-        
-        struct UserInfoAPIData: Codable {
-            let email: String
-            let favorites: [String]
-            let gameUnit: [Int]
-        }
-    }
-    
-}
+//extension UserAPIViewModel {
+//    struct Responses: Codable {
+//        struct JoinAPIData: Codable {
+//            let jwtAccessToken: String
+//            let jwtRefreshToken: String
+//            let userId: String
+//
+//        }
+//
+//
+//        struct GoogleAPIData {
+//            let authProvider: String
+//            let name: String
+//            let email: String
+//            let imageURL: String
+//            let accessToken: String
+//            let refreshToken: String
+//        }
+//
+//
+//        // Codable을 통해 JSON 객체를 Dictionary 타입으로 만들 수 있게 되었다.
+//        struct StatusCode: Codable {
+//            let success: Bool
+//            let result: String
+//            let message: String
+//        }
+//
+//        struct UserInfoAPIData: Codable {
+//            let email: String
+//            let favorites: [String]
+//            let gameUnit: [Int]
+//        }
+//    }
+//
+//}
