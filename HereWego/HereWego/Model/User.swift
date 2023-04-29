@@ -16,12 +16,12 @@ struct User: Codable {
 
 extension User {
     struct GoogleAPIData: Codable {
-        let authProvider: String?
-        let name: String?
-        let email: String?
-        let image: String?
-        let accessToken: String?
-        let refreshToken: String?
+        let authProvider: String
+        let name: String
+        let email: String
+        let image: String
+        let accessToken: String
+        let refreshToken: String
         
         init(authProvider: String, name: String, email: String, image: String, accessToken: String, refreshToken: String) {
             self.authProvider = authProvider
@@ -44,9 +44,9 @@ extension User {
     }
     
     struct JoinAPIData: Codable {
-        let jwtAccessToken: String?
-        let jwtRefreshToken: String?
-        let userId: String?
+        let jwtAccessToken: String
+        let jwtRefreshToken: String
+        let userId: String
         
         init(jwtAccessToken: String, jwtRefreshToken: String, userId: String) {
             self.jwtAccessToken = "Bearer " + jwtAccessToken
@@ -60,9 +60,9 @@ extension User {
     }
     
     struct UserInfoAPIData: Codable {
-        let homeTeamId: Int?
-        let favorites: [User.UserInfoAPIData.TeamSummary]?
-        let gameUnit: [Int]?
+        let homeTeamId: Int
+        let favorites: [User.UserInfoAPIData.TeamSummary]
+        let gameUnit: [Int]
         
         
         init(homeTeamId: Int, favorites: [User.UserInfoAPIData.TeamSummary], gameUnit: [Int]) {
@@ -76,10 +76,10 @@ extension User {
 
 extension User.UserInfoAPIData {
     struct TeamSummary: Codable {
-        let teamName: String?
-        let league: String?
-        let icon: String?
-        let rank: Int?
+        let teamName: String
+        let league: String
+        let icon: String
+        let rank: Int
     }
 }
 

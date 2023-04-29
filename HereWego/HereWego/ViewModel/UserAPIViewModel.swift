@@ -28,14 +28,6 @@ class UserAPIViewModel: ObservableObject {
     @Published var message: String = "API 호출 중..."
     @Published var isLogined = false
     
-    //    func SignInButtonHandler(authProvider: String) -> Void {
-    //        if authProvider == "Google" {
-    //            self.handleSignInButton()
-    //        } else if authProvider == "Kakao" {
-    //
-    //        }
-    //
-    //    }
     
     //test
     // 연동을 시도 했을때 불러오는 메소드
@@ -67,6 +59,7 @@ class UserAPIViewModel: ObservableObject {
         }
     }
     
+    
     // 구글 로그인 연동 해제했을때 불러오는 메소드
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         print("Disconnect")
@@ -80,204 +73,38 @@ class UserAPIViewModel: ObservableObject {
                 // Inspect error
                 return
             }
-            print("Success Google!")
-            
-            
-            guard let name = result.user.profile?.name else { return }
-            guard let email = result.user.profile?.email else { return }
-            guard let image = result.user.profile?.imageURL(withDimension: 320)?.absoluteString else { return }
-            guard let accessToken = result.user.idToken?.tokenString else { return }
-            let refreshToken = result.user.refreshToken.tokenString
-            
-            
-            
-            self.user.googleAPIData = User.GoogleAPIData(authProvider: "GOOGLE", name: name, email: email, image: image, accessToken: accessToken, refreshToken: refreshToken)
-            
-            //            self.request("join", "GOOGLE") { (result, data) in
-            //                DispatchQueue.main.async { [weak self] in
-            //                    print(self?.message)
-            //
-            //                    //                self.message = data as! String
-            //
-            //                    //                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
-            //                    //                    print(self?.userAPIViewModel.user)
-            //                    if result {
-            //                        self?.message = "로그인 성공"
-            //                        self?.isLogined = result
-            //                        print(self?.message)
-            //                        print(self?.isLogined)
-            //                        print(self?.user)
-            //                    } else {
-            //                        self?.message = "로그인 실패"
-            //                    }
-            //                    print(self?.message)
-            //
-            //
-            //                }
-            //            }
-            self.registerNewUserGoogle(authProvider: "GOOGLE") { (result, data) in
-                DispatchQueue.main.async { [weak self] in
-                    print(self?.message)
-                    
-                    //                self.message = data as! String
-                    
-                    //                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
-                    //                    print(self?.userAPIViewModel.user)
-                    if result {
-                        self?.message = "로그인 성공"
-                        self?.isLogined = result
-                        print(self?.message)
-                        print(self?.isLogined)
-                        print(self?.user)
-                    } else {
-                        self?.message = "로그인 실패"
-                    }
-                    print(self?.message)
-                    
-                    
-                    
-                    self?.getUserInfo() { (result, data) in
-                        if result {
-                            self?.message = "불러오기 성공"
-                            print(self?.message)
-                            print(self?.user)
-                        } else {
-                            self?.message = "불러오기 실패"
-                        }
-                        print(self?.message)
-                    }
-                }
+            DispatchQueue.main.async { [weak self] in
+                print("Success Google!")
+                
+                
+                guard let name = result.user.profile?.name else { return }
+                guard let email = result.user.profile?.email else { return }
+                guard let image = result.user.profile?.imageURL(withDimension: 320)?.absoluteString else { return }
+                guard let accessToken = result.user.idToken?.tokenString else { return }
+                let refreshToken = result.user.refreshToken.tokenString
+                
+                
+                
+                self?.user.googleAPIData = User.GoogleAPIData(authProvider: "GOOGLE", name: name, email: email, image: image, accessToken: accessToken, refreshToken: refreshToken)
+                
+                
+                self?.registerNewUserGoogle(authProvider: "GOOGLE")
+                
             }
+            
+            
+            
             
             // If sign in succeeded, display the app's main content View.
             
         }
     }
     
-    
-    // Body가 없는 요청
-    func getUserInfo(completionHandler: @escaping (Bool, Any) -> Void) {
-        
-        var urlComponents = URLComponents()
-        urlComponents.scheme = HereWeGoAPI.scheme
-        urlComponents.host = HereWeGoAPI.host
-        urlComponents.path = HereWeGoAPI.Path.users.rawValue
-        guard let url = urlComponents.url else {
-            print("Error: cannot create URL")
-            return
-        }
-        
-        //        guard let url = URL(string: url) else {
-        //            print("Error: cannot create URL")
-        //            return
-        //        }
-        
-        
-        // 2. url Request 설정 (Header같은 것 설정)
-        var urlRequest = URLRequest(url: url)
-        print("user jwtAccessToken[getUser] : \(self.user.joinAPIData?.jwtAccessToken)")
-        print("user id[getUser] : \(self.user.joinAPIData?.userId)")
-        // Test Code
-        urlRequest.httpMethod = "GET"
-        urlRequest.setValue(self.user.joinAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
-        urlRequest.setValue(self.user.joinAPIData?.userId as? String, forHTTPHeaderField: "UserId")
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        print("urlRequest : \(urlRequest)")
-        
-        
-        
-        
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-            
-            guard error == nil else {
-                print("Error: error calling GET")
-                print(error!)
-                return
-            }
-            guard let data = data else {
-                print("Error: Did not receive data")
-                return
-            }
-            
-            print("data : \(data)")
-            
-            let jsonStr = String(decoding: data, as: UTF8.self)
-            print("log [ASDFSADFDSAFADSFADSF] : \(data)")
-            print(jsonStr)
-            
-            
-            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
-                print("log : \(urlRequest)")
-                print("Error: HTTP request failed3")
-                return
-            }
-            //            guard let output = try? JSONDecoder().decode(Responses.StatusCode.self, from: data) else {
-            //                print("Error: JSON Data Parsing failed")
-            //                return
-            //            }
-            
-            //test
-            //            let jsonStr = String(decoding: data, as: UTF8.self)
-            //            print(data)
-            //            print("@@@@@@@@@@@@@@@@@@@@")
-            //            print(response.self)
-            //            print("########################")
-            //            print(jsonStr)
-            //            print("%%%%%%%%%%%%%%%%%%%%%%%")
-            //            print(userData)
-            
-            
-            guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(data), options: []) as? [String: Any] else {
-                print("Error: convert failed json to dictionary1")
-                return
-            }
-            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
-                print("Error: HTTP request failed1")
-                return
-            }
-            //            print(jsonStr)
-            print("jsonDictionary: \(jsonDictionary)")
-            let test = jsonDictionary["favorites"]
-            print("Test log : \(type(of: test))")
-            
-            
-            
-            //Check that there are no errors and that data exists
-            if error == nil && data != nil {
-                
-                //Parse JSON
-                let decoder = JSONDecoder()
-                
-                do{
-                    
-                    let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
-                    self.user.userInfoAPIData = userInfoAPIData
-                    print("user.userInfoAPIData : \(self.user.userInfoAPIData)")
-                }
-                catch{
-                    print("Error in JSON parsing")
-                }
-            }
-            
-            
-            
-            
-//            self.user.userInfoAPIData = User.UserInfoAPIData(homeTeamId: jsonDictionary["homeTeamId"] as! Int, favorites: jsonDictionary["favorites"] as! [User.UserInfoAPIData.TeamSummary], gameUnit: jsonDictionary["gameUnit"] as! [Int])
-            //test
-            
-            
-            
-            
-            completionHandler(true, "Complete")
-        }.resume()
-    }
-    
     // Body가 있는 요청
     
     // Header와 Body 파라미터 나눠서 작성하기(아직 안고침)
     //Post 방식의 User join func
-    func registerNewUserGoogle(authProvider: String, completionHandler: @escaping (Bool, Any) -> Void) {
+    func registerNewUserGoogle(authProvider: String) {
         // parameter(= body)에 설정할 자료들 data -> json으로 변환
         
         
@@ -324,6 +151,7 @@ class UserAPIViewModel: ObservableObject {
                 print("Error: Did not receive data")
                 return
             }
+            print("log1 : \(data)")
             guard let response = response else {
                 print("Error: response error")
                 return
@@ -356,22 +184,122 @@ class UserAPIViewModel: ObservableObject {
             
             
             // 4. 함수가 모두 종료 시 실행되는 핸들러 -> GoogleAPIViewModel로 결과 값 리턴
-            completionHandler(true, "Complete")
+            
+            self.getUserInfo()
             
         }.resume()
+        
     }
     
+    
+    // Body가 없는 요청
+    func getUserInfo() {
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = HereWeGoAPI.scheme
+        urlComponents.host = HereWeGoAPI.host
+        urlComponents.path = HereWeGoAPI.Path.users.rawValue
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            return
+        }
+        
+        //        guard let url = URL(string: url) else {
+        //            print("Error: cannot create URL")
+        //            return
+        //        }
+        
+        
+        // 2. url Request 설정 (Header같은 것 설정)
+        var urlRequest = URLRequest(url: url)
+        print("user jwtAccessToken[getUserInfo] : \(self.user.joinAPIData?.jwtAccessToken)")
+        print("user id[getUserInfo] : \(self.user.joinAPIData?.userId)")
+        // Test Code
+        urlRequest.httpMethod = "GET"
+        urlRequest.setValue(self.user.joinAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.user.joinAPIData?.userId as? String, forHTTPHeaderField: "UserId")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        print("urlRequest : \(urlRequest)")
+        
+        
+        
+        
+        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+            
+            guard error == nil else {
+                print("Error: error calling GET")
+                print(error!)
+                return
+            }
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            
+            print("data : \(data)")
+            
+            let jsonStr = String(decoding: data, as: UTF8.self)
+            print("log [ASDFSADFDSAFADSFADSF] : \(data)")
+            print(jsonStr)
+            
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("log : \(urlRequest)")
+                print("Error: HTTP request failed3")
+                return
+            }
+            
+            
+            
+            guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(data), options: []) as? [String: Any] else {
+                print("Error: convert failed json to dictionary1")
+                return
+            }
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("Error: HTTP request failed1")
+                return
+            }
+            //            print(jsonStr)
+            print("jsonDictionary: \(jsonDictionary)")
+            let test = jsonDictionary["favorites"]
+            print("Test log : \(type(of: test))")
+            
+            
+            
+            //Check that there are no errors and that data exists
+            if error == nil && data != nil {
+                
+                //Parse JSON
+                let decoder = JSONDecoder()
+                
+                do{
+                    
+                    let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
+                    self.user.userInfoAPIData = userInfoAPIData
+                    print("디코드 한 userInfoAPIData : \(userInfoAPIData)")
+                    print("user.userInfoAPIData : \(self.user.userInfoAPIData)")
+                    print("전체 유저 정보 : \(self.user)")
+                }
+                catch{
+                    print("Error in JSON parsing")
+                }
+            }
+            
+            self.isLogined = true
+        }.resume()
+        
+       
+        
+    }
+    
+    
+    
     /* 메소드별 동작 분리 */
-    func request(_ method: String, _ authProvider: String, completionHandler: @escaping (Bool, Any) -> Void) {
+    func request(_ method: String, _ authProvider: String) {
         if method == "join" {
             if authProvider == "GOOGLE" {
-                registerNewUserGoogle(authProvider: authProvider) { (success, data) in
-                    print("TSETESTSETEST")
-                    self.getUserInfo() { (success, data) in
-                        completionHandler(success, data)
-                    }
-                    completionHandler(success, data)
-                }
+                registerNewUserGoogle(authProvider: authProvider)
                 
                 
                 
@@ -393,39 +321,3 @@ extension UIApplication {
         return viewController
     }
 }
-
-//extension UserAPIViewModel {
-//    struct Responses: Codable {
-//        struct JoinAPIData: Codable {
-//            let jwtAccessToken: String
-//            let jwtRefreshToken: String
-//            let userId: String
-//
-//        }
-//
-//
-//        struct GoogleAPIData {
-//            let authProvider: String
-//            let name: String
-//            let email: String
-//            let imageURL: String
-//            let accessToken: String
-//            let refreshToken: String
-//        }
-//
-//
-//        // Codable을 통해 JSON 객체를 Dictionary 타입으로 만들 수 있게 되었다.
-//        struct StatusCode: Codable {
-//            let success: Bool
-//            let result: String
-//            let message: String
-//        }
-//
-//        struct UserInfoAPIData: Codable {
-//            let email: String
-//            let favorites: [String]
-//            let gameUnit: [Int]
-//        }
-//    }
-//
-//}

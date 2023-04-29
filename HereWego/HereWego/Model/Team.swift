@@ -16,6 +16,7 @@ struct Team: Codable {
     var statistics: Statistics?
     
     init() {
+        
     }
     
     init(teamId: Int, teamName: String, league: String, icon: String) {
@@ -38,27 +39,27 @@ struct Team: Codable {
 
 extension Team {
     struct Joining: Codable {
-        var leagueName: String?
-        var icon: String?
+        var leagueName: String
+        var icon: String
     }
     
     struct Statistics: Codable {
-        var goal: [Int]?
-        var loss: [Int]?
-        var shotsOnGoal: [Int]?
-        var shotsOffGoal: [Int]?
-        var blockedShots: [Int]?
-        var shotsInsideBox: [Int]?
-        var shotsOutsideBox: [Int]?
-        var fouls: [Int]?
-        var cornerKicks: [Int]?
-        var offSide: [Int]?
-        var ballPossession: [Int]?
-        var yellow: [Int]?
-        var red: [Int]?
-        var save: [Int]?
-        var totalPasses: [Int]?
-        var passesAccurate: [Int]?
+        var goal: [Int]
+        var loss: [Int]
+        var shotsOnGoal: [Int]
+        var shotsOffGoal: [Int]
+        var blockedShots: [Int]
+        var shotsInsideBox: [Int]
+        var shotsOutsideBox: [Int]
+        var fouls: [Int]
+        var cornerKicks: [Int]
+        var offSide: [Int]
+        var ballPossession: [Int]
+        var yellow: [Int]
+        var red: [Int]
+        var save: [Int]
+        var totalPasses: [Int]
+        var passesAccurate: [Int]
         
     }
 }
