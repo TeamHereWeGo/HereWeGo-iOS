@@ -11,9 +11,9 @@ import GoogleSignIn
 
 struct LoginButton: View {
     // Test
-//    var viewModel: UserAPI = UserAPI()
-//    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
-//    @State var isLogined = false
+    //    var viewModel: UserAPI = UserAPI()
+    //    @StateObject var userAPIViewModel: UserAPIViewModel = .init()
+    //    @State var isLogined = false
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     
@@ -22,86 +22,27 @@ struct LoginButton: View {
     var provider : String
     var body: some View {
         if userAPIViewModel.isLogined {
-//            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
-//            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
-//            Button {
-//                googleAPIViewModel.isLogined.toggle()
-//            } label: {
-//                Text("Log out")
-//            }
-            TeamDetail(teamId: 40)
+            //            AsyncImage(url: URL(string: ( googleAPIViewModel.user.googleAPIData?.imageURL)!))
+            //            Text("\((googleAPIViewModel.user.googleAPIData?.name)!) is Logined")
+            //            Button {
+            //                googleAPIViewModel.isLogined.toggle()
+            //            } label: {
+            //                Text("Log out")
+            //            }
+            
+            TeamListView()
+            
+//            TeamDetail(teamId: userAPIViewModel.user.userInfoAPIData?.homeTeamId ?? 0)
+            
         } else {
             VStack {
                 Image("UCL_logo")
                     .resizable()
                     .aspectRatio( contentMode: .fit)
                     .frame(width: 200, height: 200)
-//                Link(destination: URL(string: "https://media.api-sports.io/football/leagues/39.png")!, label: {
-//                    Text("TEST Image(https)")
-//                })
-//                Link(destination: url!, label: {
-//                    HStack {
-//                        Spacer()
-//                        Text("직접 링크 넣기")
-//                        Spacer()
-//                    }
-//                    .padding()
-//                    .background(Color.gray)
-//                    .foregroundColor(.white)
-//                    .clipShape(RoundedRectangle(cornerRadius: 5))
-//                })
-//
-//                Button {
-//                    // Test
-//                    viewModel.fetch()
-//                } label: {
-//                    HStack{
-//                        Text("viewModel.fetch()")
-//                            .foregroundColor(Color.white)
-//                            .bold()
-//                            .frame(width: 300, height: 50)
-//                            .background(Color.gray)
-//                            .cornerRadius(5.0)
-//                    }
-//                }
-//                Button {
-//
-//                } label: {
-//                    HStack{
-//                        Text(provider + "로 로그인")
-//                            .foregroundColor(Color.white)
-//                            .bold()
-//                            .frame(width: 300, height: 50)
-//                            .background(Color.green)
-//                            .cornerRadius(5.0)
-//                    }
-//                }
-//                Button {
-//
-//                } label: {
-//                    HStack{
-//                        Text("깃허브로 로그인")
-//                            .foregroundColor(Color.white)
-//                            .bold()
-//                            .frame(width: 300, height: 50)
-//                            .background(Color.black)
-//                            .cornerRadius(5.0)
-//                    }
-//                }
-//                Button {
-//
-//                } label: {
-//                    HStack{
-//                        Text("카카오로 로그인")
-//                            .foregroundColor(Color.white)
-//                            .bold()
-//                            .frame(width: 300, height: 50)
-//                            .background(Color.yellow)
-//                            .cornerRadius(5.0)
-//                    }
-//                }
+                
                 GoogleSignInButton(action: userAPIViewModel.handleSignInButton)
-       
+                
             }//VStack
             .padding()
         }

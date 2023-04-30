@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ProfileButton: View {
     @State private var showingProfile = false
-    @Binding var isLogined: Bool
-    @Binding var userName: String
-    @Binding var password: String
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+    
     var body: some View {
         Button {
             showingProfile.toggle()
@@ -21,13 +21,15 @@ struct ProfileButton: View {
                 .labelStyle(.iconOnly)
         }
         .sheet(isPresented: $showingProfile) {
-            ProfileUser(isLogined: $isLogined, userName: self.$userName, password: self.$password)
+            ProfileUser()
         }
     }
 }
 
 struct ProfileButton_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileButton(isLogined: .constant(true),userName: .constant("jmtkd9196"), password: .constant("dlrudtn1234"))
+        ProfileButton()
+            .environmentObject(UserAPIViewModel())
+            .environmentObject(TeamAPIViewModel())
     }
 }

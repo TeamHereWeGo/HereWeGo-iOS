@@ -9,12 +9,18 @@ import SwiftUI
 
 struct TeamTitle: View {
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
 //    var teamImage: String
 //    var teamName: String
 //    var league: String
     var body: some View {
         HStack {
             Text("TEST")
+            if let test = userAPIViewModel.user.userInfoAPIData?.homeTeamId {
+                Text("\(test)")
+            } else {
+                Text("nil")
+            }
 //            Image(teamAPIViewModel.team.icon!)
 //                .resizable()
 //                .aspectRatio( contentMode: .fit)
@@ -55,5 +61,6 @@ struct TeamTitle_Previews: PreviewProvider {
     static var previews: some View {
         TeamTitle()
             .environmentObject(TeamAPIViewModel())
+            .environmentObject(UserAPIViewModel())
     }
 }
