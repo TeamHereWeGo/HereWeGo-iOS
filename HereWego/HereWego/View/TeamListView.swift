@@ -25,13 +25,15 @@ struct TeamListView: View {
                         Text("즐겨찾기")
                     }
                     ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
+                        if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
                             NavigationLink {
                                 // optional 고쳐야 됨
-                                TeamDetail(teamId: teamInfo.teamId)
+                                TeamDetail(teamIndex: teamIndex)
                                     .navigationBarTitleDisplayMode(.inline)
                             } label: {
                                 // teamViewModel로 바꿔야됨
-                                TeamListRow(teamId: teamInfo.teamId)
+                                TeamListRow(teamIndex: teamIndex)
+                            }
                         }
                     }
                     Button {

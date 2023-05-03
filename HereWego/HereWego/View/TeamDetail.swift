@@ -10,13 +10,13 @@ import SwiftUI
 struct TeamDetail: View {
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
-    var teamId: Int
+    var teamIndex: Int
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                TeamTitle(teamId: teamId)
+                TeamTitle(teamIndex: teamIndex)
                 Menu {
                     Button {
                         
@@ -48,7 +48,7 @@ struct TeamDetail: View {
                 .frame(height: 2)
                 .overlay(.black)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            Text("te2 : \(teamAPIViewModel.team.teamList[0].id)")
+            Text("teamInfo : \(teamAPIViewModel.team.teamList[teamIndex].id)")
             Spacer()
         }
         .onAppear {
@@ -59,7 +59,7 @@ struct TeamDetail: View {
 
 struct TeamDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TeamDetail(teamId: 40)
+        TeamDetail(teamIndex: 0)
             .environmentObject(TeamAPIViewModel())
             .environmentObject(UserAPIViewModel())
     }
