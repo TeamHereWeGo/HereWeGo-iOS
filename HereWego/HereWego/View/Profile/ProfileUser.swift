@@ -24,12 +24,8 @@ struct ProfileUser: View {
             }
             Text("email : \(userAPIViewModel.user.googleAPIData?.email ?? "nil")")
             
-            
             //아직 로그아웃 미구현
             Button {
-//                self.userName = ""
-//                self.password = ""
-//                self.isLogined = false
             } label: {
                 Text("로그아웃")
             }

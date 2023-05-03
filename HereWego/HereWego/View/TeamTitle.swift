@@ -11,9 +11,7 @@ struct TeamTitle: View {
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     var teamId: Int
-//    var teamImage: String
-//    var teamName: String
-//    var league: String
+    
     var body: some View {
         
         HStack {
@@ -47,7 +45,6 @@ struct TeamTitle: View {
                                 .foregroundColor(.gray)
                                 .padding(.trailing)
                         }
-
                     }
                 }
             }

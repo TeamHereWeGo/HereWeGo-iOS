@@ -11,7 +11,6 @@ struct User: Codable {
     var googleAPIData: GoogleAPIData?
     var joinAPIData: JoinAPIData?
     var userInfoAPIData: UserInfoAPIData?
-    
 }
 
 extension User {
@@ -31,16 +30,6 @@ extension User {
             self.accessToken = accessToken
             self.refreshToken = refreshToken
         }
-        
-        
-        
-        //        mutating func setInfo(_ name: String, _ email: String, _ imageURL: String, _ accessToken: String, _ refreshToken: String) {
-        //            self.name = name
-        //            self.email = email
-        //            self.imageURL = imageURL
-        //            self.accessToken = accessToken
-        //            self.refreshToken = refreshToken
-        //        }
     }
     
     struct JoinAPIData: Codable {
@@ -53,10 +42,6 @@ extension User {
             self.jwtRefreshToken = jwtRefreshToken
             self.userId = userId
         }
-        
-        //        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
-        //
-        //        }
     }
     
     struct UserInfoAPIData: Codable {
@@ -64,14 +49,12 @@ extension User {
         let favorites: [User.UserInfoAPIData.TeamSummary]
         let gameUnit: [Int]
         
-        
         init(homeTeamId: Int, favorites: [User.UserInfoAPIData.TeamSummary], gameUnit: [Int]) {
             self.homeTeamId = homeTeamId
             self.favorites = favorites
             self.gameUnit = gameUnit
         }
     }
-    
 }
 
 extension User.UserInfoAPIData {
@@ -82,7 +65,3 @@ extension User.UserInfoAPIData {
         let rank: Int
     }
 }
-
-
-
-

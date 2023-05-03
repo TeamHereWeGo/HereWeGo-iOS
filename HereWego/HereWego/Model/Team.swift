@@ -32,8 +32,6 @@ extension Team {
             self.id = 0
         }
         
-        
-        
         init(teamId: Int, teamName: String, league: String, icon: String, id: Int) {
             self.teamId = teamId
             self.teamName = teamName
@@ -79,6 +77,5 @@ extension Team.TeamInfo {
         var save: [Int]
         var totalPasses: [Int]
         var passesAccurate: [Int]
-        
     }
 }

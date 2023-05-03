@@ -16,7 +16,6 @@ struct HereWeGoApp: App {
             LoginButton(provider: "google")
                 .environmentObject(userAPIViewModel)
                 .environmentObject(teamAPIViewModel)
-//            LoginView()
         }
     }
 }

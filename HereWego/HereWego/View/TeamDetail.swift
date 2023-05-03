@@ -47,18 +47,6 @@ struct TeamDetail: View {
                 .frame(height: 2)
                 .overlay(.black)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            
-//            if let test1 = userAPIViewModel.user.userInfoAPIData?.homeTeamId {
-//                Text("te1 : \(test1)")
-//            } else {
-//                Text("nil")
-//            }
-//            if let test2 = teamAPIViewModel.team.teamName {
-//                Text("te2 : \(test2)")
-//            } else {
-//                Text("nil")
-//            }
-//            Text("te1 : \(userAPIViewModel.user.userInfoAPIData?.homeTeamId)")
             Text("te2 : \(teamAPIViewModel.team.teamList[0].id)")
             Spacer()
         }
@@ -73,12 +61,5 @@ struct TeamDetail_Previews: PreviewProvider {
         TeamDetail(teamId: 40)
             .environmentObject(TeamAPIViewModel())
             .environmentObject(UserAPIViewModel())
-//
-//        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
-//            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch) (4th generation)"))
-//            .previewDisplayName("iPad Pro (11-inch) (4th generation)")
-//        TeamDetail(teamImage: "ManchesterUnited_logo", teamName: "ManchesterUnited", league: "잉글랜드 프리미어리그")
-//            .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
-//            .previewDisplayName("iPhone SE (3rd generation)")
     }
 }

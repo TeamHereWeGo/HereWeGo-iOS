@@ -11,9 +11,6 @@ struct TeamListRow: View {
     @State private var isChecked = false
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var teamId: Int
-    //    var teamImage: String
-    //    var teamName: String
-    //    var rank: Int
     var body: some View {
         HStack {
             if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamId}) {
@@ -26,7 +23,6 @@ struct TeamListRow: View {
                     Image(systemName: "paperplane.circle.fill")
                 }
                 .padding(20)
-                
                 VStack {
                     HStack {
                         Text(teamAPIViewModel.team.teamList[teamIndex].teamName)
@@ -51,18 +47,14 @@ struct TeamListRow: View {
                                 .foregroundColor(.gray)
                                 .padding(.trailing)
                         }
-                        
                     }
                 }
             }
-    
-            
         }
     }
 }
 
 struct TeamListRow_Previews: PreviewProvider {
-    //    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     static var previews: some View {
         var teamInfo = Team.TeamInfo()
         TeamListRow(teamId: 40)
