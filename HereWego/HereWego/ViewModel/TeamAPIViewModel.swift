@@ -23,10 +23,9 @@ fileprivate enum HereWeGoAPITeamList {
 
 class TeamAPIViewModel: ObservableObject {
     
-//    @Published var googleAPIViewModel = GoogleAPIViewModel()
+    //    @Published var googleAPIViewModel = GoogleAPIViewModel()
     //    @Published var teams: [Team]
     @Published var team = Team()
-    @Published var teamList: [Team] = []
     @Published var message: String = "API 호출 중..."
     
     
@@ -48,7 +47,7 @@ class TeamAPIViewModel: ObservableObject {
         //            return
         //        }
         
-
+        
         
         // 2. url Request 설정 (Header같은 것 설정)
         var request = URLRequest(url: url)
@@ -61,6 +60,7 @@ class TeamAPIViewModel: ObservableObject {
         
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
             guard error == nil else {
                 print("Error: error calling GET")
                 print(error!)
@@ -88,11 +88,14 @@ class TeamAPIViewModel: ObservableObject {
                 print("Error: convert failed json to dictionary111")
                 return
             }
+            
+            
             guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
                 print("Error: HTTP request failed")
                 return
             }
             print("TeamAPIViewModel(jsonDictionary) : \(jsonDictionary)")
+            print("type : \(type(of: jsonDictionary))")
             //            guard let output = try? JSONDecoder().decode(Responses.StatusCode.self, from: data) else {
             //                print("Error: JSON Data Parsing failed")
             //                return
@@ -101,29 +104,26 @@ class TeamAPIViewModel: ObservableObject {
             
             // 3. GoogleAPIViewModel에서 userAPIViewModel에 호출한 지점에 completionHandler를 통해 결과 값을 넘겨주기 위해 Dictionary 형식으로 데이터 변경
             
-            if error == nil && data != nil {
-                
-                //Parse JSON
-                let decoder = JSONDecoder()
-                
-                do{
-                    
-                    let teamListData = try decoder.decode([Team].self, from: data)
-                    self.teamList = teamListData
-                    print("디코드 한 teamListData : \(teamListData)")
-                    print("team.teamList : \(self.teamList)")
-//                    print("전체 유저 정보 : \(self.team)")
+            
+
+            
+            
+            DispatchQueue.main.async { [weak self] in
+                if let array = jsonDictionary as? [[String: Any]] {
+                    for dict in array {
+                        if let teamName = dict["teamName"] as? String,
+                           let teamId = dict["teamId"] as? Int,
+                           let icon = dict["icon"] as? String,
+                           let league = dict["league"] as? String {
+                            let team = Team.TeamInfo(teamId: teamId, teamName: teamName, league: league, icon: icon, id: 1)
+                            self?.team.teamList.append(team)
+                        }
+                    }
                 }
-                catch{
-                    print("Error in JSON parsing")
-                }
+                print(self?.team)
             }
             
-//            let teamListAPIData = Responses.TeamDetailData(teamId: jsonDictionary["teamId"] as! Int, teamName: jsonDictionary["teamName"] as! String, league: jsonDictionary["league"] as! String, icon: jsonDictionary["icon"] as! String, joining: jsonDictionary["joining"] as! Team.Joining, statistics: jsonDictionary["statistics"] as! Team.Statistics)
-            
-            
-//            let teamListAPIData = Responses.TeamDetailData(teamId: jsonDictionary["teamId"] as! Int, teamName: jsonDictionary["teamName"] as! String, league: jsonDictionary["league"] as! String, icon: jsonDictionary["icon"] as! String, joining: jsonDictionary["joining"] as! Team.Joining, statistics: jsonDictionary["statistics"] as! Team.Statistics)
-            
+  
 
         }.resume()
     }
@@ -208,7 +208,7 @@ class TeamAPIViewModel: ObservableObject {
             // 3. GoogleAPIViewModel에서 userAPIViewModel에 호출한 지점에 completionHandler를 통해 결과 값을 넘겨주기 위해 Dictionary 형식으로 데이터 변경
             
             
-            let teamDetailData = Responses.TeamDetailData(teamId: jsonDictionary["teamId"] as! Int, teamName: jsonDictionary["teamName"] as! String, league: jsonDictionary["league"] as! String, icon: jsonDictionary["icon"] as! String, joining: jsonDictionary["joining"] as! Team.Joining, statistics: jsonDictionary["statistics"] as! Team.Statistics)
+//            let teamDetailData = Responses.TeamDetailData(teamId: jsonDictionary["teamId"] as! Int, teamName: jsonDictionary["teamName"] as! String, league: jsonDictionary["league"] as! String, icon: jsonDictionary["icon"] as! String, joining: jsonDictionary["joining"] as! Team.TeamInfo.Joining, statistics: jsonDictionary["statistics"] as! Team.TeamInfo.Statistics)
             
             
             // 4. 함수가 모두 종료 시 실행되는 핸들러 -> GoogleAPIViewModel로 결과 값 리턴
@@ -221,52 +221,53 @@ class TeamAPIViewModel: ObservableObject {
     func request(_ method: String, _ userData: User) {
         if method == "GET" {
             getTeamList(method: method, userData: userData)
-//            { (success, data) in
-//                DispatchQueue.main.async { [weak self] in
-//                    print(self?.message)
-//
-//                    //                self.message = data as! String
-//
-//                    //                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
-//                    //                    print(self?.userAPIViewModel.user)
-//                    if success {
-//                        self?.message = "팀 불러오기 성공"
-//
-//                        print(self?.team)
-//                    } else {
-//                        self?.message = "팀 불러우기 실패"
-//                    }
-//                    print(self?.message)
-//                }
-//            }
+            //            { (success, data) in
+            //                DispatchQueue.main.async { [weak self] in
+            //                    print(self?.message)
+            //
+            //                    //                self.message = data as! String
+            //
+            //                    //                    self?.user.userAPIData = User.JoinAPIData(data as! UserAPIViewModel.Responses.JoinAPIData)
+            //                    //                    print(self?.userAPIViewModel.user)
+            //                    if success {
+            //                        self?.message = "팀 불러오기 성공"
+            //
+            //                        print(self?.team)
+            //                    } else {
+            //                        self?.message = "팀 불러우기 실패"
+            //                    }
+            //                    print(self?.message)
+            //                }
+            //            }
         }
         else {
-//            requestPost(method: method, authProvider: authProvider, userData: userData) { (success, data) in
-//                completionHandler(success, data)
-//            }
+            //            requestPost(method: method, authProvider: authProvider, userData: userData) { (success, data) in
+            //                completionHandler(success, data)
+            //            }
         }
     }
     
 }
 
 
-extension TeamAPIViewModel {
-    struct Responses: Codable {
-        struct SummaryInfo: Codable {
-            let teamId: Int
-            let teamName: String
-            let league: String
-            let icon: String
-        }
-        
-        struct TeamDetailData: Codable {
-            let teamId: Int
-            let teamName: String
-            let league: String
-            let icon: String
-            let joining: Team.Joining
-            let statistics: Team.Statistics
-            
+
+//extension TeamAPIViewModel {
+//    struct Responses: Codable {
+//        struct SummaryInfo: Codable {
+//            let teamId: Int
+//            let teamName: String
+//            let league: String
+//            let icon: String
+//        }
+//
+//        struct TeamDetailData: Codable {
+//            let teamId: Int
+//            let teamName: String
+//            let league: String
+//            let icon: String
+//            let joining: Team.TeamInfo.Joining
+//            let statistics: Team.TeamInfo.Statistics
+//
             //            struct Joining: Codable {
             //                var leagueName: String?
             //                var icon: String?
@@ -291,19 +292,19 @@ extension TeamAPIViewModel {
             //                var passesAccurate: [Int]?
             //
             //            }
-        }
+//        }
         
         
         
         // Codable을 통해 JSON 객체를 Dictionary 타입으로 만들 수 있게 되었다.
-        struct StatusCode: Codable {
-            let success: Bool
-            let result: String
-            let message: String
-        }
-        
-    }
-}
-
-
-
+//        struct StatusCode: Codable {
+//            let success: Bool
+//            let result: String
+//            let message: String
+//        }
+//
+//    }
+//}
+//
+//
+//

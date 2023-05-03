@@ -15,7 +15,7 @@ struct TeamDetail: View {
         VStack {
             HStack {
                 Spacer()
-                TeamTitle()
+                TeamTitle(teamId: teamId)
                 Menu {
                     Button {
                         
@@ -59,7 +59,7 @@ struct TeamDetail: View {
 //                Text("nil")
 //            }
 //            Text("te1 : \(userAPIViewModel.user.userInfoAPIData?.homeTeamId)")
-            Text("te2 : \(teamAPIViewModel.team.teamName)")
+            Text("te2 : \(teamAPIViewModel.team.teamList[0].id)")
             Spacer()
         }
         .onAppear {

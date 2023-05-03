@@ -31,6 +31,7 @@
 		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
 		F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */; };
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
+		F3B1AB522A02200B00924860 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1AB512A02200B00924860 /* Array+Extension.swift */; };
 		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
 		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		F387BF202955BF88008E3877 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = HereWego/View/Login/LoginButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
+		F3B1AB512A02200B00924860 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "HereWego/Extensions/Array+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		F3249AF22919725A00302D84 /* HereWeGo */ = {
 			isa = PBXGroup;
 			children = (
+				F3B1AB4E2A021FC000924860 /* Extensions */,
 				F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */,
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
@@ -171,6 +174,14 @@
 				F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F3B1AB4E2A021FC000924860 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3B1AB512A02200B00924860 /* Array+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 				F3249B1F291973B900302D84 /* Team.swift in Sources */,
 				F3249B1C291973AE00302D84 /* SearchView.swift in Sources */,
 				F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */,
+				F3B1AB522A02200B00924860 /* Array+Extension.swift in Sources */,
 				F35A541329C70D4800E4446A /* UserAPIViewModel.swift in Sources */,
 				F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */,
 				F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */,

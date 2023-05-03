@@ -90,6 +90,8 @@ class UserAPIViewModel: ObservableObject {
                 
                 self?.registerNewUserGoogle(authProvider: "GOOGLE")
                 
+                print("User : \(self?.user)")
+                
             }
             
             

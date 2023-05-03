@@ -26,21 +26,23 @@ struct TeamListView: View {
                     
                     
                     
-                    
-                    NavigationLink {
-                        // optional 고쳐야 됨
-                        TeamDetail(teamId: 40)
-                            .navigationBarTitleDisplayMode(.inline)
-                    } label: {
-                        // teamViewModel로 바꿔야됨
-                        TeamListRow(teamId: 40)
+                    ForEach(teamAPIViewModel.team.teamList) { teamInfo in
+                        NavigationLink {
+                            // optional 고쳐야 됨
+                            TeamDetail(teamId: teamInfo.teamId)
+                                .navigationBarTitleDisplayMode(.inline)
+                        } label: {
+                            // teamViewModel로 바꿔야됨
+                            TeamListRow(teamId: teamInfo.teamId)
+                        }
                     }
                     
+                    
                     Button {
-                        print("팀 리스트 로그 : \(teamAPIViewModel.teamList)")
-                        print("팀 리스트 로그 1 : \(teamAPIViewModel.teamList[0])")
+                        print("팀 리스트 로그 : \(teamAPIViewModel.team.teamList)")
+                        print("팀 리스트 로그 1 : \(teamAPIViewModel.team.teamList[0])")
                     } label: {
-                        Text("ㅇ")
+                        Text("log")
                     }
 //                    NavigationLink {
 //                        TeamDetail(teamImage: "Liverpool_logo", teamName: "LiverPool", league: "잉글랜드 프리미어리그")

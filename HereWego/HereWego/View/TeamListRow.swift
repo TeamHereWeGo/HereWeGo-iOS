@@ -11,50 +11,62 @@ struct TeamListRow: View {
     @State private var isChecked = false
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var teamId: Int
-//    var teamImage: String
-//    var teamName: String
-//    var rank: Int
+    //    var teamImage: String
+    //    var teamName: String
+    //    var rank: Int
     var body: some View {
         HStack {
-            Image(teamAPIViewModel.team.icon)
-                .resizable()
-                .aspectRatio( contentMode: .fit)
-                .frame(width: 75, height: 75)
-            VStack {
-                HStack {
-                    Text(teamAPIViewModel.team.teamName)
-                        .bold()
-                        .font(.title3)
-                        .lineLimit(1)
-                        .allowsTightening(true)
-                    Spacer()
+            if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamId}) {
+                AsyncImage(url: URL(string: teamAPIViewModel.team.teamList[teamIndex].icon)) { image in
+                    image
+                        .resizable()
+                        .aspectRatio( contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                } placeholder: {
+                    Image(systemName: "paperplane.circle.fill")
                 }
-                HStack {
-                    Text("순위 : \(1)위")
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        FavoriteButton(isChecked: $isChecked)
+                .padding(20)
+                
+                VStack {
+                    HStack {
+                        Text(teamAPIViewModel.team.teamList[teamIndex].teamName)
+                            .bold()
+                            .font(.title3)
+                            .lineLimit(1)
+                            .allowsTightening(true)
+                        Spacer()
                     }
-                    Button {
+                    HStack {
+                        Text("순위 : \(1)위")
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            FavoriteButton(isChecked: $isChecked)
+                        }
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "house")
+                                .foregroundColor(.gray)
+                                .padding(.trailing)
+                        }
                         
-                    } label: {
-                        Image(systemName: "house")
-                            .foregroundColor(.gray)
-                            .padding(.trailing)
                     }
-                    
                 }
             }
+    
+            
         }
     }
 }
 
 struct TeamListRow_Previews: PreviewProvider {
-//    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+    //    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     static var previews: some View {
+        var teamInfo = Team.TeamInfo()
         TeamListRow(teamId: 40)
             .environmentObject(TeamAPIViewModel())
     }
 }
+
