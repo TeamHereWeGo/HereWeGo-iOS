@@ -11,6 +11,7 @@ struct TeamDetail: View {
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var teamId: Int
+    
     var body: some View {
         VStack {
             HStack {

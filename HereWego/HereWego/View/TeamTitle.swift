@@ -16,10 +16,15 @@ struct TeamTitle: View {
         
         HStack {
             if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamId}) {
-                Image(teamAPIViewModel.team.teamList[teamIndex].icon)
-                    .resizable()
-                    .aspectRatio( contentMode: .fit)
-                    .frame(width: 75, height: 75)
+                AsyncImage(url: URL(string: teamAPIViewModel.team.teamList[teamIndex].icon)) { image in
+                    image
+                        .resizable()
+                        .aspectRatio( contentMode: .fit)
+                        .frame(width: 75, height: 75)
+                } placeholder: {
+                    Image(systemName: "paperplane.circle.fill")
+                }
+                .padding(20)
                 VStack {
                     HStack {
                         Text(teamAPIViewModel.team.teamList[teamIndex].teamName)

@@ -24,19 +24,19 @@ struct TeamListView: View {
                     Toggle(isOn: $showFavoriteOnly) {
                         Text("즐겨찾기")
                     }
-                    ForEach(teamAPIViewModel.team.teamList) { teamInfo in
-                        NavigationLink {
-                            // optional 고쳐야 됨
-                            TeamDetail(teamId: teamInfo.teamId)
-                                .navigationBarTitleDisplayMode(.inline)
-                        } label: {
-                            // teamViewModel로 바꿔야됨
-                            TeamListRow(teamId: teamInfo.teamId)
+                    ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
+                            NavigationLink {
+                                // optional 고쳐야 됨
+                                TeamDetail(teamId: teamInfo.teamId)
+                                    .navigationBarTitleDisplayMode(.inline)
+                            } label: {
+                                // teamViewModel로 바꿔야됨
+                                TeamListRow(teamId: teamInfo.teamId)
                         }
                     }
                     Button {
                         print("팀 리스트 로그 : \(teamAPIViewModel.team.teamList)")
-                        print("팀 리스트 로그 1 : \(teamAPIViewModel.team.teamList[0])")
+                        print("팀 리스트 로그 1 : \(teamAPIViewModel.team.teamList[2])")
                     } label: {
                         Text("log")
                     }

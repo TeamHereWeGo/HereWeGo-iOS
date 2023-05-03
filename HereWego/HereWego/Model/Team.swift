@@ -20,7 +20,7 @@ extension Team {
         var icon: String
         var joining: Joining
         var statistics: Statistics
-        let id: Int
+        let id: String
         
         init() {
             self.teamId = 0
@@ -29,20 +29,20 @@ extension Team {
             self.icon = ""
             self.joining = Joining(leagueName: self.league, icon: self.icon)
             self.statistics = Statistics(goal: [], loss: [], shotsOnGoal: [], shotsOffGoal: [], blockedShots: [], shotsInsideBox: [], shotsOutsideBox: [], fouls: [], cornerKicks: [], offSide: [], ballPossession: [], yellow: [], red: [], save: [], totalPasses: [], passesAccurate: [])
-            self.id = 0
+            self.id = ""
         }
         
-        init(teamId: Int, teamName: String, league: String, icon: String, id: Int) {
+        init(teamId: Int, teamName: String, league: String, icon: String, id: String) {
             self.teamId = teamId
             self.teamName = teamName
             self.league = league
             self.icon = icon
             self.joining = Joining(leagueName: self.league, icon: self.icon)
             self.statistics = Statistics(goal: [], loss: [], shotsOnGoal: [], shotsOffGoal: [], blockedShots: [], shotsInsideBox: [], shotsOutsideBox: [], fouls: [], cornerKicks: [], offSide: [], ballPossession: [], yellow: [], red: [], save: [], totalPasses: [], passesAccurate: [])
-            self.id = 0
+            self.id = ""
         }
         
-        init(teamId: Int, teamName: String, league: String, icon: String, joining: Team.TeamInfo.Joining, statistics: Team.TeamInfo.Statistics, id: Int) {
+        init(teamId: Int, teamName: String, league: String, icon: String, joining: Team.TeamInfo.Joining, statistics: Team.TeamInfo.Statistics, id: String) {
             self.teamId = teamId
             self.teamName = teamName
             self.league = league

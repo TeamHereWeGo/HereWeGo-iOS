@@ -35,22 +35,22 @@ struct LoginView: View {
                     .background(Color.gray)
                     .cornerRadius(5.0)
                     .padding(.horizontal, 20)
-                Button {
-                    print(userName)
-                    print(password)
-                    tempLoginData.forEach { loginData in
-                        print(loginData)
-                        if userName == loginData.key && password == loginData.value {
-                            isLogined = true
-                        }
-                    }
-                } label: {
-                    Text("Login")
-                        .padding()
-                        .background(Color.gray)
-                        .cornerRadius(5.0)
-                        .padding(.horizontal, 20)
-                }
+//                Button {
+//                    print(userName)
+//                    print(password)
+//                    tempLoginData.forEach { loginData in
+//                        print(loginData)
+//                        if userName == loginData.key && password == loginData.value {
+//                            isLogined = true
+//                        }
+//                    }
+//                } label: {
+//                    Text("Login")
+//                        .padding()
+//                        .background(Color.gray)
+//                        .cornerRadius(5.0)
+//                        .padding(.horizontal, 20)
+//                }
                 .navigationDestination(isPresented: $isLogined) {
                     AddHomeTeamView(isLogined: self.$isLogined, userName: self.$userName, password: self.$password)
                 }

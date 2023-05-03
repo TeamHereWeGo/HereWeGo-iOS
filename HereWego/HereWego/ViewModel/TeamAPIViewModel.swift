@@ -72,7 +72,7 @@ class TeamAPIViewModel: ObservableObject {
                            let teamId = dict["teamId"] as? Int,
                            let icon = dict["icon"] as? String,
                            let league = dict["league"] as? String {
-                            let team = Team.TeamInfo(teamId: teamId, teamName: teamName, league: league, icon: icon, id: 1)
+                            let team = Team.TeamInfo(teamId: teamId, teamName: teamName, league: league, icon: icon, id: UUID().uuidString)
                             self?.team.teamList.append(team)
                         }
                     }
