@@ -25,23 +25,10 @@ struct TeamListView: View {
                     Toggle(isOn: $showFavoriteOnly) {
                         Text("즐겨찾기")
                     }
-                    if searchText == "" {
-                        ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
-                            if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
-                                NavigationLink {
-                                    // optional 고쳐야 됨
-                                    TeamDetail(teamIndex: teamIndex)
-                                        .navigationBarTitleDisplayMode(.inline)
-                                } label: {
-                                    // teamViewModel로 바꿔야됨
-                                    TeamListRow(teamIndex: teamIndex)
-                                }
-                            }
-                        }
-                    } else {
-                        ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
-                            if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
-                                if teamInfo.teamName.localizedCaseInsensitiveContains(searchText) {
+                    if showFavoriteOnly {
+                        if searchText == "" {
+                            ForEach(userAPIViewModel.user.userInfoAPIData.favorites, id: \.teamName) { teamInfo in
+                                if let teamIndex = userAPIViewModel.user.userInfoAPIData.favorites.firstIndex(where: { $0.teamName == teamInfo.teamName}) {
                                     NavigationLink {
                                         // optional 고쳐야 됨
                                         TeamDetail(teamIndex: teamIndex)
@@ -49,6 +36,51 @@ struct TeamListView: View {
                                     } label: {
                                         // teamViewModel로 바꿔야됨
                                         TeamListRow(teamIndex: teamIndex)
+                                    }
+                                }
+                            }
+                        } else {
+                            ForEach(userAPIViewModel.user.userInfoAPIData.favorites, id: \.teamName) { teamInfo in
+                                if let teamIndex = userAPIViewModel.user.userInfoAPIData.favorites.firstIndex(where: { $0.teamName == teamInfo.teamName}) {
+                                    if teamInfo.teamName.localizedCaseInsensitiveContains(searchText) {
+                                        NavigationLink {
+                                            // optional 고쳐야 됨
+                                            TeamDetail(teamIndex: teamIndex)
+                                                .navigationBarTitleDisplayMode(.inline)
+                                        } label: {
+                                            // teamViewModel로 바꿔야됨
+                                            TeamListRow(teamIndex: teamIndex)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        if searchText == "" {
+                            ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
+                                if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
+                                    NavigationLink {
+                                        // optional 고쳐야 됨
+                                        TeamDetail(teamIndex: teamIndex)
+                                            .navigationBarTitleDisplayMode(.inline)
+                                    } label: {
+                                        // teamViewModel로 바꿔야됨
+                                        TeamListRow(teamIndex: teamIndex)
+                                    }
+                                }
+                            }
+                        } else {
+                            ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
+                                if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
+                                    if teamInfo.teamName.localizedCaseInsensitiveContains(searchText) {
+                                        NavigationLink {
+                                            // optional 고쳐야 됨
+                                            TeamDetail(teamIndex: teamIndex)
+                                                .navigationBarTitleDisplayMode(.inline)
+                                        } label: {
+                                            // teamViewModel로 바꿔야됨
+                                            TeamListRow(teamIndex: teamIndex)
+                                        }
                                     }
                                 }
                             }

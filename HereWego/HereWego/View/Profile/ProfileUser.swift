@@ -13,7 +13,7 @@ struct ProfileUser: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("<회원 정보>")
-            Text("ID : \(userAPIViewModel.user.googleAPIData?.name ?? "nil")")
+            Text("ID : \(userAPIViewModel.user.googleAPIData.name ?? "nil")")
             HStack {
                 Text("PW : ")
                 Button {
@@ -22,7 +22,7 @@ struct ProfileUser: View {
                     Text("[비밀번호 변경]")
                 }
             }
-            Text("email : \(userAPIViewModel.user.googleAPIData?.email ?? "nil")")
+            Text("email : \(userAPIViewModel.user.googleAPIData.email ?? "nil")")
             
             //아직 로그아웃 미구현
             Button {

@@ -97,8 +97,8 @@ class UserAPIViewModel: ObservableObject {
         // 2. URL Request 설정(Header)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
-        urlRequest.setValue(self.user.googleAPIData?.accessToken as? String, forHTTPHeaderField: "Access-Token")
-        urlRequest.setValue(self.user.googleAPIData?.refreshToken as? String, forHTTPHeaderField: "Refresh-Token")
+        urlRequest.setValue(self.user.googleAPIData.accessToken as? String, forHTTPHeaderField: "Access-Token")
+        urlRequest.setValue(self.user.googleAPIData.refreshToken as? String, forHTTPHeaderField: "Refresh-Token")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpBody = json
         
@@ -134,8 +134,8 @@ class UserAPIViewModel: ObservableObject {
             self.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
             
             // log 출력
-            print("user jwtAccessToken[Register] : \(self.user.joinAPIData?.jwtAccessToken)")
-            print("user id[Register] : \(self.user.joinAPIData?.userId)")
+            print("user jwtAccessToken[Register] : \(self.user.joinAPIData.jwtAccessToken)")
+            print("user id[Register] : \(self.user.joinAPIData.userId)")
             
             self.getUserInfo()
         }.resume()
@@ -154,12 +154,12 @@ class UserAPIViewModel: ObservableObject {
         var urlRequest = URLRequest(url: url)
         
         // log 출력
-        print("user jwtAccessToken[getUserInfo] : \(self.user.joinAPIData?.jwtAccessToken)")
-        print("user id[getUserInfo] : \(self.user.joinAPIData?.userId)")
+        print("user jwtAccessToken[getUserInfo] : \(self.user.joinAPIData.jwtAccessToken)")
+        print("user id[getUserInfo] : \(self.user.joinAPIData.userId)")
         
         urlRequest.httpMethod = "GET"
-        urlRequest.setValue(self.user.joinAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
-        urlRequest.setValue(self.user.joinAPIData?.userId as? String, forHTTPHeaderField: "UserId")
+        urlRequest.setValue(self.user.joinAPIData.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.user.joinAPIData.userId as? String, forHTTPHeaderField: "UserId")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in

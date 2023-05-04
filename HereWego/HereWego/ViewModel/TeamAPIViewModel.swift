@@ -34,8 +34,8 @@ class TeamAPIViewModel: ObservableObject {
         }
         var request = URLRequest(url: url)
         request.httpMethod = method
-        request.setValue(userData.joinAPIData?.userId as? String, forHTTPHeaderField: "UserId")
-        request.setValue(userData.joinAPIData?.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
+        request.setValue(userData.joinAPIData.userId as? String, forHTTPHeaderField: "UserId")
+        request.setValue(userData.joinAPIData.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
@@ -97,8 +97,8 @@ class TeamAPIViewModel: ObservableObject {
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method
-        urlRequest.setValue(userData.googleAPIData?.accessToken as? String, forHTTPHeaderField: "Access-Token")
-        urlRequest.setValue(userData.googleAPIData?.refreshToken as? String, forHTTPHeaderField: "Refresh-Token")
+        urlRequest.setValue(userData.googleAPIData.accessToken as? String, forHTTPHeaderField: "Access-Token")
+        urlRequest.setValue(userData.googleAPIData.refreshToken as? String, forHTTPHeaderField: "Refresh-Token")
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpBody = json
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
