@@ -8,7 +8,6 @@
 import Foundation
 
 struct Team: Codable {
-    var searchKeyword = ""
     var teamList: [TeamInfo] = []
 }
 

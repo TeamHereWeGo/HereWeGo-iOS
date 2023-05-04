@@ -14,7 +14,7 @@ struct LoginView: View {
     @State private var isLogined = false
     @State private var showSignUp = false
     @State private var oauteChecked = false
-    private var tempLoginData: [String: String] = ["jmtkd9196": "dlrudtn1234", "jae961217": "jaeyeon1234", "sukrrard97": "hyeonseok1234", "rurusu0704": "junyoung1234"]
+//    private var tempLoginData: [String: String] = ["jmtkd9196": "dlrudtn1234", "jae961217": "jaeyeon1234", "sukrrard97": "hyeonseok1234", "rurusu0704": "junyoung1234"]
     
     var body: some View {
         NavigationStack(path: $stack) {
@@ -37,7 +37,6 @@ struct LoginView: View {
                     .padding(.horizontal, 20)
 //                Button {
 //                    print(userName)
-//                    print(password)
 //                    tempLoginData.forEach { loginData in
 //                        print(loginData)
 //                        if userName == loginData.key && password == loginData.value {

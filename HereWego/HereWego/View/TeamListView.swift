@@ -10,6 +10,7 @@ import SwiftUI
 struct TeamListView: View {
     @State private var showFavoriteOnly = false
     @State private var showingProfile = false
+    @State private var searchText = ""
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     
@@ -17,25 +18,43 @@ struct TeamListView: View {
         NavigationView {
             VStack {
                 List {
-                    SearchView()
+                    SearchView(searchText: $searchText)
                         .frame(height: 10)
                         .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 0))
                         .cornerRadius(10)
                     Toggle(isOn: $showFavoriteOnly) {
                         Text("즐겨찾기")
                     }
-                    ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
-                        if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
-                            NavigationLink {
-                                // optional 고쳐야 됨
-                                TeamDetail(teamIndex: teamIndex)
-                                    .navigationBarTitleDisplayMode(.inline)
-                            } label: {
-                                // teamViewModel로 바꿔야됨
-                                TeamListRow(teamIndex: teamIndex)
+                    if searchText == "" {
+                        ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
+                            if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
+                                NavigationLink {
+                                    // optional 고쳐야 됨
+                                    TeamDetail(teamIndex: teamIndex)
+                                        .navigationBarTitleDisplayMode(.inline)
+                                } label: {
+                                    // teamViewModel로 바꿔야됨
+                                    TeamListRow(teamIndex: teamIndex)
+                                }
+                            }
+                        }
+                    } else {
+                        ForEach(teamAPIViewModel.team.teamList, id: \.teamId) { teamInfo in
+                            if let teamIndex = teamAPIViewModel.team.teamList.firstIndex(where: { $0.teamId == teamInfo.teamId}) {
+                                if teamInfo.teamName.localizedCaseInsensitiveContains(searchText) {
+                                    NavigationLink {
+                                        // optional 고쳐야 됨
+                                        TeamDetail(teamIndex: teamIndex)
+                                            .navigationBarTitleDisplayMode(.inline)
+                                    } label: {
+                                        // teamViewModel로 바꿔야됨
+                                        TeamListRow(teamIndex: teamIndex)
+                                    }
+                                }
                             }
                         }
                     }
+                    
                     Button {
                         print("팀 리스트 로그 : \(teamAPIViewModel.team.teamList)")
                         print("팀 리스트 로그 1 : \(teamAPIViewModel.team.teamList[2])")
