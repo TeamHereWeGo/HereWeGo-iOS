@@ -142,8 +142,8 @@ class UserAPIViewModel: ObservableObject {
         }.resume()
     }
     
-    // MARK: User에 Favorite Team 저장
-    func registerFavoriteTeamOrDeregisterFavoriteTeam(teamId: String) {
+    // MARK: User에 Favorite Team 추가 및 삭제
+    func registerFavoriteTeamOrDeregisterFavoriteTeam(teamId: Int) {
         guard let json = try? JSONEncoder().encode(self.user.googleAPIData) else { return }
         
         // 1. URL Components 설정
@@ -151,7 +151,7 @@ class UserAPIViewModel: ObservableObject {
         urlComponents.scheme = HereWeGoAPI.scheme
         urlComponents.host = HereWeGoAPI.host
         urlComponents.path = HereWeGoAPI.Path.favorites.rawValue
-        urlComponents.queryItems = [URLQueryItem(name: teamId, value: "\(teamId)")]
+        urlComponents.queryItems = [URLQueryItem(name: "teamId", value: "\(teamId)")]
         guard let url = urlComponents.url else {
             print("Error: cannot create URL")
             return
@@ -166,7 +166,7 @@ class UserAPIViewModel: ObservableObject {
         urlRequest.httpBody = json
         
         // log 출력
-        print("log : \(urlRequest)")
+        print("log[registerFavoriteTeamOrDeregisterFavoriteTeam] : \(urlRequest)")
         
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             guard error == nil else {
@@ -193,14 +193,10 @@ class UserAPIViewModel: ObservableObject {
                 return
             }
             
-            // 3. 받아서 Dictionary 형태의 데이터를 User 객체에 저장
-            self.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+            // log
+            print(jsonStr)
+            print(self.user.userInfoAPIData.favorites)
             
-            // log 출력
-            print("user jwtAccessToken[Register] : \(self.user.joinAPIData.jwtAccessToken)")
-            print("user id[Register] : \(self.user.joinAPIData.userId)")
-            
-            self.getUserInfo()
         }.resume()
     }
     
@@ -282,6 +278,10 @@ class UserAPIViewModel: ObservableObject {
         return false
     }
       
+//    // MARK: Register Favorite Team or DeRegister Favorite Team
+//    func toggleFavoriteTeam() {
+//
+//    }
     
     // MARK: 메소드 별 동작 분리
     func request(_ method: String, _ authProvider: String) {

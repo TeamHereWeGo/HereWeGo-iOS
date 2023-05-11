@@ -40,7 +40,7 @@ struct TeamListRow: View {
                     Button {
                         
                     } label: {
-                        FavoriteButton(isChecked: userAPIViewModel.isFavorite(team: teamAPIViewModel.team.teamList[teamIndex]))
+                        FavoriteButton(teamIndex: teamIndex)
                     }
                     Button {
                         
