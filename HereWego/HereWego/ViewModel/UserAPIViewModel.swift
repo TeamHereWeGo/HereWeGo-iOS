@@ -16,6 +16,7 @@ fileprivate enum HereWeGoAPI {
     enum Path: String {
         case join = "/v1/join"
         case users = "/v1/users"
+        case favorites = "/v1/teams/favorites"
     }
 }
 
@@ -141,6 +142,68 @@ class UserAPIViewModel: ObservableObject {
         }.resume()
     }
     
+    // MARK: User에 Favorite Team 저장
+    func registerFavoriteTeamOrDeregisterFavoriteTeam(teamId: String) {
+        guard let json = try? JSONEncoder().encode(self.user.googleAPIData) else { return }
+        
+        // 1. URL Components 설정
+        var urlComponents = URLComponents()
+        urlComponents.scheme = HereWeGoAPI.scheme
+        urlComponents.host = HereWeGoAPI.host
+        urlComponents.path = HereWeGoAPI.Path.favorites.rawValue
+        urlComponents.queryItems = [URLQueryItem(name: teamId, value: "\(teamId)")]
+        guard let url = urlComponents.url else {
+            print("Error: cannot create URL")
+            return
+        }
+        
+        // 2. URL Request 설정(Header)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "PUT"
+        urlRequest.setValue(self.user.joinAPIData.userId as? String, forHTTPHeaderField: "UserId")
+        urlRequest.setValue(self.user.joinAPIData.jwtAccessToken as? String, forHTTPHeaderField: "Authorization")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = json
+        
+        // log 출력
+        print("log : \(urlRequest)")
+        
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            guard error == nil else {
+                print("Error: error calling GET")
+                print(error!)
+                return
+            }
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            print("log1 : \(data)")
+            guard let response = response else {
+                print("Error: response error")
+                return
+            }
+            let jsonStr = String(decoding: data, as: UTF8.self)
+            guard let jsonDictionary = try? JSONSerialization.jsonObject(with: Data(jsonStr.utf8), options: []) as? [String: Any] else {
+                print("Error: convert failed json to dictionary")
+                return
+            }
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+            
+            // 3. 받아서 Dictionary 형태의 데이터를 User 객체에 저장
+            self.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+            
+            // log 출력
+            print("user jwtAccessToken[Register] : \(self.user.joinAPIData.jwtAccessToken)")
+            print("user id[Register] : \(self.user.joinAPIData.userId)")
+            
+            self.getUserInfo()
+        }.resume()
+    }
+    
     // MARK: User.UserInfoAPIData 정보 저장
     func getUserInfo() {
         var urlComponents = URLComponents()
@@ -208,6 +271,17 @@ class UserAPIViewModel: ObservableObject {
             self.isLogined = true
         }.resume()
     }
+    
+    // MARK: Favorite Team인지 아닌지 확인(True / False)
+    func isFavorite(team: Team.TeamInfo) -> Bool {
+        for teamInfo in self.user.userInfoAPIData.favorites {
+            if teamInfo.teamName == team.teamName {
+                return true
+            }
+        }
+        return false
+    }
+      
     
     // MARK: 메소드 별 동작 분리
     func request(_ method: String, _ authProvider: String) {

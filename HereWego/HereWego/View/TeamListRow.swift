@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TeamListRow: View {
     @State private var isChecked = false
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var teamIndex: Int
     
@@ -35,10 +36,11 @@ struct TeamListRow: View {
                 HStack {
                     Text("순위 : \(1)위")
                     Spacer()
+                    
                     Button {
                         
                     } label: {
-                        FavoriteButton(isChecked: $isChecked)
+                        FavoriteButton(isChecked: userAPIViewModel.isFavorite(team: teamAPIViewModel.team.teamList[teamIndex]))
                     }
                     Button {
                         
@@ -56,9 +58,9 @@ struct TeamListRow: View {
 
 struct TeamListRow_Previews: PreviewProvider {
     static var previews: some View {
-        var teamInfo = Team.TeamInfo()
-        TeamListRow(teamIndex: 0)
+        TeamListRow(teamIndex: 40)
             .environmentObject(TeamAPIViewModel())
+            .environmentObject(UserAPIViewModel())
     }
 }
 

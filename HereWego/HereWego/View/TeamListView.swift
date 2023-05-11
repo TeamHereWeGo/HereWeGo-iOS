@@ -25,6 +25,7 @@ struct TeamListView: View {
                     Toggle(isOn: $showFavoriteOnly) {
                         Text("즐겨찾기")
                     }
+                    // 즐겨찾기만 보기
                     if showFavoriteOnly {
                         if searchText == "" {
                             ForEach(userAPIViewModel.user.userInfoAPIData.favorites, id: \.teamName) { teamInfo in
@@ -39,7 +40,7 @@ struct TeamListView: View {
                                     }
                                 }
                             }
-                        } else {
+                        } else {    // 모두 보기
                             ForEach(userAPIViewModel.user.userInfoAPIData.favorites, id: \.teamName) { teamInfo in
                                 if let teamIndex = userAPIViewModel.user.userInfoAPIData.favorites.firstIndex(where: { $0.teamName == teamInfo.teamName}) {
                                     if teamInfo.teamName.localizedCaseInsensitiveContains(searchText) {

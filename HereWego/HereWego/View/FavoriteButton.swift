@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @Binding var isChecked: Bool
+    var isChecked: Bool
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var body: some View {
         Button {
-            isChecked.toggle()
+            
         } label: {
             Label("Toggle Oauth", systemImage: isChecked ? "star.fill" : "star")
                 .labelStyle(.iconOnly)
@@ -22,6 +24,8 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(isChecked: .constant(true))
+        FavoriteButton(isChecked: true)
+            .environmentObject(UserAPIViewModel())
+            .environmentObject(TeamAPIViewModel())
     }
 }

@@ -36,6 +36,7 @@ struct TeamTitle: View {
                 HStack {
                     Text(teamAPIViewModel.team.teamList[teamIndex].league)
                     Spacer()
+                    
                     Button {
                         
                     } label: {
