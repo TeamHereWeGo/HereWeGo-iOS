@@ -40,8 +40,7 @@ struct TeamTitle: View {
                     Button {
                         
                     } label: {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
+                        FavoriteButton(isChecked: userAPIViewModel.isFavorite(team: teamAPIViewModel.team.teamList[teamIndex]))
                     }
                     Button {
                         
