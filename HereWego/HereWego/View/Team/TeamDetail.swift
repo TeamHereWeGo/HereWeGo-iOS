@@ -48,21 +48,33 @@ struct TeamDetail: View {
                 .frame(height: 2)
                 .overlay(.black)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            Text("teamInfo : \(teamAPIViewModel.team.teamList[teamIndex].id)")
+            ChartView(teamIndex: teamIndex)
+            ForEach(teamAPIViewModel.team.teamList[teamIndex].statistics.ballPossession, id: \.self) { statistic in
+                Text("statistics : \(statistic)")
+            }
+//            Text("득점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.goal[0])")
+//            Text("실점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.loss[0])")
+//            Text("볼 점유율 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.ballPossession[0])")
+//            Text("막힌 슛 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.blockedShots[0])")
+//            Text("코너킥 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.cornerKicks[0])")
+//            Text("오프사이드 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.offSide[0])")
+//            Text("패스정확도 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.passesAccurate[0])")
+            
             Spacer()
         }
         .onAppear {
             print("userAPIViewModel.user : \(userAPIViewModel.user)")
             teamAPIViewModel.getTeamDetail(method: "GET", userData: userAPIViewModel.user, teamId: teamAPIViewModel.team.teamList[teamIndex].teamId)
+            print(teamIndex)
             print("teamDetail : \(teamAPIViewModel.team.teamList[teamIndex])")
         }
     }
 }
 
-struct TeamDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        TeamDetail(teamIndex: 0)
-            .environmentObject(TeamAPIViewModel())
-            .environmentObject(UserAPIViewModel())
-    }
-}
+//struct TeamDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TeamDetail(teamIndex: 0)
+//            .environmentObject(TeamAPIViewModel())
+//            .environmentObject(UserAPIViewModel())
+//    }
+//}
