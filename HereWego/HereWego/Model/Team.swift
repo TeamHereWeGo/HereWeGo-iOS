@@ -36,6 +36,7 @@ extension Team {
             self.teamName = teamName
             self.league = league
             self.icon = icon
+            //여기서 joining 정보까지 갱신
             self.joining = Joining(leagueName: self.league, icon: self.icon)
             self.statistics = Statistics(goal: [], loss: [], shotsOnGoal: [], shotsOffGoal: [], blockedShots: [], shotsInsideBox: [], shotsOutsideBox: [], fouls: [], cornerKicks: [], offSide: [], ballPossession: [], yellow: [], red: [], save: [], totalPasses: [], passesAccurate: [])
             self.id = ""

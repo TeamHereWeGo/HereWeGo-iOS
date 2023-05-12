@@ -130,5 +130,68 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HereWego/ViewModel/TeamAPIViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "getTeamDetail(method:userData:teamId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3 - d37f3c492c167820"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.getTeamDetail(method: Swift.String, userData: HereWeGo.User, teamId: Swift.Int) -&gt; ()"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "2804">
+               </Location>
+               <Location
+                  uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3 - c8aebf4af7c12a63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.getTeamDetail(method: Swift.String, userData: HereWeGo.User, teamId: Swift.Int) -&gt; ()"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3 - c8aebf4af7c12a63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.getTeamDetail(method: Swift.String, userData: HereWeGo.User, teamId: Swift.Int) -&gt; ()"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -53,6 +53,8 @@ struct TeamDetail: View {
         }
         .onAppear {
             print("userAPIViewModel.user : \(userAPIViewModel.user)")
+            teamAPIViewModel.getTeamDetail(method: "GET", userData: userAPIViewModel.user, teamId: teamAPIViewModel.team.teamList[teamIndex].teamId)
+            print("teamDetail : \(teamAPIViewModel.team.teamList[teamIndex])")
         }
     }
 }
