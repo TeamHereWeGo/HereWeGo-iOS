@@ -48,19 +48,26 @@ struct TeamDetail: View {
                 .frame(height: 2)
                 .overlay(.black)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-            ChartView(teamIndex: teamIndex)
-            ForEach(teamAPIViewModel.team.teamList[teamIndex].statistics.ballPossession, id: \.self) { statistic in
-                Text("statistics : \(statistic)")
-            }
-//            Text("득점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.goal[0])")
-//            Text("실점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.loss[0])")
-//            Text("볼 점유율 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.ballPossession[0])")
-//            Text("막힌 슛 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.blockedShots[0])")
-//            Text("코너킥 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.cornerKicks[0])")
-//            Text("오프사이드 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.offSide[0])")
-//            Text("패스정확도 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.passesAccurate[0])")
             
-            Spacer()
+            ScrollView {
+                ChartView(teamIndex: teamIndex)
+                    .clipShape(Rectangle())
+                    .frame(width: .infinity, height: 300)   //  상수 수정하기.
+                    .overlay {
+                        Rectangle().stroke(.black, lineWidth: 2)
+                    }
+                    .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                TeamStatisticsView(teamIndex: teamIndex)
+    //            Text("득점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.goal[0])")
+    //            Text("실점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.loss[0])")
+    //            Text("볼 점유율 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.ballPossession[0])")
+    //            Text("막힌 슛 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.blockedShots[0])")
+    //            Text("코너킥 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.cornerKicks[0])")
+    //            Text("오프사이드 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.offSide[0])")
+    //            Text("패스정확도 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.passesAccurate[0])")
+                
+                Spacer()
+            }
         }
         .onAppear {
             print("userAPIViewModel.user : \(userAPIViewModel.user)")

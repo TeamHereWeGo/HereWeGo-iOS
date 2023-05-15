@@ -24,6 +24,7 @@
 		F35A541329C70D4800E4446A /* UserAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541229C70D4800E4446A /* UserAPIViewModel.swift */; };
 		F35A541529C70DDF00E4446A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541429C70DDF00E4446A /* AppDelegate.swift */; };
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
+		F37FA5BF2A1137AF00F80B80 /* TeamStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FA5BE2A1137AF00F80B80 /* TeamStatistics.swift */; };
 		F386FDBA29CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */; };
 		F386FDC029CAF7C0005BCFDD /* TeamAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386FDBF29CAF7C0005BCFDD /* TeamAPIViewModel.swift */; };
 		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
@@ -52,6 +53,7 @@
 		F35A541229C70D4800E4446A /* UserAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPIViewModel.swift; path = HereWego/ViewModel/UserAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F35A541429C70DDF00E4446A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HereWego/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
+		F37FA5BE2A1137AF00F80B80 /* TeamStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamStatistics.swift; path = HereWego/View/Team/TeamStatistics.swift; sourceTree = SOURCE_ROOT; };
 		F37FDF9129658533008D7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		F386FDBF29CAF7C0005BCFDD /* TeamAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamAPIViewModel.swift; path = HereWego/ViewModel/TeamAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -150,6 +152,7 @@
 				F3249B14291973AE00302D84 /* TeamListRow.swift */,
 				F3249B11291973AE00302D84 /* TeamListView.swift */,
 				F3249B12291973AE00302D84 /* TeamTitle.swift */,
+				F37FA5BE2A1137AF00F80B80 /* TeamStatistics.swift */,
 			);
 			path = Team;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				F386FDC029CAF7C0005BCFDD /* TeamAPIViewModel.swift in Sources */,
 				F3BE5DB42A0E259600C9F950 /* ChartView.swift in Sources */,
 				F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */,
+				F37FA5BF2A1137AF00F80B80 /* TeamStatistics.swift in Sources */,
 				F387BF212955BF88008E3877 /* LoginButton.swift in Sources */,
 				F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */,
 			);
