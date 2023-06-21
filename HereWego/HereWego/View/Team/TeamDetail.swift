@@ -10,6 +10,7 @@ import SwiftUI
 struct TeamDetail: View {
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+    @State private var dataType: String = "test"
     var teamIndex: Int
     
     var body: some View {
@@ -50,14 +51,14 @@ struct TeamDetail: View {
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             
             ScrollView {
-                ChartView(teamIndex: teamIndex)
+                ChartView(teamIndex: teamIndex, dataType: $dataType)
                     .clipShape(Rectangle())
                     .frame(width: .infinity, height: 300)   //  상수 수정하기.
                     .overlay {
                         Rectangle().stroke(.black, lineWidth: 2)
                     }
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                TeamStatisticsView(teamIndex: teamIndex)
+                TeamStatisticsView(teamIndex: teamIndex, dataType: $dataType)
                 
                 
                 
