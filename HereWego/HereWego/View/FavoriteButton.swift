@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct FavoriteButton: View {
-    @Binding var isChecked: Bool
+    var teamIndex: Int
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var body: some View {
         Button {
-            isChecked.toggle()
+            userAPIViewModel.registerFavoriteTeamOrDeregisterFavoriteTeam(teamId: teamAPIViewModel.team.teamList[teamIndex].teamId)
         } label: {
-            Label("Toggle Oauth", systemImage: isChecked ? "star.fill" : "star")
+                Label("Toggle Oauth", systemImage: userAPIViewModel.isFavorite(team: teamAPIViewModel.team.teamList[teamIndex]) ? "star.fill" : "star")
                 .labelStyle(.iconOnly)
-                .foregroundColor(isChecked ? .yellow : .gray)
+                .foregroundColor(true ? .yellow : .gray)
         }
     }
 }
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteButton(isChecked: .constant(true))
+        FavoriteButton(teamIndex: 40)
+            .environmentObject(UserAPIViewModel())
+            .environmentObject(TeamAPIViewModel())
     }
 }

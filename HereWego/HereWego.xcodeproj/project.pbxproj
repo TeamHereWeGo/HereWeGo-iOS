@@ -21,16 +21,17 @@
 		F3249B1F291973B900302D84 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3249B1E291973B900302D84 /* Team.swift */; };
 		F35A540B29C70B9F00E4446A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F35A540A29C70B9F00E4446A /* GoogleSignIn */; };
 		F35A540D29C70B9F00E4446A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F35A540C29C70B9F00E4446A /* GoogleSignInSwift */; };
-		F35A541129C70D3D00E4446A /* GoogleAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */; };
 		F35A541329C70D4800E4446A /* UserAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541229C70D4800E4446A /* UserAPIViewModel.swift */; };
 		F35A541529C70DDF00E4446A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35A541429C70DDF00E4446A /* AppDelegate.swift */; };
 		F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */; };
-		F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FDF96296609F0008D7BF2 /* UserAPI.swift */; };
+		F37FA5BF2A1137AF00F80B80 /* TeamStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37FA5BE2A1137AF00F80B80 /* TeamStatistics.swift */; };
 		F386FDBA29CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */; };
 		F386FDC029CAF7C0005BCFDD /* TeamAPIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386FDBF29CAF7C0005BCFDD /* TeamAPIViewModel.swift */; };
 		F387BF212955BF88008E3877 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F387BF202955BF88008E3877 /* LoginButton.swift */; };
 		F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */; };
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
+		F3B1AB522A02200B00924860 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1AB512A02200B00924860 /* Array+Extension.swift */; };
+		F3BE5DB42A0E259600C9F950 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE5DB32A0E259600C9F950 /* ChartView.swift */; };
 		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
 		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
@@ -49,17 +50,18 @@
 		F3249B13291973AE00302D84 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F3249B14291973AE00302D84 /* TeamListRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamListRow.swift; sourceTree = "<group>"; };
 		F3249B1E291973B900302D84 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoogleAPIViewModel.swift; path = HereWego/ViewModel/GoogleAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F35A541229C70D4800E4446A /* UserAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPIViewModel.swift; path = HereWego/ViewModel/UserAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F35A541429C70DDF00E4446A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HereWego/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OauthCheckBox.swift; path = HereWego/View/OauthCheckBox.swift; sourceTree = SOURCE_ROOT; };
+		F37FA5BE2A1137AF00F80B80 /* TeamStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamStatistics.swift; path = HereWego/View/Team/TeamStatistics.swift; sourceTree = SOURCE_ROOT; };
 		F37FDF9129658533008D7BF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F37FDF96296609F0008D7BF2 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = HereWego/ViewModel/UserAPI.swift; sourceTree = SOURCE_ROOT; };
 		F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		F386FDBF29CAF7C0005BCFDD /* TeamAPIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamAPIViewModel.swift; path = HereWego/ViewModel/TeamAPIViewModel.swift; sourceTree = SOURCE_ROOT; };
 		F387BF202955BF88008E3877 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = HereWego/View/Login/LoginButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
+		F3B1AB512A02200B00924860 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "HereWego/Extensions/Array+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		F3BE5DB32A0E259600C9F950 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = HereWego/View/ChartView.swift; sourceTree = SOURCE_ROOT; };
 		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 		F3249AF22919725A00302D84 /* HereWeGo */ = {
 			isa = PBXGroup;
 			children = (
+				F3B1AB4E2A021FC000924860 /* Extensions */,
 				F386FDB929CADB88005BCFDD /* client_55459197335-278uorif4s69e2o7o6lvpar71h7grd47.apps.googleusercontent.com.plist */,
 				F3249AF32919725A00302D84 /* HereWeGoApp.swift */,
 				F3249B012919727B00302D84 /* Model */,
@@ -129,26 +132,34 @@
 		F3249B08291972F700302D84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F35FEC312A0D3E1400FAE7A2 /* Team */,
 				F387BF1F2955BDF4008E3877 /* Login */,
 				F39AD9D9291B913D00EDCC82 /* Profile */,
 				F3249B0E291973AE00302D84 /* AddHomeTeamView.swift */,
 				F3F40115291A8DA6009D43B8 /* SignUpView.swift */,
 				F3249B13291973AE00302D84 /* SearchView.swift */,
+				F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */,
+				F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */,
+				F3BE5DB32A0E259600C9F950 /* ChartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F35FEC312A0D3E1400FAE7A2 /* Team */ = {
+			isa = PBXGroup;
+			children = (
 				F3249B0C291973AE00302D84 /* TeamDetail.swift */,
 				F3249B14291973AE00302D84 /* TeamListRow.swift */,
 				F3249B11291973AE00302D84 /* TeamListView.swift */,
 				F3249B12291973AE00302D84 /* TeamTitle.swift */,
-				F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */,
-				F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */,
+				F37FA5BE2A1137AF00F80B80 /* TeamStatistics.swift */,
 			);
-			path = View;
+			path = Team;
 			sourceTree = "<group>";
 		};
 		F37FDF95296609E4008D7BF2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F37FDF96296609F0008D7BF2 /* UserAPI.swift */,
-				F35A541029C70D3D00E4446A /* GoogleAPIViewModel.swift */,
 				F35A541229C70D4800E4446A /* UserAPIViewModel.swift */,
 				F386FDBF29CAF7C0005BCFDD /* TeamAPIViewModel.swift */,
 			);
@@ -171,6 +182,14 @@
 				F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F3B1AB4E2A021FC000924860 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3B1AB512A02200B00924860 /* Array+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +273,9 @@
 				F3249B1F291973B900302D84 /* Team.swift in Sources */,
 				F3249B1C291973AE00302D84 /* SearchView.swift in Sources */,
 				F3249B15291973AE00302D84 /* TeamDetail.swift in Sources */,
+				F3B1AB522A02200B00924860 /* Array+Extension.swift in Sources */,
 				F35A541329C70D4800E4446A /* UserAPIViewModel.swift in Sources */,
 				F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */,
-				F37FDF97296609F0008D7BF2 /* UserAPI.swift in Sources */,
 				F3249B1A291973AE00302D84 /* TeamListView.swift in Sources */,
 				F3249B16291973AE00302D84 /* LoginView.swift in Sources */,
 				F35A541529C70DDF00E4446A /* AppDelegate.swift in Sources */,
@@ -267,9 +286,10 @@
 				F3249AF42919725A00302D84 /* HereWeGoApp.swift in Sources */,
 				F3249B1D291973AE00302D84 /* TeamListRow.swift in Sources */,
 				F36E4FCC291AD22C006E72D6 /* OauthCheckBox.swift in Sources */,
-				F35A541129C70D3D00E4446A /* GoogleAPIViewModel.swift in Sources */,
 				F386FDC029CAF7C0005BCFDD /* TeamAPIViewModel.swift in Sources */,
+				F3BE5DB42A0E259600C9F950 /* ChartView.swift in Sources */,
 				F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */,
+				F37FA5BF2A1137AF00F80B80 /* TeamStatistics.swift in Sources */,
 				F387BF212955BF88008E3877 /* LoginButton.swift in Sources */,
 				F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */,
 			);

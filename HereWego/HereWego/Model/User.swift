@@ -8,20 +8,34 @@
 import Foundation
 
 struct User: Codable {
-    var googleAPIData: GoogleAPIData?
-    var joinAPIData: JoinAPIData?
-    var userInfoAPIData: UserInfoAPIData?
+    var googleAPIData: GoogleAPIData
+    var joinAPIData: JoinAPIData
+    var userInfoAPIData: UserInfoAPIData
     
+    init() {
+        googleAPIData = GoogleAPIData()
+        joinAPIData = JoinAPIData()
+        userInfoAPIData = UserInfoAPIData()
+    }
 }
 
 extension User {
     struct GoogleAPIData: Codable {
-        let authProvider: String
-        let name: String
-        let email: String
-        let image: String
-        let accessToken: String
-        let refreshToken: String
+        var authProvider: String
+        var name: String
+        var email: String
+        var image: String
+        var accessToken: String
+        var refreshToken: String
+        
+        init() {
+            self.authProvider = ""
+            self.name = ""
+            self.email = ""
+            self.image = ""
+            self.accessToken = ""
+            self.refreshToken = ""
+        }
         
         init(authProvider: String, name: String, email: String, image: String, accessToken: String, refreshToken: String) {
             self.authProvider = authProvider
@@ -31,39 +45,36 @@ extension User {
             self.accessToken = accessToken
             self.refreshToken = refreshToken
         }
-        
-        
-        
-        //        mutating func setInfo(_ name: String, _ email: String, _ imageURL: String, _ accessToken: String, _ refreshToken: String) {
-        //            self.name = name
-        //            self.email = email
-        //            self.imageURL = imageURL
-        //            self.accessToken = accessToken
-        //            self.refreshToken = refreshToken
-        //        }
     }
     
     struct JoinAPIData: Codable {
-        let jwtAccessToken: String
-        let jwtRefreshToken: String
-        let userId: String
+        var jwtAccessToken: String
+        var jwtRefreshToken: String
+        var userId: String
+        
+        init() {
+            self.jwtAccessToken = ""
+            self.jwtRefreshToken = ""
+            self.userId = ""
+        }
         
         init(jwtAccessToken: String, jwtRefreshToken: String, userId: String) {
             self.jwtAccessToken = "Bearer " + jwtAccessToken
             self.jwtRefreshToken = jwtRefreshToken
             self.userId = userId
         }
-        
-        //        mutating func setInfo(_ serverSignInInfo: UserAPI.UserData) {
-        //
-        //        }
     }
     
     struct UserInfoAPIData: Codable {
-        let homeTeamId: Int
-        let favorites: [User.UserInfoAPIData.TeamSummary]
-        let gameUnit: [Int]
+        var homeTeamId: Int
+        var favorites: [User.UserInfoAPIData.TeamSummary]
+        var gameUnit: [Int]
         
+        init() {
+            self.homeTeamId = 0
+            self.favorites = []
+            self.gameUnit = []
+        }
         
         init(homeTeamId: Int, favorites: [User.UserInfoAPIData.TeamSummary], gameUnit: [Int]) {
             self.homeTeamId = homeTeamId
@@ -71,18 +82,13 @@ extension User {
             self.gameUnit = gameUnit
         }
     }
-    
 }
 
 extension User.UserInfoAPIData {
     struct TeamSummary: Codable {
-        let teamName: String
-        let league: String
-        let icon: String
-        let rank: Int
+        var teamName: String
+        var league: String
+        var icon: String
+        var rank: Int
     }
 }
-
-
-
-

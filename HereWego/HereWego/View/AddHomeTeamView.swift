@@ -40,7 +40,6 @@ struct AddHomeTeamView: View {
         .toolbar {
             ToolbarItem {
                 ProfileButton()
-                
             }
         }
     }

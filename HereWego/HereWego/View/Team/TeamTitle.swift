@@ -1,28 +1,32 @@
 //
-//  TeamListRow.swift
+//  TeamTitle.swift
 //  HereWeGo
 //
-//  Created by Kyungsoo Lee on 2022/11/02.
+//  Created by Kyungsoo Lee on 2022/11/05.
 //
 
 import SwiftUI
 
-struct TeamListRow: View {
-    @State private var isChecked = false
+struct TeamTitle: View {
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
-    var teamId: Int
-//    var teamImage: String
-//    var teamName: String
-//    var rank: Int
+    @EnvironmentObject var userAPIViewModel: UserAPIViewModel
+    var teamIndex: Int
+    
     var body: some View {
+        
         HStack {
-            Image(teamAPIViewModel.team.icon)
-                .resizable()
-                .aspectRatio( contentMode: .fit)
-                .frame(width: 75, height: 75)
+            AsyncImage(url: URL(string: teamAPIViewModel.team.teamList[teamIndex].icon)) { image in
+                image
+                    .resizable()
+                    .aspectRatio( contentMode: .fit)
+                    .frame(width: 75, height: 75)
+            } placeholder: {
+                Image(systemName: "paperplane.circle.fill")
+            }
+            .padding(20)
             VStack {
                 HStack {
-                    Text(teamAPIViewModel.team.teamName)
+                    Text(teamAPIViewModel.team.teamList[teamIndex].teamName)
                         .bold()
                         .font(.title3)
                         .lineLimit(1)
@@ -30,12 +34,13 @@ struct TeamListRow: View {
                     Spacer()
                 }
                 HStack {
-                    Text("순위 : \(1)위")
+                    Text(teamAPIViewModel.team.teamList[teamIndex].league)
                     Spacer()
+                    
                     Button {
                         
                     } label: {
-                        FavoriteButton(isChecked: $isChecked)
+                        FavoriteButton(teamIndex: teamIndex)
                     }
                     Button {
                         
@@ -44,17 +49,16 @@ struct TeamListRow: View {
                             .foregroundColor(.gray)
                             .padding(.trailing)
                     }
-                    
                 }
             }
         }
     }
 }
 
-struct TeamListRow_Previews: PreviewProvider {
-//    @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+struct TeamTitle_Previews: PreviewProvider {
     static var previews: some View {
-        TeamListRow(teamId: 40)
+        TeamTitle(teamIndex: 0)
             .environmentObject(TeamAPIViewModel())
+            .environmentObject(UserAPIViewModel())
     }
 }

@@ -14,8 +14,8 @@
             filePath = "HereWego/ViewModel/UserAPIViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "handleSignInButton()"
             landmarkType = "7">
             <Locations>
@@ -55,63 +55,188 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "30506022-96FA-4616-ABC6-4091AD527916"
+            uuid = "7AF2B937-6200-4A30-9E16-B4BEE25A3CF1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HereWeGo/View/TeamListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7AF2B937-6200-4A30-9E16-B4BEE25A3CF1 - 5ac120b30960e1aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SwiftUI.Toggle&lt;SwiftUI.Text&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;HereWeGo.Team.TeamInfo&gt;, Swift.String, SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.TupleView&lt;(HereWeGo.TeamListRow, SwiftUI.Text)&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in HereWeGo.TeamListView.body.getter : some"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWeGo/View/TeamListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+               <Location
+                  uuid = "7AF2B937-6200-4A30-9E16-B4BEE25A3CF1 - f3b398ff36f78f1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (HereWeGo.Team.TeamInfo) -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.TupleView&lt;(HereWeGo.TeamListRow, SwiftUI.Text)&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SwiftUI.Toggle&lt;SwiftUI.Text&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;HereWeGo.Team.TeamInfo&gt;, Swift.String, SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.NavigationLink&lt;SwiftUI.TupleView&lt;(HereWeGo.TeamListRow, SwiftUI.Text)&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0&gt;)&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in HereWeGo.TeamListView.body.getter : some"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWeGo/View/TeamListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "7AF2B937-6200-4A30-9E16-B4BEE25A3CF1 - 7a8fb70339e252d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SwiftUI.Toggle&lt;SwiftUI.Text&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;HereWeGo.Team.TeamInfo&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.TupleView&lt;(HereWeGo.TeamListRow, SwiftUI.Text)&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in HereWeGo.TeamListView.body.getter : some"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWeGo/View/TeamListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+               <Location
+                  uuid = "7AF2B937-6200-4A30-9E16-B4BEE25A3CF1 - 99cb7e759bc5aadf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (HereWeGo.Team.TeamInfo) -&gt; SwiftUI.NavigationLink&lt;SwiftUI.TupleView&lt;(HereWeGo.TeamListRow, SwiftUI.Text)&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0, SwiftUI.Toggle&lt;SwiftUI.Text&gt;, SwiftUI.ForEach&lt;Swift.Array&lt;HereWeGo.Team.TeamInfo&gt;, Swift.String, SwiftUI.NavigationLink&lt;SwiftUI.TupleView&lt;(HereWeGo.TeamListRow, SwiftUI.Text)&gt;, &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0&gt; in HereWeGo.TeamListView.body.getter : some"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWeGo/View/TeamListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HereWego/ViewModel/TeamAPIViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "requestPost(method:authProvider:userData:completionHandler:)"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "getTeamDetail(method:userData:teamId:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3 - d37f3c492c167820"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.getTeamDetail(method: Swift.String, userData: HereWeGo.User, teamId: Swift.Int) -&gt; ()"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "2804">
+               </Location>
+               <Location
+                  uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3 - c8aebf4af7c12a63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.getTeamDetail(method: Swift.String, userData: HereWeGo.User, teamId: Swift.Int) -&gt; ()"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "A49B7920-4E57-4775-B0A6-FF96421CC7A3 - c8aebf4af7c12a63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.getTeamDetail(method: Swift.String, userData: HereWeGo.User, teamId: Swift.Int) -&gt; ()"
+                  moduleName = "HereWeGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E076752-4C93-40E6-BD24-28516AC29F99"
-            shouldBeEnabled = "Yes"
+            uuid = "B98DABD1-B56F-484D-B9DC-1E9A6A0ABFA7"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HereWego/ViewModel/TeamAPIViewModel.swift"
+            filePath = "HereWego/View/ChartView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "requestPost(method:authProvider:userData:completionHandler:)"
-            landmarkType = "7">
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "body"
+            landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "1E076752-4C93-40E6-BD24-28516AC29F99 - ff2ac93c5c2d40aa"
+                  uuid = "B98DABD1-B56F-484D-B9DC-1E9A6A0ABFA7 - f47982023491fca5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.requestPost(method: Swift.String, authProvider: Swift.String, userData: HereWeGo.User, completionHandler: (Swift.Bool, Any) -&gt; ()) -&gt; ()"
+                  symbolName = "HereWeGo.ChartView.body.getter : some"
                   moduleName = "HereWeGo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/View/ChartView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "187"
-                  endingLineNumber = "187"
-                  offsetFromSymbolStart = "1024">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "396">
                </Location>
                <Location
-                  uuid = "1E076752-4C93-40E6-BD24-28516AC29F99 - ff2ac93c5c2d40aa"
+                  uuid = "B98DABD1-B56F-484D-B9DC-1E9A6A0ABFA7 - f47982023491fca5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HereWeGo.TeamAPIViewModel.requestPost(method: Swift.String, authProvider: Swift.String, userData: HereWeGo.User, completionHandler: (Swift.Bool, Any) -&gt; ()) -&gt; ()"
+                  symbolName = "HereWeGo.ChartView.body.getter : some"
                   moduleName = "HereWeGo"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/ViewModel/TeamAPIViewModel.swift"
+                  urlString = "file:///Users/kyungsoolee/Git%20Repositories/HereWeGo-iOS/HereWego/HereWego/View/ChartView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "187"
-                  endingLineNumber = "187"
-                  offsetFromSymbolStart = "872">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>

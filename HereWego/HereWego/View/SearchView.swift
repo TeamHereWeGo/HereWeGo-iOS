@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State private var searchText = ""
+    @Binding var searchText: String
     var body: some View {
         ZStack {
             Color.gray.opacity(0.5)
@@ -28,6 +28,6 @@ struct SearchView: View {
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        SearchView(searchText: .constant(""))
     }
 }
