@@ -58,13 +58,8 @@ struct TeamDetail: View {
                     }
                     .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                 TeamStatisticsView(teamIndex: teamIndex)
-    //            Text("득점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.goal[0])")
-    //            Text("실점 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.loss[0])")
-    //            Text("볼 점유율 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.ballPossession[0])")
-    //            Text("막힌 슛 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.blockedShots[0])")
-    //            Text("코너킥 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.cornerKicks[0])")
-    //            Text("오프사이드 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.offSide[0])")
-    //            Text("패스정확도 : \(teamAPIViewModel.team.teamList[teamIndex].statistics.passesAccurate[0])")
+                
+                
                 
                 Spacer()
             }
