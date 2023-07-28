@@ -13,19 +13,25 @@ struct ChartView: View {
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
     var teamIndex: Int
     @Binding var dataType: String
-    let ranges: [String] = ["1D", "1W", "1M", "3M", "ALL"]
+//    private var xAxis: Int
+    let ranges: [[String: Int]] = [["1D": 1], ["1W": 1], ["1M": 4], ["3M": 12], ["ALL": 38]]
     
     var body: some View {
         VStack {
             HStack {
                 ForEach(ranges, id: \.self) { item in
-                    Button {
-                        
-                    } label: {
-                        Text("\(item)")
-                        
-                    }
-                    
+//                    guard let key = item.keys.first,
+//                          let value = item[key] {
+                              Button {
+                                  
+                              } label: {
+                                  Text("test")
+                                  
+                              }
+                              
+//                          } else {
+//                              return EmptyView()
+//                          }
                 }
                 
                 

@@ -246,25 +246,29 @@ class UserAPIViewModel: ObservableObject {
                 return
             }
             
-            // log
-            print("User.UserInfoAPIData [JSON Dictionary] : \(jsonDictionary)")
             
-            if error == nil && data != nil {
-                let decoder = JSONDecoder()
-                do{
-                    let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
-                    self.user.userInfoAPIData = userInfoAPIData
-                    
-                    // log
-                    print("디코드 한 userInfoAPIData : \(userInfoAPIData)")
-                    print("user.userInfoAPIData : \(self.user.userInfoAPIData)")
-                    print("전체 유저 정보 : \(self.user)")
+            DispatchQueue.main.sync { [weak self] in
+                // log
+                print("User.UserInfoAPIData [JSON Dictionary] : \(jsonDictionary)")
+                
+                if error == nil && data != nil {
+                    let decoder = JSONDecoder()
+                    do{
+                        let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
+                        self?.user.userInfoAPIData = userInfoAPIData
+                        
+                        // log
+                        print("디코드 한 userInfoAPIData : \(userInfoAPIData)")
+                        print("user.userInfoAPIData : \(self?.user.userInfoAPIData)")
+                        print("전체 유저 정보 : \(self?.user)")
+                    }
+                    catch{
+                        print("Error in JSON parsing")
+                    }
                 }
-                catch{
-                    print("Error in JSON parsing")
-                }
+                self?.isLogined = true
             }
-            self.isLogined = true
+            
         }.resume()
     }
     

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 fileprivate enum HereWeGoAPITeamList {
     static let scheme = "http"
     static let host = "hwgapp.com"
