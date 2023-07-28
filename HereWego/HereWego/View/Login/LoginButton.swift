@@ -12,13 +12,12 @@ import GoogleSignIn
 struct LoginButton: View {
     @EnvironmentObject var userAPIViewModel: UserAPIViewModel
     @EnvironmentObject var teamAPIViewModel: TeamAPIViewModel
+    @State private var isLoggedIn: Bool = false
     
     let url = URL(string: "http://hwgapp.com/oauth2/authorize/google?redirect_uri=http://hwgapp.com/v1/users")
     var provider : String
     var body: some View {
-        if userAPIViewModel.isLogined {
-            TeamListView()
-        } else {
+        NavigationStack {
             VStack {
                 Image("UCL_logo")
                     .resizable()
@@ -27,6 +26,10 @@ struct LoginButton: View {
                 GoogleSignInButton(action: userAPIViewModel.handleSignInButton)
             }
             .padding()
+            
+            .navigationDestination(isPresented: $userAPIViewModel.isLogined) {
+                MainView()
+            }
         }
     }
 }

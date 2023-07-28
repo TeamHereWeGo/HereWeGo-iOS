@@ -130,15 +130,17 @@ class UserAPIViewModel: ObservableObject {
                 print("Error: HTTP request failed2")
                 return
             }
-            
-            // 3. 받아서 Dictionary 형태의 데이터를 User 객체에 저장
-            self.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
-            
-            // log 출력
-            print("user jwtAccessToken[Register] : \(self.user.joinAPIData.jwtAccessToken)")
-            print("user id[Register] : \(self.user.joinAPIData.userId)")
-            
-            self.getUserInfo()
+            DispatchQueue.main.async { [weak self] in
+                // 3. 받아서 Dictionary 형태의 데이터를 User 객체에 저장
+                self?.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+                
+                // log 출력
+                print("user jwtAccessToken[Register] : \(self?.user.joinAPIData.jwtAccessToken)")
+                print("user id[Register] : \(self?.user.joinAPIData.userId)")
+                
+                self?.getUserInfo()
+            }
+           
         }.resume()
     }
     

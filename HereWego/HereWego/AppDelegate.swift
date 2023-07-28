@@ -11,7 +11,7 @@ import GoogleSignInSwift
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-      var handled = GIDSignIn.sharedInstance.handle(url)
+      let handled = GIDSignIn.sharedInstance.handle(url)
       if handled {
         return true
       }
