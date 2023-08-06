@@ -14,10 +14,11 @@ struct FavoriteButton: View {
     var body: some View {
         Button {
             userAPIViewModel.registerFavoriteTeamOrDeregisterFavoriteTeam(teamId: teamAPIViewModel.team.teamList[teamIndex].teamId)
+            print(userAPIViewModel.user)
         } label: {
                 Label("Toggle Oauth", systemImage: userAPIViewModel.isFavorite(team: teamAPIViewModel.team.teamList[teamIndex]) ? "star.fill" : "star")
                 .labelStyle(.iconOnly)
-                .foregroundColor(true ? .yellow : .gray)
+                .foregroundColor(.yellow)
         }
     }
 }

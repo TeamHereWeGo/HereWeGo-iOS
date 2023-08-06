@@ -31,6 +31,7 @@
 		F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */; };
 		F39AD9DD291B916D00EDCC82 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */; };
 		F3B1AB522A02200B00924860 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B1AB512A02200B00924860 /* Array+Extension.swift */; };
+		F3B257642A73A8E500B18598 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B257632A73A8E500B18598 /* MainView.swift */; };
 		F3BE5DB42A0E259600C9F950 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BE5DB32A0E259600C9F950 /* ChartView.swift */; };
 		F3DA8C8A291E420D007CB553 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DA8C89291E420D007CB553 /* User.swift */; };
 		F3F40116291A8DA6009D43B8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F40115291A8DA6009D43B8 /* SignUpView.swift */; };
@@ -61,6 +62,7 @@
 		F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteButton.swift; path = HereWego/View/FavoriteButton.swift; sourceTree = SOURCE_ROOT; };
 		F39AD9DC291B916D00EDCC82 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileButton.swift; path = HereWego/View/Profile/ProfileButton.swift; sourceTree = SOURCE_ROOT; };
 		F3B1AB512A02200B00924860 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "HereWego/Extensions/Array+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		F3B257632A73A8E500B18598 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = HereWego/View/MainView.swift; sourceTree = SOURCE_ROOT; };
 		F3BE5DB32A0E259600C9F950 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartView.swift; path = HereWego/View/ChartView.swift; sourceTree = SOURCE_ROOT; };
 		F3DA8C89291E420D007CB553 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = HereWego/Model/User.swift; sourceTree = SOURCE_ROOT; };
 		F3F40115291A8DA6009D43B8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = HereWego/View/SignUpView.swift; sourceTree = SOURCE_ROOT; };
@@ -141,6 +143,7 @@
 				F36E4FCB291AD22C006E72D6 /* OauthCheckBox.swift */,
 				F39AD9D6291ADE5D00EDCC82 /* FavoriteButton.swift */,
 				F3BE5DB32A0E259600C9F950 /* ChartView.swift */,
+				F3B257632A73A8E500B18598 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				F386FDC029CAF7C0005BCFDD /* TeamAPIViewModel.swift in Sources */,
 				F3BE5DB42A0E259600C9F950 /* ChartView.swift in Sources */,
 				F3249B17291973AE00302D84 /* AddHomeTeamView.swift in Sources */,
+				F3B257642A73A8E500B18598 /* MainView.swift in Sources */,
 				F37FA5BF2A1137AF00F80B80 /* TeamStatistics.swift in Sources */,
 				F387BF212955BF88008E3877 /* LoginButton.swift in Sources */,
 				F39AD9D7291ADE5D00EDCC82 /* FavoriteButton.swift in Sources */,

@@ -130,15 +130,17 @@ class UserAPIViewModel: ObservableObject {
                 print("Error: HTTP request failed2")
                 return
             }
-            
-            // 3. 받아서 Dictionary 형태의 데이터를 User 객체에 저장
-            self.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
-            
-            // log 출력
-            print("user jwtAccessToken[Register] : \(self.user.joinAPIData.jwtAccessToken)")
-            print("user id[Register] : \(self.user.joinAPIData.userId)")
-            
-            self.getUserInfo()
+            DispatchQueue.main.async { [weak self] in
+                // 3. 받아서 Dictionary 형태의 데이터를 User 객체에 저장
+                self?.user.joinAPIData = User.JoinAPIData(jwtAccessToken: jsonDictionary["jwtRefreshToken"] as! String, jwtRefreshToken: jsonDictionary["jwtRefreshToken"] as! String, userId: jsonDictionary["userId"] as! String)
+                
+                // log 출력
+                print("user jwtAccessToken[Register] : \(self?.user.joinAPIData.jwtAccessToken)")
+                print("user id[Register] : \(self?.user.joinAPIData.userId)")
+                
+                self?.getUserInfo()
+            }
+           
         }.resume()
     }
     
@@ -246,25 +248,29 @@ class UserAPIViewModel: ObservableObject {
                 return
             }
             
-            // log
-            print("User.UserInfoAPIData [JSON Dictionary] : \(jsonDictionary)")
             
-            if error == nil && data != nil {
-                let decoder = JSONDecoder()
-                do{
-                    let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
-                    self.user.userInfoAPIData = userInfoAPIData
-                    
-                    // log
-                    print("디코드 한 userInfoAPIData : \(userInfoAPIData)")
-                    print("user.userInfoAPIData : \(self.user.userInfoAPIData)")
-                    print("전체 유저 정보 : \(self.user)")
+            DispatchQueue.main.sync { [weak self] in
+                // log
+                print("User.UserInfoAPIData [JSON Dictionary] : \(jsonDictionary)")
+                
+                if error == nil && data != nil {
+                    let decoder = JSONDecoder()
+                    do{
+                        let userInfoAPIData = try decoder.decode(User.UserInfoAPIData.self, from: data)
+                        self?.user.userInfoAPIData = userInfoAPIData
+                        
+                        // log
+                        print("디코드 한 userInfoAPIData : \(userInfoAPIData)")
+                        print("user.userInfoAPIData : \(self?.user.userInfoAPIData)")
+                        print("전체 유저 정보 : \(self?.user)")
+                    }
+                    catch{
+                        print("Error in JSON parsing")
+                    }
                 }
-                catch{
-                    print("Error in JSON parsing")
-                }
+                self?.isLogined = true
             }
-            self.isLogined = true
+            
         }.resume()
     }
     

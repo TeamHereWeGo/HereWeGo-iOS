@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 사용 X
 struct LoginView: View {
     @State private var stack = NavigationPath()
     @State private var userName = ""
